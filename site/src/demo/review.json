@@ -1,0 +1,152 @@
+{
+  "funnel": {
+    "SNAPSHOT": 2166,
+    "DELIVERED": 1563,
+    "PARTICIPATED": 964,
+    "CLAIMED": 500,
+    "REDEEMED": 275,
+    "TARGET_ACTION_COMPLETED": 224
+  },
+  "budget": {
+    "reserved": 0,
+    "committed": 330000,
+    "released": 270000,
+    "total": 600000,
+    "available": 270000,
+    "utilization": 0.55
+  },
+  "breakdown": {
+    "segment": [
+      {
+        "dimension_id": 27,
+        "claimed": 500,
+        "redeemed": 275,
+        "target_actions": 224,
+        "bank_cost": 330000,
+        "merchant_contribution": 220000,
+        "redemption_rate": 0.55,
+        "name": "沉默高积分客户",
+        "suggestion": "观察后人工决策"
+      }
+    ],
+    "scene": [
+      {
+        "dimension_id": "COMMUNITY",
+        "claimed": 500,
+        "redeemed": 275,
+        "target_actions": 224,
+        "bank_cost": 330000,
+        "merchant_contribution": 220000,
+        "redemption_rate": 0.55,
+        "name": "社区生活",
+        "suggestion": "观察后人工决策"
+      }
+    ],
+    "merchant": [
+      {
+        "dimension_id": 73,
+        "claimed": 60,
+        "redeemed": 8,
+        "target_actions": 7,
+        "bank_cost": 9600,
+        "merchant_contribution": 6400,
+        "redemption_rate": 0.13333333333333333,
+        "name": "渝邻便利（虚构）",
+        "suggestion": "核销率低于 20%，可考虑下一轮减少额度"
+      },
+      {
+        "dimension_id": 74,
+        "claimed": 66,
+        "redeemed": 43,
+        "target_actions": 35,
+        "bank_cost": 51600,
+        "merchant_contribution": 34400,
+        "redemption_rate": 0.6515151515151515,
+        "name": "山城早餐铺（虚构）",
+        "suggestion": "观察后人工决策"
+      },
+      {
+        "dimension_id": 75,
+        "claimed": 63,
+        "redeemed": 40,
+        "target_actions": 36,
+        "bank_cost": 48000,
+        "merchant_contribution": 32000,
+        "redemption_rate": 0.6349206349206349,
+        "name": "邻里生鲜（虚构）",
+        "suggestion": "观察后人工决策"
+      },
+      {
+        "dimension_id": 76,
+        "claimed": 60,
+        "redeemed": 38,
+        "target_actions": 29,
+        "bank_cost": 45600,
+        "merchant_contribution": 30400,
+        "redemption_rate": 0.6333333333333333,
+        "name": "江畔小铺（虚构）",
+        "suggestion": "观察后人工决策"
+      },
+      {
+        "dimension_id": 77,
+        "claimed": 63,
+        "redeemed": 43,
+        "target_actions": 32,
+        "bank_cost": 51600,
+        "merchant_contribution": 34400,
+        "redemption_rate": 0.6825396825396826,
+        "name": "桥头生活社（虚构）",
+        "suggestion": "观察后人工决策"
+      },
+      {
+        "dimension_id": 78,
+        "claimed": 65,
+        "redeemed": 40,
+        "target_actions": 34,
+        "bank_cost": 48000,
+        "merchant_contribution": 32000,
+        "redemption_rate": 0.6153846153846154,
+        "name": "山城茶馆（虚构）",
+        "suggestion": "观察后人工决策"
+      },
+      {
+        "dimension_id": 79,
+        "claimed": 66,
+        "redeemed": 37,
+        "target_actions": 32,
+        "bank_cost": 44400,
+        "merchant_contribution": 29600,
+        "redemption_rate": 0.5606060606060606,
+        "name": "邻里杂货（虚构）",
+        "suggestion": "观察后人工决策"
+      },
+      {
+        "dimension_id": 80,
+        "claimed": 57,
+        "redeemed": 26,
+        "target_actions": 19,
+        "bank_cost": 31200,
+        "merchant_contribution": 20800,
+        "redemption_rate": 0.45614035087719296,
+        "name": "江岸便民店（虚构）",
+        "suggestion": "观察后人工决策"
+      }
+    ],
+    "benefit": [
+      {
+        "dimension_id": 19,
+        "claimed": 500,
+        "redeemed": 275,
+        "target_actions": 224,
+        "bank_cost": 330000,
+        "merchant_contribution": 220000,
+        "redemption_rate": 0.55,
+        "name": "20元社区生活权益",
+        "suggestion": "观察后人工决策"
+      }
+    ]
+  },
+  "target_value": 150,
+  "target_actual": 224,
+  "merchant_contribution": 220000
+}

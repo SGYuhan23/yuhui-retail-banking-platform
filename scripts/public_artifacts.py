@@ -8,6 +8,8 @@ INTERNAL_DOCS = {'legacy-refactor-audit.md', 'legacy-refactor-result.md', 'ç®€åŽ
 
 def exclusion(relative):
     p = Path(relative)
+    if p.parts[:3] == ("site", "public", "screenshots") or str(p) == "site/public/bank-mark.svg":
+        return "generated Pages copies; canonical screenshots and logo retained in source"
     if str(p) in {"verification/final-patch/backend-build.log", "verification/final-patch/backend-tests.log"}: return "obsolete build evidence"
     if p.parts[0] in ROOT_BLOCKED: return 'local runtime or working directory'
     if ANY_BLOCKED.intersection(p.parts): return 'build, dependency or IDE artifact'
