@@ -1,0 +1,59 @@
+.operating-shell {
+  min-width: 0;
+}
+.operating-shell .ant-table-cell {
+  overflow-wrap: anywhere;
+}
+.operating-shell .ant-modal-body pre {
+  max-height: 60vh;
+  overflow: auto;
+}
+.v3-consumer {
+  margin: 24px 0;
+  padding: 24px;
+  background: #fffaf4;
+  border: 1px solid #eadcc9;
+  border-radius: 16px;
+}
+.v3-consumer .ant-card {
+  max-width: 100%;
+}
+@media (max-width: 700px) {
+  .operating-shell > .ant-space {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .operating-shell .ant-select {
+    max-width: calc(100vw - 60px);
+  }
+  .operating-shell .ant-col-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-bottom: 12px;
+  }
+  .operating-shell .ant-col-6,
+  .operating-shell .ant-col-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 12px;
+  }
+  .operating-shell .ant-table-wrapper {
+    overflow-x: auto;
+  }
+  .v3-consumer {
+    padding: 16px;
+  }
+  .v3-consumer .ant-space {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .v3-consumer .ant-input {
+    width: 100% !important;
+  }
+  .v3-consumer .ant-space-item {
+    max-width: 100%;
+  }
+  .v3-consumer strong {
+    overflow-wrap: anywhere;
+  }
+}

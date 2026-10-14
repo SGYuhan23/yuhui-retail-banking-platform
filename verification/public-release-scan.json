@@ -1,0 +1,276 @@
+{
+  "secret_candidates": [
+    {
+      "path": ".gitignore",
+      "keyword_hits": 1,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "compose.local.yml",
+      "keyword_hits": 8,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "docs/demo-configuration.md",
+      "keyword_hits": 6,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "scripts/check-award-replay.py",
+      "keyword_hits": 1,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "scripts/portfolio_verify.py",
+      "keyword_hits": 20,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-server/contracts/src/main/java/com/yuhui/trigger/api/dto/req/EmailPasswordLoginRequestDTO.java",
+      "keyword_hits": 3,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-server/contracts/src/main/java/com/yuhui/trigger/api/dto/req/EmailRegisterRequestDTO.java",
+      "keyword_hits": 2,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-server/contracts/src/main/java/com/yuhui/trigger/api/dto/req/RefreshTokenRequestDTO.java",
+      "keyword_hits": 3,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-server/contracts/src/main/java/com/yuhui/trigger/api/dto/res/UserLoginResponseDTO.java",
+      "keyword_hits": 4,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/operating/V3Store.java",
+      "keyword_hits": 3,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/http/LocalWalletController.java",
+      "keyword_hits": 3,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/http/UserController.java",
+      "keyword_hits": 30,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/identity/model/vo/UserVO.java",
+      "keyword_hits": 2,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/identity/repository/IUserRepository.java",
+      "keyword_hits": 5,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/identity/service/impl/IUserService.java",
+      "keyword_hits": 5,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/identity/service/impl/IUserServiceImpl.java",
+      "keyword_hits": 19,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-server/runtime/.env.example",
+      "keyword_hits": 8,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/java/com/yuhui/config/DataSourceConfig.java",
+      "keyword_hits": 2,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/java/com/yuhui/config/LocalExternalAwards.java",
+      "keyword_hits": 3,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/java/com/yuhui/config/RedisClientConfig.java",
+      "keyword_hits": 5,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/java/com/yuhui/config/RedisClientConfigProperties.java",
+      "keyword_hits": 1,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/java/com/yuhui/config/XxlJobAutoConfig.java",
+      "keyword_hits": 4,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/application-local.properties",
+      "keyword_hits": 6,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/application.yml",
+      "keyword_hits": 37,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-server/shared/src/main/java/com/yuhui/types/enums/ResponseCode.java",
+      "keyword_hits": 6,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-server/shared/src/main/java/com/yuhui/types/util/AliOSSUtils.java",
+      "keyword_hits": 9,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-server/shared/src/main/java/com/yuhui/types/util/MinIOUtils.java",
+      "keyword_hits": 6,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-server/storage/src/main/java/com/yuhui/infrastructure/adapter/repository/LocalErpRepository.java",
+      "keyword_hits": 5,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-server/storage/src/main/java/com/yuhui/infrastructure/adapter/repository/UserRepositoryImpl.java",
+      "keyword_hits": 5,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-web/config/defaultSettings.ts",
+      "keyword_hits": 1,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-web/config/proxy.ts",
+      "keyword_hits": 9,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-web/pnpm-lock.yaml",
+      "keyword_hits": 23,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-web/src/app.tsx",
+      "keyword_hits": 8,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-web/src/components/GuideAssistant/index.tsx",
+      "keyword_hits": 9,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-web/src/components/HeaderDropdown/index.tsx",
+      "keyword_hits": 2,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-web/src/components/RightContent/AvatarDropdown.tsx",
+      "keyword_hits": 10,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-web/src/pages/Account/Center/index.tsx",
+      "keyword_hits": 17,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-web/src/pages/Auth/LoginMethods/index.tsx",
+      "keyword_hits": 9,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-web/src/pages/Auth/Users/index.tsx",
+      "keyword_hits": 2,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-web/src/pages/User/Login/index.tsx",
+      "keyword_hits": 22,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-web/src/requestErrorConfig.ts",
+      "keyword_hits": 8,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-web/src/services/api.ts",
+      "keyword_hits": 21,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-web/src/services/typings.d.ts",
+      "keyword_hits": 6,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-web/src/utils/auth.ts",
+      "keyword_hits": 43,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    },
+    {
+      "path": "yuhui-web/types/index.d.ts",
+      "keyword_hits": 5,
+      "classification": "reviewed: field/API name, environment reference, public dependency, DEMO_ONLY or TEST_ONLY fixture"
+    }
+  ],
+  "absolute_path_matches": [],
+  "private_ip_matches": [],
+  "email_matches": [
+    {
+      "path": "docs/demo-configuration.md",
+      "match": "x@qq.com",
+      "classification": "reviewed public attribution or synthetic example"
+    },
+    {
+      "path": "yuhui-web/pnpm-lock.yaml",
+      "match": "i@izs.me",
+      "classification": "reviewed public attribution or synthetic example"
+    },
+    {
+      "path": "yuhui-web/src/pages/Auth/LoginMethods/index.tsx",
+      "match": "x@qq.com",
+      "classification": "reviewed public attribution or synthetic example"
+    },
+    {
+      "path": "yuhui-web/types/index.d.ts",
+      "match": "antdesign@alipay.com",
+      "classification": "reviewed public attribution or synthetic example"
+    }
+  ],
+  "phone_matches": [],
+  "runtime_log_matches": [],
+  "forbidden_artifact_matches": [],
+  "summary": {
+    "real_secret": 0,
+    "absolute_private_path": 0,
+    "private_ip": 0,
+    "runtime_log": 0,
+    "forbidden_artifact": 0
+  },
+  "scope": "Text heuristics plus manual candidate review; not a security certification. Loopback and symbolic configuration references are allowed.",
+  "forbidden_counts": {
+    "real_secret_matches": 0,
+    "absolute_private_path_matches": 0,
+    "private_ip_matches": 0,
+    "forbidden_public_ip_matches": 0,
+    "runtime_log_matches": 0,
+    "old_author_identity_matches": 0,
+    "old_repo_identity_matches": 0,
+    "private_external_asset_matches": 0,
+    "internal_audit_artifact_matches": 0,
+    "broken_links": 0
+  }
+}

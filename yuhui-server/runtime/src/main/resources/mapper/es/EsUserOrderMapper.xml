@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yuhui.infrastructure.es.EsUserOrderMapper">
+
+    <resultMap id="BaseResultMap" type="com.yuhui.infrastructure.es.po.EsUserOrder">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="userId" column="_user_id" jdbcType="VARCHAR"/>
+        <result property="activityId" column="_activity_id" jdbcType="BIGINT"/>
+        <result property="activityName" column="_activity_name" jdbcType="VARCHAR"/>
+        <result property="strategyId" column="_strategy_id" jdbcType="BIGINT"/>
+        <result property="orderState" column="_order_state" jdbcType="VARCHAR"/>
+        <result property="createTime" column="_create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="_update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <select id="queryUserOrderListEs" resultMap="BaseResultMap">
+        select _user_id, _activity_id, _activity_name, _strategy_id, _order_state, _create_time, _update_time
+        from "marketing.user_order"
+        order by _update_time desc
+    </select>
+
+</mapper>

@@ -1,0 +1,217 @@
+{
+  "result": "PASS",
+  "checks": [
+    {
+      "name": "TEST 12: fixed seed customer contents, event counts and budget costs reproduce",
+      "result": "PASS"
+    },
+    {
+      "name": "Demo dataset sizes",
+      "result": "PASS"
+    },
+    {
+      "name": "TEST 1: segment preview stable",
+      "result": "PASS"
+    },
+    {
+      "name": "TEST 2: snapshot unchanged after customer mutation",
+      "result": "PASS"
+    },
+    {
+      "name": "Governance cannot publish draft",
+      "result": "PASS"
+    },
+    {
+      "name": "TEST 3: published configuration API rejects edits",
+      "result": "PASS"
+    },
+    {
+      "name": "TEST 3b: DB rejects version mutation",
+      "result": "PASS"
+    },
+    {
+      "name": "Snapshot member DB mutation rejected",
+      "result": "PASS"
+    },
+    {
+      "name": "Repeated batch cannot double campaign budget",
+      "result": "PASS"
+    },
+    {
+      "name": "TEST 4: 20 concurrent claims cannot exceed 2400-cent cap",
+      "result": "PASS"
+    },
+    {
+      "name": "TEST 5: each claim writes one reserve and one claimed event",
+      "result": "PASS"
+    },
+    {
+      "name": "TEST 9: repeated claim prevented",
+      "result": "PASS"
+    },
+    {
+      "name": "Wrong merchant cannot redeem",
+      "result": "PASS"
+    },
+    {
+      "name": "Minimum spend enforced",
+      "result": "PASS"
+    },
+    {
+      "name": "TEST 8: 16 concurrent redeems exactly one success",
+      "result": "PASS"
+    },
+    {
+      "name": "TEST 6: reserve transitions to commit",
+      "result": "PASS"
+    },
+    {
+      "name": "Expired redemption blocked",
+      "result": "PASS"
+    },
+    {
+      "name": "TEST 7: expiry releases once",
+      "result": "PASS"
+    },
+    {
+      "name": "TEST 10: semantic event key idempotent",
+      "result": "PASS"
+    },
+    {
+      "name": "TEST 11: dashboard independently reconstructed from SQL ledgers",
+      "result": "PASS"
+    },
+    {
+      "name": "Four dimensions present",
+      "result": "PASS"
+    },
+    {
+      "name": "Public wallet hides bank and merchant costs",
+      "result": "PASS"
+    },
+    {
+      "name": "Marketing consent mandatory",
+      "result": "PASS"
+    },
+    {
+      "name": "Revoked live consent blocks new touch",
+      "result": "PASS"
+    },
+    {
+      "name": "Manual decision stores metrics snapshot",
+      "result": "PASS"
+    },
+    {
+      "name": "Ledger historical updates blocked",
+      "result": "PASS"
+    },
+    {
+      "name": "TARGET-1: fixed demo target 150 / actual 224 / delta 74 / 149.333% / met",
+      "result": "PASS"
+    },
+    {
+      "name": "TARGET frozen version and independent window SQL",
+      "result": "PASS"
+    },
+    {
+      "name": "TIME-2 demo all entitlements terminal",
+      "result": "PASS"
+    },
+    {
+      "name": "TARGET-2: ten post-window observations excluded (SQL total 234)",
+      "result": "PASS"
+    },
+    {
+      "name": "BUDGET-1: total6000 hard2400, 2400 success then 1 rejected",
+      "result": "PASS"
+    },
+    {
+      "name": "BUDGET-2: null hard, 3000+3000 allowed then 1 rejected",
+      "result": "PASS"
+    },
+    {
+      "name": "BUDGET-3: hard5000, 2400+2600 allowed then 1 rejected",
+      "result": "PASS"
+    },
+    {
+      "name": "BUDGET-4: concurrent Run allocation serialized on campaign",
+      "result": "PASS"
+    },
+    {
+      "name": "REVIEW-2: approved budget mutation rejected and DRAFT persists",
+      "result": "PASS"
+    },
+    {
+      "name": "REVIEW approve retains exact submitted payload",
+      "result": "PASS"
+    },
+    {
+      "name": "REVIEW-3: segment-only change after submit rejected at publish",
+      "result": "PASS"
+    },
+    {
+      "name": "REVIEW-1/4: re-review succeeds; published payload equals approved",
+      "result": "PASS"
+    },
+    {
+      "name": "REVIEW-3b: segment-only AFTER APPROVAL mutation rejected",
+      "result": "PASS"
+    },
+    {
+      "name": "REVIEW-5: published version and snapshot immutable",
+      "result": "PASS"
+    },
+    {
+      "name": "TIME-1: ended Run with available entitlements is ONGOING",
+      "result": "PASS"
+    },
+    {
+      "name": "TIME ongoing fulfillment permits decision with frozen time semantics",
+      "result": "PASS"
+    },
+    {
+      "name": "TIME-3: redeem AFTER configured end changes cumulative costs, not target",
+      "result": "PASS"
+    },
+    {
+      "name": "Decision history unchanged after fulfillment",
+      "result": "PASS"
+    },
+    {
+      "name": "TIME-4/BUDGET-5: post-end expiry releases once and settles",
+      "result": "PASS"
+    },
+    {
+      "name": "Fulfillment count independently reconciles to entitlement SQL",
+      "result": "PASS"
+    },
+    {
+      "name": "Review exposes separate as-of, delivery and observation windows",
+      "result": "PASS"
+    },
+    {
+      "name": "Final showcase restored reproducibly",
+      "result": "PASS"
+    }
+  ],
+  "demo": {
+    "seed": 202610,
+    "run_id": 28,
+    "funnel": {
+      "SNAPSHOT": 2166,
+      "DELIVERED": 1563,
+      "PARTICIPATED": 964,
+      "CLAIMED": 500,
+      "REDEEMED": 275,
+      "TARGET_ACTION_COMPLETED": 224
+    },
+    "budget": {
+      "reserved": 0,
+      "committed": 330000,
+      "released": 270000,
+      "total": 600000,
+      "available": 270000,
+      "utilization": 0.55
+    }
+  }
+}

@@ -1,0 +1,70 @@
+.viewport {
+  overflow: hidden;
+  border-radius: 4px;
+}
+.track {
+  display: flex;
+  width: max-content;
+  animation: recordBroadcast linear infinite;
+  will-change: transform;
+}
+.group {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 24px;
+  padding-right: 24px;
+}
+.item {
+  flex: 0 0 var(--record-width);
+  width: var(--record-width);
+  min-width: 0;
+}
+.staticViewport {
+  overflow-x: auto;
+}
+.staticTrack {
+  display: flex;
+  gap: 24px;
+}
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+  color: #70675f;
+  font-size: 12px;
+}
+.controls button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  border: 1px solid #e7ded3;
+  border-radius: 18px;
+  background: #fffcf7;
+  color: #793c2b;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.controls button:hover {
+  background: #f3e6da;
+}
+.viewport:focus-visible,
+.controls button:focus-visible {
+  outline: 2px solid #a74330;
+  outline-offset: 3px;
+}
+@keyframes recordBroadcast {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+  }
+}

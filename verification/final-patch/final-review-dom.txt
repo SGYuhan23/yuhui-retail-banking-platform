@@ -1,0 +1,174 @@
+- complementary:
+  - img "logo"
+  - heading "渝惠｜零售客户经营" [level=1]
+  - menu:
+    - menuitem "dashboard 经营总览":
+      - link "dashboard 经营总览":
+        - /url: /operating/overview
+        - img "dashboard":
+        - generic: 经营总览
+    - menuitem "team 客群经营":
+      - link "team 客群经营":
+        - /url: /operating/segments
+        - img "team":
+        - generic: 客群经营
+    - menuitem "project 活动经营" [expanded]:
+      - img "project":
+      - generic: 活动经营
+    - menu:
+      - menuitem "经营方案与投放":
+        - link "经营方案与投放":
+          - /url: /operating/campaigns
+          - generic: 经营方案与投放
+      - menuitem "营销玩法":
+        - generic: 营销玩法
+    - menuitem "shop 商户与权益":
+      - link "shop 商户与权益":
+        - /url: /operating/merchants
+        - img "shop":
+        - generic: 商户与权益
+    - menuitem "wallet 积分与预算":
+      - img "wallet":
+      - generic: 积分与预算
+    - menuitem "bar-chart 经营复盘":
+      - img "bar-chart":
+      - generic: 经营复盘
+    - menuitem "setting 系统配置":
+      - img "setting":
+      - generic: 系统配置
+  - menu
+  - generic "本地体验用户（认证功能未接入）":
+    - generic: 渝惠体验客户
+- main:
+  - heading "经营复盘｜截至 2026-10-14 16:01" [level=2]
+  - generic: 每个数字都可追溯至冻结客群、投放批次与经营 / 预算流水。观察行为不代表因果增量。
+  - alert:
+    - img "info-circle":
+    - generic: Synthetic / Mock Data · 个人产品实践
+    - generic: 以下客户、商户、交易与经营结果均为固定种子生成的合成演示数据，不代表任何银行真实经营数据。
+  - combobox
+  - generic "#31 涪陵社区生活场景｜沉默客户唤醒计划"
+  - button "重新计算":
+    - generic: 重新计算
+  - button "预算流水":
+    - generic: 预算流水
+  - button "经营事件台账":
+    - generic: 经营事件台账
+  - alert:
+    - img "info-circle":
+    - generic: 当前已领取权益履约已完成。
+    - generic: 投放窗口：2026-10-01 00:00:00.0 至 2026-10-12 23:59:59.0。停止投放不等于履约结束。
+  - generic: 经营目标达成
+  - generic: 目标行为客户（实际 / 目标）
+  - generic: 224 / 150
+  - generic: 完成率
+  - generic: 149.3%
+  - generic: 与目标差额
+  - generic: "+74"
+  - generic: 达标状态
+  - generic: 已达标
+  - paragraph: 目标定义：MOCK_COMMUNITY_PURCHASE；目标值来自发布版本。目标行为为合成观察事实，不代表营销因果增量。
+  - paragraph: 目标行为观察窗口：2026-10-01 00:00:00.0 至 2026-10-12 23:59:59.0（含边界）。
+  - generic: 客户行为漏斗 · 按客户去重
+  - button "客群快照":
+    - generic: 客群快照
+  - generic: 2,166
+  - progressbar
+  - button "有效触达":
+    - generic: 有效触达
+  - generic: 1,563
+  - progressbar
+  - button "参与":
+    - generic: 参与
+  - generic: "964"
+  - progressbar
+  - button "领取":
+    - generic: 领取
+  - generic: "500"
+  - progressbar
+  - button "核销":
+    - generic: 核销
+  - generic: "275"
+  - progressbar
+  - button "目标行为":
+    - generic: 目标行为
+  - generic: "224"
+  - progressbar
+  - paragraph: 目标行为观察窗口：2026-10-01 00:00:00.0 至 2026-10-12 23:59:59.0。目标行为需要独立记录；核销不会自动推定活跃。
+  - generic: 预算与成本
+  - paragraph: 截至 2026-10-14 16:01:40.707639 的累计履约事实；核销、实扣与释放包含投放结束后的履约，不按目标观察窗口截断。
+  - generic: 总预算
+  - generic: ¥6000.00
+  - generic: 当前预占
+  - generic: ¥0.00
+  - generic: 已实扣
+  - generic: ¥3300.00
+  - generic: 累计释放
+  - generic: ¥2700.00
+  - generic: 可用预算
+  - generic: ¥2700.00
+  - generic: 商户让利
+  - generic: ¥2200.00
+  - generic: 单位核销客户银行成本
+  - generic: ¥12.00
+  - generic: 单位目标行为客户银行成本
+  - generic: ¥14.73
+  - paragraph: 预算使用率（实扣 / 总预算）：55.0%。累计释放是历史流水合计，不与当前预占重复加总。
+  - paragraph: 成本效率 = 已实扣银行成本 ÷ 对应去重客户数；分母为 0 时显示「—」。
+  - generic: 经营拆解
+  - tablist:
+    - tab "客群快照" [selected]
+    - tab "场景"
+    - tab "商户"
+    - tab "权益"
+  - tabpanel "客群快照":
+    - table:
+      - rowgroup:
+        - row "客群快照 领取客户 核销客户 核销率 目标行为客户 银行成本 规则建议":
+          - columnheader "客群快照"
+          - columnheader "领取客户"
+          - columnheader "核销客户"
+          - columnheader "核销率"
+          - columnheader "目标行为客户"
+          - columnheader "银行成本"
+          - columnheader "规则建议"
+      - rowgroup:
+        - row "沉默高积分客户 500 275 55 224 ¥3300.00 观察后人工决策":
+          - cell "沉默高积分客户"
+          - cell "500"
+          - cell "275"
+          - cell "55":
+            - progressbar:
+              - generic "55%"
+          - cell "224"
+          - cell "¥3300.00"
+          - cell "观察后人工决策"
+    - list:
+      - listitem "上一页":
+        - button "left" [disabled]:
+          - img "left":
+      - listitem "1":
+        - generic: "1"
+      - listitem "下一页":
+        - button "right" [disabled]:
+          - img "right":
+  - generic: 下一轮资源决策 · 人工记录
+  - paragraph: 规则提示提供判断依据，最终由运营人员选择。保存时冻结当前指标。
+  - combobox
+  - generic "保持"
+  - button "保存决策与指标快照" [disabled]:
+    - generic: 保存决策与指标快照
+  - textbox "根据哪些事实，下一轮如何调整资源？"
+  - table:
+    - rowgroup:
+      - row "决策 原因 记录时间 事实快照":
+        - columnheader "决策"
+        - columnheader "原因"
+        - columnheader "记录时间"
+        - columnheader "事实快照"
+    - rowgroup:
+      - row "暂无数据 暂无数据":
+        - cell "暂无数据 暂无数据":
+          - img "暂无数据"
+          - generic: 暂无数据
+- contentinfo: 渝惠｜银行零售客户经营与场景权益平台 ｜ 个人项目演示，非银行官方服务

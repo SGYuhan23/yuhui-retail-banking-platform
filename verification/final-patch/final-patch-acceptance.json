@@ -1,0 +1,263 @@
+{
+  "V3_FINAL_FREEZE_READY": "YES",
+  "scope": "Three final patches only; local synthetic demonstration",
+  "date": "2026-10-14",
+  "backend_build": "PASS",
+  "backend_tests": {
+    "result": "PASS",
+    "tests": 10,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "note": "Legacy course app tests remain skipped by existing configuration; not counted as passing."
+  },
+  "targeted_tests": {
+    "result": "PASS",
+    "assertions": 22
+  },
+  "v3_acceptance": {
+    "result": "PASS",
+    "assertions": 48
+  },
+  "old_regression": [
+    {
+      "script": "smoke.py",
+      "result": "PASS",
+      "exit_code": 0
+    },
+    {
+      "script": "check-crud.py",
+      "result": "PASS",
+      "exit_code": 0
+    },
+    {
+      "script": "check-flow.py",
+      "result": "PASS",
+      "exit_code": 0
+    },
+    {
+      "script": "check-alias.py",
+      "result": "PASS",
+      "exit_code": 0
+    },
+    {
+      "script": "check-wallet.py",
+      "result": "PASS",
+      "exit_code": 0
+    },
+    {
+      "script": "check-outbox.py",
+      "result": "PASS",
+      "exit_code": 0
+    },
+    {
+      "script": "check-gift-cache.py",
+      "result": "PASS",
+      "exit_code": 0
+    },
+    {
+      "script": "check-credit-concurrency.py",
+      "result": "PASS",
+      "exit_code": 0
+    },
+    {
+      "script": "check-award-replay.py",
+      "result": "PASS",
+      "exit_code": 0
+    },
+    {
+      "script": "check-warmup.py",
+      "result": "PASS",
+      "exit_code": 0
+    }
+  ],
+  "frontend_typecheck": "PASS",
+  "frontend_build": "PASS",
+  "demo_reproducibility": "PASS",
+  "browser_main_flow": "PASS",
+  "ac": [
+    {
+      "id": "AC1",
+      "requirement": "创建查看合成客群",
+      "result": "PASS",
+      "evidence": "v3-check.log / targeted-tests.log"
+    },
+    {
+      "id": "AC2",
+      "requirement": "客群人数预览",
+      "result": "PASS",
+      "evidence": "v3-check.log / targeted-tests.log"
+    },
+    {
+      "id": "AC3",
+      "requirement": "不可变客群快照",
+      "result": "PASS",
+      "evidence": "v3-check.log / targeted-tests.log"
+    },
+    {
+      "id": "AC4",
+      "requirement": "经营目标/客群/场景/权益/预算/KPI/停止规则配置",
+      "result": "PASS",
+      "evidence": "v3-check.log / targeted-tests.log"
+    },
+    {
+      "id": "AC5",
+      "requirement": "不可变发布版本",
+      "result": "PASS",
+      "evidence": "v3-check.log / targeted-tests.log"
+    },
+    {
+      "id": "AC6",
+      "requirement": "创建投放批次",
+      "result": "PASS",
+      "evidence": "v3-check.log / targeted-tests.log"
+    },
+    {
+      "id": "AC7",
+      "requirement": "领取产生权益、事件、预占",
+      "result": "PASS",
+      "evidence": "v3-check.log / targeted-tests.log"
+    },
+    {
+      "id": "AC8",
+      "requirement": "核销产生事件并预占转实扣",
+      "result": "PASS",
+      "evidence": "v3-check.log / targeted-tests.log"
+    },
+    {
+      "id": "AC9",
+      "requirement": "失效释放预算",
+      "result": "PASS",
+      "evidence": "v3-check.log / targeted-tests.log"
+    },
+    {
+      "id": "AC10",
+      "requirement": "并发预算不超发",
+      "result": "PASS",
+      "evidence": "v3-check.log / targeted-tests.log"
+    },
+    {
+      "id": "AC11",
+      "requirement": "重复核销仅成功一次",
+      "result": "PASS",
+      "evidence": "v3-check.log / targeted-tests.log"
+    },
+    {
+      "id": "AC12",
+      "requirement": "复盘事实可从台账重算",
+      "result": "PASS",
+      "evidence": "v3-check.log / targeted-tests.log"
+    },
+    {
+      "id": "AC13",
+      "requirement": "客群/场景/商户/权益四维拆解",
+      "result": "PASS",
+      "evidence": "v3-check.log / targeted-tests.log"
+    },
+    {
+      "id": "AC14",
+      "requirement": "人工决策及指标快照",
+      "result": "PASS",
+      "evidence": "v3-check.log / targeted-tests.log"
+    },
+    {
+      "id": "AC15",
+      "requirement": "固定种子可复现",
+      "result": "PASS",
+      "evidence": "v3-check.log / targeted-tests.log"
+    },
+    {
+      "id": "AC16",
+      "requirement": "原积分/抽奖/权益不回归",
+      "result": "PASS",
+      "evidence": "old-regression.log"
+    },
+    {
+      "id": "AC17",
+      "requirement": "Synthetic 页面边界",
+      "result": "PASS",
+      "evidence": "browser-flow.json / final-review-dom.txt"
+    },
+    {
+      "id": "AC18",
+      "requirement": "README 技术声明准确",
+      "result": "PASS",
+      "evidence": "../../README.md / ../../docs/v3-truth-boundaries.md"
+    },
+    {
+      "id": "AC19",
+      "requirement": "活动累计分配硬上限",
+      "result": "PASS",
+      "evidence": "v3-check.log / targeted-tests.log"
+    },
+    {
+      "id": "AC20",
+      "requirement": "批准后配置或规则变更拒绝发布",
+      "result": "PASS",
+      "evidence": "v3-check.log / targeted-tests.log"
+    },
+    {
+      "id": "AC21",
+      "requirement": "发布内容等于批准快照",
+      "result": "PASS",
+      "evidence": "v3-check.log / targeted-tests.log"
+    },
+    {
+      "id": "AC22",
+      "requirement": "目标值取发布版本/实际取事件",
+      "result": "PASS",
+      "evidence": "v3-check.log / targeted-tests.log"
+    },
+    {
+      "id": "AC23",
+      "requirement": "目标仅统计冻结观察窗口",
+      "result": "PASS",
+      "evidence": "v3-check.log / targeted-tests.log"
+    },
+    {
+      "id": "AC24",
+      "requirement": "投放结束与履约结束分离",
+      "result": "PASS",
+      "evidence": "v3-check.log / targeted-tests.log"
+    },
+    {
+      "id": "AC25",
+      "requirement": "结束后履约累计变化且不推定目标行为",
+      "result": "PASS",
+      "evidence": "v3-check.log / targeted-tests.log"
+    }
+  ],
+  "demo": {
+    "funnel": {
+      "SNAPSHOT": 2166,
+      "DELIVERED": 1563,
+      "PARTICIPATED": 964,
+      "CLAIMED": 500,
+      "REDEEMED": 275,
+      "TARGET_ACTION_COMPLETED": 224
+    },
+    "budget": {
+      "reserved": 0,
+      "committed": 330000,
+      "released": 270000,
+      "total": 600000,
+      "available": 270000,
+      "utilization": 0.55
+    },
+    "merchant_contribution": 220000,
+    "target_actual": 224,
+    "target_value": 150,
+    "target_delta": 74,
+    "target_achievement_rate": 1.4933333333333334
+  },
+  "blocking_issues": [],
+  "known_p2": [
+    "NEW label definition",
+    "Historical merchant display names not fully frozen",
+    "Empty breakdown null/0 UI",
+    "Existing DDD layering",
+    "Consumer draw-heavy homepage",
+    "No complex multi-Run management UI"
+  ],
+  "stop_development": true
+}

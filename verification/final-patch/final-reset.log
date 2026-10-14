@@ -1,0 +1,207 @@
+{
+  "result": "PASS",
+  "run_id": 31,
+  "fingerprint": {
+    "funnel": {
+      "SNAPSHOT": 2166,
+      "DELIVERED": 1563,
+      "PARTICIPATED": 964,
+      "CLAIMED": 500,
+      "REDEEMED": 275,
+      "TARGET_ACTION_COMPLETED": 224
+    },
+    "budget": {
+      "reserved": 0,
+      "committed": 330000,
+      "released": 270000,
+      "total": 600000,
+      "available": 270000,
+      "utilization": 0.55
+    },
+    "customer_hash": "def55f9afa784d7f4b74e8c9009f6cf707d60087ede08d953780cea1f2ae2e82",
+    "events": "CLAIMED\t500\nDELIVERED\t1563\nELIGIBLE\t2166\nPARTICIPATED\t964\nREDEEMED\t275\nTARGET_ACTION_COMPLETED\t224",
+    "costs": "COMMIT\t330000\t-330000\t330000\nRELEASE\t270000\t-270000\t0\nRESERVE\t600000\t600000\t0"
+  },
+  "review": {
+    "run": {
+      "id": 31,
+      "campaign_id": 34,
+      "campaign_version_id": 30,
+      "segment_snapshot_id": 33,
+      "status": "ENDED",
+      "start_time": "2026-10-01 00:00:00.0",
+      "end_time": "2026-10-12 23:59:59.0",
+      "budget_total": 600000,
+      "created_at": "2026-10-14 16:01:15.0",
+      "config_json": "{\"name\": \"涪陵社区生活场景｜沉默客户唤醒计划\", \"scene\": {\"id\": \"COMMUNITY\", \"name\": \"社区生活\"}, \"benefit\": {\"id\": 40, \"name\": \"20元社区生活权益\", \"type\": \"COUPON\", \"status\": \"ACTIVE\", \"scene_id\": \"COMMUNITY\", \"bank_cost\": 1200, \"face_value\": 2000, \"valid_days\": 7, \"total_stock\": 10000, \"points_price\": 0, \"merchant_cost\": 800, \"minimum_spend\": 4000}, \"end_time\": \"2026-10-12 23:59:59\", \"scene_id\": \"COMMUNITY\", \"merchants\": [{\"id\": 157, \"name\": \"渝邻便利（虚构）\", \"status\": \"ACTIVE\", \"category\": \"合成生活商户\", \"district\": \"涪陵\", \"scene_id\": \"COMMUNITY\", \"mock_flag\": true}, {\"id\": 158, \"name\": \"山城早餐铺（虚构）\", \"status\": \"ACTIVE\", \"category\": \"合成生活商户\", \"district\": \"涪陵\", \"scene_id\": \"COMMUNITY\", \"mock_flag\": true}, {\"id\": 159, \"name\": \"邻里生鲜（虚构）\", \"status\": \"ACTIVE\", \"category\": \"合成生活商户\", \"district\": \"涪陵\", \"scene_id\": \"COMMUNITY\", \"mock_flag\": true}, {\"id\": 160, \"name\": \"江畔小铺（虚构）\", \"status\": \"ACTIVE\", \"category\": \"合成生活商户\", \"district\": \"涪陵\", \"scene_id\": \"COMMUNITY\", \"mock_flag\": true}, {\"id\": 161, \"name\": \"桥头生活社（虚构）\", \"status\": \"ACTIVE\", \"category\": \"合成生活商户\", \"district\": \"涪陵\", \"scene_id\": \"COMMUNITY\", \"mock_flag\": true}, {\"id\": 162, \"name\": \"山城茶馆（虚构）\", \"status\": \"ACTIVE\", \"category\": \"合成生活商户\", \"district\": \"涪陵\", \"scene_id\": \"COMMUNITY\", \"mock_flag\": true}, {\"id\": 163, \"name\": \"邻里杂货（虚构）\", \"status\": \"ACTIVE\", \"category\": \"合成生活商户\", \"district\": \"涪陵\", \"scene_id\": \"COMMUNITY\", \"mock_flag\": true}, {\"id\": 164, \"name\": \"江岸便民店（虚构）\", \"status\": \"ACTIVE\", \"category\": \"合成生活商户\", \"district\": \"涪陵\", \"scene_id\": \"COMMUNITY\", \"mock_flag\": true}], \"mock_data\": true, \"objective\": \"CUSTOMER_REACTIVATION\", \"benefit_id\": 40, \"segment_id\": 55, \"start_time\": \"2026-10-01 00:00:00\", \"merchant_ids\": [157, 158, 159, 160, 161, 162, 163, 164], \"target_value\": 150, \"target_metric\": \"MOCK_COMMUNITY_PURCHASE\", \"guardrail_config\": {\"max_bank_budget\": 600000, \"min_redemption_rate\": 0.3, \"max_budget_burn_rate\": 0.9, \"max_cost_per_target_action\": 2400}, \"bank_budget_total\": 600000, \"segment_rule_json\": {\"logic\": \"AND\", \"conditions\": [{\"op\": \"=\", \"field\": \"district\", \"value\": \"涪陵\"}, {\"op\": \">=\", \"field\": \"last_active_days\", \"value\": 60}, {\"op\": \"<=\", \"field\": \"last_active_days\", \"value\": 180}, {\"op\": \">=\", \"field\": \"points_balance\", \"value\": 2000}, {\"op\": \"=\", \"field\": \"preferred_scene\", \"value\": \"COMMUNITY\"}, {\"op\": \"=\", \"field\": \"marketing_consent\", \"value\": true}]}, \"review_config_hash\": \"a53bc54ed854bef95c91fabdad1e7728aeb73ed858e0d1d9a751b114ad34e78f\", \"segment_snapshot_id\": 33, \"claim_limit_per_customer\": 1}"
+    },
+    "funnel": {
+      "SNAPSHOT": 2166,
+      "DELIVERED": 1563,
+      "PARTICIPATED": 964,
+      "CLAIMED": 500,
+      "REDEEMED": 275,
+      "TARGET_ACTION_COMPLETED": 224
+    },
+    "budget": {
+      "reserved": 0,
+      "committed": 330000,
+      "released": 270000,
+      "total": 600000,
+      "available": 270000,
+      "utilization": 0.55
+    },
+    "bank_cost": 330000,
+    "target_metric": "MOCK_COMMUNITY_PURCHASE",
+    "target_value": 150,
+    "target_actual": 224,
+    "target_delta": 74,
+    "target_achievement_rate": 1.4933333333333334,
+    "target_met": true,
+    "review_as_of": "2026-10-14T16:01:22.081124",
+    "run_start_at": "2026-10-01 00:00:00.0",
+    "run_end_at": "2026-10-12 23:59:59.0",
+    "target_observation_start_at": "2026-10-01 00:00:00.0",
+    "target_observation_end_at": "2026-10-12 23:59:59.0",
+    "outstanding_entitlement_count": 0,
+    "fulfillment_status": "SETTLED",
+    "merchant_contribution": 220000,
+    "cost_per_redeemed_customer": 1200.0,
+    "cost_per_target_action_customer": 1473.2142857142858,
+    "warnings": [],
+    "breakdown": {
+      "segment": [
+        {
+          "dimension_id": 33,
+          "claimed": 500,
+          "redeemed": 275,
+          "target_actions": 224,
+          "bank_cost": 330000,
+          "merchant_contribution": 220000,
+          "redemption_rate": 0.55,
+          "name": "沉默高积分客户",
+          "suggestion": "观察后人工决策"
+        }
+      ],
+      "scene": [
+        {
+          "dimension_id": "COMMUNITY",
+          "claimed": 500,
+          "redeemed": 275,
+          "target_actions": 224,
+          "bank_cost": 330000,
+          "merchant_contribution": 220000,
+          "redemption_rate": 0.55,
+          "name": "社区生活",
+          "suggestion": "观察后人工决策"
+        }
+      ],
+      "merchant": [
+        {
+          "dimension_id": 157,
+          "claimed": 60,
+          "redeemed": 8,
+          "target_actions": 7,
+          "bank_cost": 9600,
+          "merchant_contribution": 6400,
+          "redemption_rate": 0.13333333333333333,
+          "name": "渝邻便利（虚构）",
+          "suggestion": "核销率低于 20%，可考虑下一轮减少额度"
+        },
+        {
+          "dimension_id": 158,
+          "claimed": 66,
+          "redeemed": 43,
+          "target_actions": 35,
+          "bank_cost": 51600,
+          "merchant_contribution": 34400,
+          "redemption_rate": 0.6515151515151515,
+          "name": "山城早餐铺（虚构）",
+          "suggestion": "观察后人工决策"
+        },
+        {
+          "dimension_id": 159,
+          "claimed": 63,
+          "redeemed": 40,
+          "target_actions": 36,
+          "bank_cost": 48000,
+          "merchant_contribution": 32000,
+          "redemption_rate": 0.6349206349206349,
+          "name": "邻里生鲜（虚构）",
+          "suggestion": "观察后人工决策"
+        },
+        {
+          "dimension_id": 160,
+          "claimed": 60,
+          "redeemed": 38,
+          "target_actions": 29,
+          "bank_cost": 45600,
+          "merchant_contribution": 30400,
+          "redemption_rate": 0.6333333333333333,
+          "name": "江畔小铺（虚构）",
+          "suggestion": "观察后人工决策"
+        },
+        {
+          "dimension_id": 161,
+          "claimed": 63,
+          "redeemed": 43,
+          "target_actions": 32,
+          "bank_cost": 51600,
+          "merchant_contribution": 34400,
+          "redemption_rate": 0.6825396825396826,
+          "name": "桥头生活社（虚构）",
+          "suggestion": "观察后人工决策"
+        },
+        {
+          "dimension_id": 162,
+          "claimed": 65,
+          "redeemed": 40,
+          "target_actions": 34,
+          "bank_cost": 48000,
+          "merchant_contribution": 32000,
+          "redemption_rate": 0.6153846153846154,
+          "name": "山城茶馆（虚构）",
+          "suggestion": "观察后人工决策"
+        },
+        {
+          "dimension_id": 163,
+          "claimed": 66,
+          "redeemed": 37,
+          "target_actions": 32,
+          "bank_cost": 44400,
+          "merchant_contribution": 29600,
+          "redemption_rate": 0.5606060606060606,
+          "name": "邻里杂货（虚构）",
+          "suggestion": "观察后人工决策"
+        },
+        {
+          "dimension_id": 164,
+          "claimed": 57,
+          "redeemed": 26,
+          "target_actions": 19,
+          "bank_cost": 31200,
+          "merchant_contribution": 20800,
+          "redemption_rate": 0.45614035087719296,
+          "name": "江岸便民店（虚构）",
+          "suggestion": "观察后人工决策"
+        }
+      ],
+      "benefit": [
+        {
+          "dimension_id": 40,
+          "claimed": 500,
+          "redeemed": 275,
+          "target_actions": 224,
+          "bank_cost": 330000,
+          "merchant_contribution": 220000,
+          "redemption_rate": 0.55,
+          "name": "20元社区生活权益",
+          "suggestion": "观察后人工决策"
+        }
+      ]
+    },
+    "decisions": [],
+    "mock_data": true,
+    "interpretation": "目标行为仅计 Run 观察窗口；核销、预算与成本为截至 review_as_of 累计履约事实；合成行为不代表因果增量；金额单位为分。"
+  }
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yuhui.infrastructure.dao.RuleTreeMapper">
+
+    <resultMap id="BaseResultMap" type="com.yuhui.infrastructure.dao.po.RuleTree">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="treeName" column="tree_name" jdbcType="VARCHAR"/>
+            <result property="treeDesc" column="tree_desc" jdbcType="VARCHAR"/>
+            <result property="treeNodeRuleKey" column="tree_node_rule_key" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+</mapper>

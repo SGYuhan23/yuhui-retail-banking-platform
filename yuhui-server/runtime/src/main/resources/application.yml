@@ -1,0 +1,217 @@
+spring:
+  application:
+    name: yuhui-server
+  config:
+    import:
+      - optional:file:./.env[.properties]
+      - optional:file:./runtime/.env[.properties]
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  elasticsearch:
+    datasource:
+      url: jdbc:es://http://${app.infra.es.host}:${app.infra.es.port}
+      username: ${app.infra.es.username}
+      password: ${app.infra.es.password}
+  rabbitmq:
+    publisher-confirm-type: correlated
+    publisher-returns: true
+    addresses: ${app.infra.rabbitmq.host}:${app.infra.rabbitmq.port}
+    port: ${app.infra.rabbitmq.port}
+    username: ${app.infra.rabbitmq.username}
+    password: ${app.infra.rabbitmq.password}
+    virtual-host: ${app.infra.rabbitmq.virtual-host}
+    connection-timeout: 2s
+    listener:
+      simple:
+        retry:
+          enabled: true
+          initial-interval: 1000ms
+          multiplier: 1
+          max-attempts: 3
+        prefetch: 1
+        acknowledge-mode: auto
+    template:
+      mandatory: true
+      retry:
+        enabled: true
+        initial-interval: 1000ms
+        multiplier: 1
+        max-attempts: 3
+    topic:
+      activity_sku_stock_zero: activity_sku_stock_zero
+      award_stock_zero: award_stock_zero
+      send_award: send_award
+      send_rebate: send_rebate
+      credit_adjust_success: credit_adjust_success
+      lottery: lottery
+      delete_keys_with_prefix: delete_keys_with_prefix
+
+server:
+  port: 8091
+  servlet:
+    context-path: /api/v1
+  tomcat:
+    mbeanregistry:
+      enabled: true
+    threads:
+      max: 200
+      min-spare: 50
+    accept-count: 100
+    max-connections: 200
+
+thread:
+  pool:
+    executor:
+      config:
+        core-pool-size: 20
+        max-pool-size: 50
+        keep-alive-time: 5000
+        block-queue-size: 5000
+        policy: CallerRunsPolicy
+
+mini-db-router:
+  jdbc:
+    datasource:
+      dbCount: 2
+      tbCount: 4
+      default: db00
+      routerKey: userId
+      list: db01,db02
+      db00:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://${app.infra.mysql.host}:${app.infra.mysql.port}/marketing?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai&useSSL=true
+        username: ${app.infra.mysql.username}
+        password: ${app.infra.mysql.password}
+        type-class-name: com.zaxxer.hikari.HikariDataSource
+        pool:
+          pool-name: Retail_HikariCP
+          minimum-idle: 15
+          idle-timeout: 180000
+          maximum-pool-size: 25
+          auto-commit: true
+          max-lifetime: 1800000
+          connection-timeout: 30000
+          connection-test-query: SELECT 1
+      db01:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://${app.infra.mysql.host}:${app.infra.mysql.port}/marketing_01?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai&useSSL=true
+        username: ${app.infra.mysql.username}
+        password: ${app.infra.mysql.password}
+        type-class-name: com.zaxxer.hikari.HikariDataSource
+        pool:
+          pool-name: Retail_HikariCP
+          minimum-idle: 15
+          idle-timeout: 180000
+          maximum-pool-size: 25
+          auto-commit: true
+          max-lifetime: 1800000
+          connection-timeout: 30000
+          connection-test-query: SELECT 1
+      db02:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://${app.infra.mysql.host}:${app.infra.mysql.port}/marketing_02?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai&useSSL=true
+        username: ${app.infra.mysql.username}
+        password: ${app.infra.mysql.password}
+        type-class-name: com.zaxxer.hikari.HikariDataSource
+        pool:
+          pool-name: Retail_HikariCP
+          minimum-idle: 15
+          idle-timeout: 180000
+          maximum-pool-size: 25
+          auto-commit: true
+          max-lifetime: 1800000
+          connection-timeout: 30000
+          connection-test-query: SELECT 1
+
+redis:
+  sdk:
+    config:
+      host: ${app.infra.redis.host}
+      port: ${app.infra.redis.port}
+      password: ${app.infra.redis.password}
+      database: ${app.infra.redis.database}
+      pool-size: 10
+      min-idle-size: 5
+      idle-timeout: 30000
+      connect-timeout: 10000
+      retry-attempts: 3
+      retry-interval: 1000
+      ping-interval: 60000
+      keep-alive: true
+
+logging:
+  config: classpath:logback-spring.xml
+
+dubbo:
+  application:
+    name: yuhui-retail-banking-platform
+    version: 1.0
+  registry:
+    id: nacos-registry
+    address: nacos://${app.infra.nacos.host}:${app.infra.nacos.port}
+  protocol:
+    name: tri
+    port: -1
+  consumer:
+    check: false
+    timeout: 5000
+    retries: 1
+
+auth:
+  tenant-id: ${app.auth.tenant-id}
+  refresh-token-prefix: "lottery:refresh_token:"
+  refresh-token-ttl-days: 7
+
+authing:
+  app-id: ${app.authing.app-id}
+  app-secret: ${app.authing.app-secret}
+  app-host: ${app.authing.app-host}
+
+zookeeper:
+  sdk:
+    config:
+      connect-string: ${app.infra.zookeeper.host}:${app.infra.zookeeper.port}
+      base-sleep-time-ms: 1000
+      max-retries: 3
+      session-timeout-ms: 18000
+      connection-timeout-ms: 30000
+
+xxl:
+  job:
+    accessToken: ${XXL_JOB_ACCESS_TOKEN:demo-token} # DEMO_ONLY
+    admin:
+      addresses: http://${app.infra.xxl.host}:${app.infra.xxl.port}/xxl-job-admin
+    executor:
+      address:
+      appname: marketing-job
+      ip:
+      port: 9999
+      logpath: ./data/applogs/xxl-job/jobhandler
+      logretentiondays: 30
+
+alioss:
+  endpoint: ${app.infra.alioss.endpoint}
+  accessKeyId: ${app.infra.alioss.access-key-id}
+  accessKeySecret: ${app.infra.alioss.access-key-secret}
+  bucketName: ${app.infra.alioss.bucket-name}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+
+#minio:
+#  endpoint: http://${app.infra.minio.host}:${app.infra.minio.port}
+#  accessKey: ${app.infra.minio.access-key}
+#  accessSecret: ${app.infra.minio.access-secret}
+#  bucketName: example-bucket

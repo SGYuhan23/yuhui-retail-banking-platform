@@ -1,0 +1,16 @@
+{
+  "result": "PASS",
+  "mode": "strict artifact",
+  "broken_local_markdown_links": [],
+  "required_missing": [],
+  "frozen_changed": [],
+  "obsolete_license_warning": [],
+  "identity_leaks": [],
+  "real_secret": [],
+  "old_author_identity": [],
+  "old_repo_identity": [],
+  "forbidden_public_ip": [],
+  "private_external_asset": [],
+  "public_file_count": 720,
+  "public_bytes": 29369669
+}

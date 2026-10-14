@@ -1,0 +1,68 @@
+PASS TEST 12: fixed seed customer contents, event counts and budget costs reproduce
+PASS Demo dataset sizes
+PASS TEST 1: segment preview stable
+PASS TEST 2: snapshot unchanged after customer mutation
+PASS Governance cannot publish draft
+PASS TEST 3: published configuration API rejects edits
+PASS TEST 3b: DB rejects version mutation
+PASS Snapshot member DB mutation rejected
+PASS Repeated batch cannot double campaign budget
+PASS TEST 4: 20 concurrent claims cannot exceed 2400-cent cap
+PASS TEST 5: each claim writes one reserve and one claimed event
+PASS TEST 9: repeated claim prevented
+PASS Wrong merchant cannot redeem
+PASS Minimum spend enforced
+PASS TEST 8: 16 concurrent redeems exactly one success
+PASS TEST 6: reserve transitions to commit
+PASS Expired redemption blocked
+PASS TEST 7: expiry releases once
+PASS TEST 10: semantic event key idempotent
+PASS TEST 11: dashboard independently reconstructed from SQL ledgers
+PASS Four dimensions present
+PASS Public wallet hides bank and merchant costs
+PASS Marketing consent mandatory
+PASS Revoked live consent blocks new touch
+PASS Manual decision stores metrics snapshot
+PASS Ledger historical updates blocked
+PASS TARGET-1: fixed demo target 150 / actual 224 / delta 74 / 149.333% / met
+PASS TARGET frozen version and independent window SQL
+PASS TIME-2 demo all entitlements terminal
+PASS TARGET-2: ten post-window observations excluded (SQL total 234)
+PASS BUDGET-1: total6000 hard2400, 2400 success then 1 rejected
+PASS BUDGET-2: null hard, 3000+3000 allowed then 1 rejected
+PASS BUDGET-3: hard5000, 2400+2600 allowed then 1 rejected
+PASS BUDGET-4: concurrent Run allocation serialized on campaign
+PASS REVIEW-2: approved budget mutation rejected and DRAFT persists
+PASS REVIEW approve retains exact submitted payload
+PASS REVIEW-3: segment-only change after submit rejected at publish
+PASS REVIEW-1/4: re-review succeeds; published payload equals approved
+PASS REVIEW-3b: segment-only AFTER APPROVAL mutation rejected
+PASS REVIEW-5: published version and snapshot immutable
+PASS TIME-1: ended Run with available entitlements is ONGOING
+PASS TIME ongoing fulfillment permits decision with frozen time semantics
+PASS TIME-3: redeem AFTER configured end changes cumulative costs, not target
+PASS Decision history unchanged after fulfillment
+PASS TIME-4/BUDGET-5: post-end expiry releases once and settles
+PASS Fulfillment count independently reconciles to entitlement SQL
+PASS Review exposes separate as-of, delivery and observation windows
+PASS Final showcase restored reproducibly
+{
+  "seed": 202610,
+  "run_id": 20,
+  "funnel": {
+    "SNAPSHOT": 2166,
+    "DELIVERED": 1563,
+    "PARTICIPATED": 964,
+    "CLAIMED": 500,
+    "REDEEMED": 275,
+    "TARGET_ACTION_COMPLETED": 224
+  },
+  "budget": {
+    "reserved": 0,
+    "committed": 330000,
+    "released": 270000,
+    "total": 600000,
+    "available": 270000,
+    "utilization": 0.55
+  }
+}

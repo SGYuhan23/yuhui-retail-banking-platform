@@ -1,0 +1,70 @@
+smoke: PASS
+/erp/activity/query_activity 1000 success 1
+/erp/activity_count/query_activity_count 1000 success 4
+/erp/activity_sku/query_activity_sku 1000 success 4
+/erp/award/query_award 1000 success 9
+/erp/behavior/query_behavior 1000 success 3
+/erp/behavior/query_behavior_gift 1000 success 1
+/erp/query_activity_account 1000 success 5
+/erp/query_activity_record 1000 success 11
+/erp/query_credit_account 1000 success 4
+/erp/query_credit_record 1000 success 8
+/erp/query_user_award_record 1000 success 9
+/erp/query_user_award_record_by_activity_id 1000 success 9
+/erp/query_user_behavior_rebate_order 1000 success 11
+/erp/query_user_order 1000 success 5
+/erp/rule/query_rule 1000 success 2
+/erp/rule/tree/node/line/query_rule_tree_node_line 1000 success 11
+/erp/rule/tree/node/query_rule_tree_node 1000 success 13
+/erp/rule/tree/node/query_rule_tree_node_one 1000 success 3
+/erp/rule/tree/query_rule_tree 1000 success 5
+/erp/strategy/award/query_strategy_award 1000 success 8
+/erp/strategy/query_strategy 1000 success 2
+
+check-crud: PASS
+strategy create/update/read PASS
+activity create/update/read PASS
+activity_count create/update/read PASS
+award create/update/read PASS
+rule create/update/read PASS
+rule_tree create/update/read PASS
+activity_sku create/update/read PASS
+behavior create/update/read PASS
+rule_tree_node create/update/read PASS
+rule_tree_node_line create/update/read PASS
+strategy_award create/update/read PASS
+strategy_award delete True
+rule_tree_node_line delete True
+rule_tree_node delete True
+behavior delete True
+activity_sku delete True
+rule_tree delete True
+rule delete True
+award delete True
+activity_count delete True
+activity delete True
+strategy delete True
+
+check-flow: PASS
+PASS: 20 checks; test user: replica-check-1791982279
+
+check-alias: PASS
+PASS 25 assertions; 1000000 seeded samples: [199795, 300627, 499578, 0]
+
+check-wallet: PASS
+PASS wallet: 5 checks
+
+check-outbox: PASS
+PASS outbox: 2 checks
+
+check-gift-cache: PASS
+Gift receipt cache-miss regression PASS
+
+check-credit-concurrency: PASS
+PASS credit concurrency: 6 checks
+
+check-award-replay: PASS
+PASS award replay: 5 checks
+
+check-warmup: PASS
+PASS warmup: existing stock preserved

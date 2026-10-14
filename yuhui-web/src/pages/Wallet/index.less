@@ -1,0 +1,198 @@
+.heading {
+  padding: 20px 0 26px;
+}
+.heading > span {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #ab8a6d;
+}
+.heading h1 {
+  font: 600 36px/1.45 'Songti SC', 'STSong', serif;
+  margin: 12px 0;
+  color: #342a21;
+}
+.heading em {
+  font-style: normal;
+  color: #b4442d;
+}
+.heading p {
+  color: #8b7f72;
+  font-size: 13px;
+}
+.summary {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  border: 1px solid #e8dfd3;
+  border-radius: 18px;
+  padding: 24px 32px;
+  background: #fffdf9;
+}
+.summary > div {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.summary > div > span:first-child {
+  font-size: 27px;
+  color: #b47d56;
+}
+.summary > div > span:last-child {
+  font-size: 11px;
+  color: #8d7e6e;
+}
+.summary strong {
+  display: block;
+  font: 32px/1.5 Georgia, serif;
+  color: #3c3026;
+}
+.summary > a {
+  margin-left: auto;
+  color: #b5432e;
+  font-size: 12px;
+}
+.filters {
+  display: flex;
+  gap: 24px;
+  margin: 28px 0 20px;
+  border-bottom: 1px solid #e9dfd3;
+}
+.filters button {
+  border: 0;
+  background: none;
+  color: #8b7d6e;
+  padding: 0 8px 12px;
+  cursor: pointer;
+  min-height: 44px;
+}
+.filters button.active {
+  border-bottom: 2px solid #b5432e;
+  color: #b5432e;
+}
+.empty {
+  padding: 44px 20px 48px;
+  text-align: center;
+  background: #fffdf9;
+  border: 1px solid #ece5da;
+  border-radius: 20px;
+}
+.empty > div {
+  width: 200px;
+  max-width: 100%;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+}
+.empty h2 {
+  font: 600 24px/1.5 'Songti SC', serif;
+}
+.empty p {
+  color: #968778;
+  font-size: 12px;
+  margin-bottom: 25px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+.card {
+  background: #fffdf9;
+  border: 1px solid #e8dfd3;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.card > div:first-child {
+  aspect-ratio: 1.9;
+}
+.cardBody {
+  padding: 24px;
+}
+.available,
+.used {
+  font-size: 10px;
+  padding: 4px 9px;
+  border-radius: 20px;
+}
+.available {
+  background: #e9efe6;
+  color: #638468;
+}
+.used {
+  background: #eeebe5;
+  color: #918477;
+}
+.card h2 {
+  font: 600 24px/1.5 'Songti SC', serif;
+  margin: 15px 0 8px;
+}
+.card p {
+  font-size: 11px;
+  color: #8c7e6d;
+}
+.card small {
+  font-size: 9px;
+  color: #a29484;
+  overflow-wrap: anywhere;
+}
+.cardAction {
+  margin-top: 20px;
+  border-top: 1px dashed #e2d5c4;
+  padding-top: 20px;
+}
+.cardAction > span {
+  font-size: 11px;
+  color: #86927f;
+}
+.notice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 24px 0 0;
+  color: #9a8977;
+  font-size: 11px;
+}
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .summary {
+    gap: 30px;
+    padding: 20px;
+  }
+}
+@media (max-width: 520px) {
+  .heading {
+    padding-top: 6px;
+  }
+  .heading h1 {
+    font-size: 29px;
+  }
+  .summary {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .summary > div {
+    gap: 10px;
+  }
+  .summary > a {
+    width: 100%;
+    margin: 0;
+    border-top: 1px solid #eee5da;
+    padding-top: 14px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .notice {
+    font-size: 10px;
+    align-items: flex-start;
+  }
+  .empty {
+    padding: 32px 16px;
+  }
+  .empty h2 {
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,430 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] yuhui-platform                                                     [pom]
+[INFO] shared                                                             [jar]
+[INFO] contracts                                                          [jar]
+[INFO] marketing                                                          [jar]
+[INFO] readmodel                                                          [jar]
+[INFO] storage                                                            [jar]
+[INFO] entrypoints                                                        [jar]
+[INFO] 
+[INFO] ----------------------< com.yuhui:yuhui-platform >----------------------
+[INFO] Building yuhui-platform 1.0-SNAPSHOT                               [1/7]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --------------------------< com.yuhui:shared >--------------------------
+[INFO] Building shared 1.0-SNAPSHOT                                       [2/7]
+[INFO]   from shared/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Parameter 'propertiesEncoding' is unknown for plugin 'maven-resources-plugin:2.5:resources (default-resources)'
+[WARNING] Parameter 'parameters' is unknown for plugin 'maven-compiler-plugin:3.0:compile (default-compile)'
+[WARNING] Parameter 'propertiesEncoding' is unknown for plugin 'maven-resources-plugin:2.5:testResources (default-testResources)'
+[WARNING] Parameter 'parameters' is unknown for plugin 'maven-compiler-plugin:3.0:testCompile (default-testCompile)'
+[INFO] 
+[INFO] --- resources:2.5:resources (default-resources) @ shared ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/shared/src/main/resources
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/shared/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.0:compile (default-compile) @ shared ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 18 source files to <workspace>/yuhui-retail-banking-platform/yuhui-server/shared/target/classes
+[INFO] 
+[INFO] --- resources:2.5:testResources (default-testResources) @ shared ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/shared/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.0:testCompile (default-testCompile) @ shared ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ shared ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] ------------------------< com.yuhui:contracts >-------------------------
+[INFO] Building contracts 1.0-SNAPSHOT                                    [3/7]
+[INFO]   from contracts/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Parameter 'propertiesEncoding' is unknown for plugin 'maven-resources-plugin:2.5:resources (default-resources)'
+[WARNING] Parameter 'parameters' is unknown for plugin 'maven-compiler-plugin:3.0:compile (default-compile)'
+[WARNING] Parameter 'propertiesEncoding' is unknown for plugin 'maven-resources-plugin:2.5:testResources (default-testResources)'
+[WARNING] Parameter 'parameters' is unknown for plugin 'maven-compiler-plugin:3.0:testCompile (default-testCompile)'
+[INFO] 
+[INFO] --- resources:2.5:resources (default-resources) @ contracts ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/contracts/src/main/resources
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/contracts/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.0:compile (default-compile) @ contracts ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 71 source files to <workspace>/yuhui-retail-banking-platform/yuhui-server/contracts/target/classes
+[INFO] 
+[INFO] --- resources:2.5:testResources (default-testResources) @ contracts ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/contracts/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.0:testCompile (default-testCompile) @ contracts ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ contracts ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] ------------------------< com.yuhui:marketing >-------------------------
+[INFO] Building marketing 1.0-SNAPSHOT                                    [4/7]
+[INFO]   from marketing/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Parameter 'propertiesEncoding' is unknown for plugin 'maven-resources-plugin:2.5:resources (default-resources)'
+[WARNING] Parameter 'parameters' is unknown for plugin 'maven-compiler-plugin:3.0:compile (default-compile)'
+[WARNING] Parameter 'propertiesEncoding' is unknown for plugin 'maven-resources-plugin:2.5:testResources (default-testResources)'
+[WARNING] Parameter 'parameters' is unknown for plugin 'maven-compiler-plugin:3.0:testCompile (default-testCompile)'
+[INFO] 
+[INFO] --- resources:2.5:resources (default-resources) @ marketing ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/marketing/src/main/resources
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/marketing/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.0:compile (default-compile) @ marketing ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 153 source files to <workspace>/yuhui-retail-banking-platform/yuhui-server/marketing/target/classes
+[INFO] 
+[INFO] --- resources:2.5:testResources (default-testResources) @ marketing ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/marketing/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.0:testCompile (default-testCompile) @ marketing ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ marketing ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] ------------------------< com.yuhui:readmodel >-------------------------
+[INFO] Building readmodel 1.0-SNAPSHOT                                    [5/7]
+[INFO]   from readmodel/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Parameter 'propertiesEncoding' is unknown for plugin 'maven-resources-plugin:2.5:resources (default-resources)'
+[WARNING] Parameter 'parameters' is unknown for plugin 'maven-compiler-plugin:3.0:compile (default-compile)'
+[WARNING] Parameter 'propertiesEncoding' is unknown for plugin 'maven-resources-plugin:2.5:testResources (default-testResources)'
+[WARNING] Parameter 'parameters' is unknown for plugin 'maven-compiler-plugin:3.0:testCompile (default-testCompile)'
+[INFO] 
+[INFO] --- resources:2.5:resources (default-resources) @ readmodel ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/readmodel/src/main/resources
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/readmodel/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.0:compile (default-compile) @ readmodel ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 22 source files to <workspace>/yuhui-retail-banking-platform/yuhui-server/readmodel/target/classes
+[INFO] 
+[INFO] --- resources:2.5:testResources (default-testResources) @ readmodel ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/readmodel/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.0:testCompile (default-testCompile) @ readmodel ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ readmodel ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] -------------------------< com.yuhui:storage >--------------------------
+[INFO] Building storage 1.0-SNAPSHOT                                      [6/7]
+[INFO]   from storage/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Parameter 'propertiesEncoding' is unknown for plugin 'maven-resources-plugin:2.5:resources (default-resources)'
+[WARNING] Parameter 'parameters' is unknown for plugin 'maven-compiler-plugin:3.0:compile (default-compile)'
+[WARNING] Parameter 'propertiesEncoding' is unknown for plugin 'maven-resources-plugin:2.5:testResources (default-testResources)'
+[WARNING] Parameter 'parameters' is unknown for plugin 'maven-compiler-plugin:3.0:testCompile (default-testCompile)'
+[INFO] 
+[INFO] --- resources:2.5:resources (default-resources) @ storage ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/storage/src/main/resources
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/storage/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.0:compile (default-compile) @ storage ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 88 source files to <workspace>/yuhui-retail-banking-platform/yuhui-server/storage/target/classes
+[WARNING] <workspace>/yuhui-retail-banking-platform/yuhui-server/storage/src/main/java/com/yuhui/infrastructure/redis/RedisServiceImpl.java: 某些输入文件使用或覆盖了已过时的 API。
+[WARNING] <workspace>/yuhui-retail-banking-platform/yuhui-server/storage/src/main/java/com/yuhui/infrastructure/redis/RedisServiceImpl.java: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+[INFO] 
+[INFO] --- resources:2.5:testResources (default-testResources) @ storage ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/storage/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.0:testCompile (default-testCompile) @ storage ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ storage ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] -----------------------< com.yuhui:entrypoints >------------------------
+[INFO] Building entrypoints 1.0-SNAPSHOT                                  [7/7]
+[INFO]   from entrypoints/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Parameter 'propertiesEncoding' is unknown for plugin 'maven-resources-plugin:2.5:resources (default-resources)'
+[WARNING] Parameter 'parameters' is unknown for plugin 'maven-compiler-plugin:3.0:compile (default-compile)'
+[WARNING] Parameter 'propertiesEncoding' is unknown for plugin 'maven-resources-plugin:2.5:testResources (default-testResources)'
+[WARNING] Parameter 'parameters' is unknown for plugin 'maven-compiler-plugin:3.0:testCompile (default-testCompile)'
+[WARNING] 2 problems were encountered while building the effective model for org.apache.yetus:audience-annotations:jar:0.5.0 during dependency collection step for project (use -X to see details)
+[INFO] 
+[INFO] --- resources:2.5:resources (default-resources) @ entrypoints ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/entrypoints/src/main/resources
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/entrypoints/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.0:compile (default-compile) @ entrypoints ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 39 source files to <workspace>/yuhui-retail-banking-platform/yuhui-server/entrypoints/target/classes
+[WARNING] <workspace>/yuhui-retail-banking-platform/yuhui-server/entrypoints/src/main/java/com/yuhui/operating/V3Controller.java: 某些输入文件使用了未经检查或不安全的操作。
+[WARNING] <workspace>/yuhui-retail-banking-platform/yuhui-server/entrypoints/src/main/java/com/yuhui/operating/V3Controller.java: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+[INFO] 
+[INFO] --- resources:2.5:testResources (default-testResources) @ entrypoints ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/entrypoints/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.0:testCompile (default-testCompile) @ entrypoints ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 7 source files to <workspace>/yuhui-retail-banking-platform/yuhui-server/entrypoints/target/test-classes
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ entrypoints ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.yuhui.marketing.FoundationRefactorTest
+20:50:10.568 [main] WARN com.yuhui.marketing.task.service.TaskServiceImpl - Outbox retry pending messageId:x
+java.lang.IllegalStateException: null
+	at com.yuhui.marketing.task.service.TaskServiceImpl.dispatchPendingBatch(TaskServiceImpl.java:19)
+	at com.yuhui.marketing.FoundationRefactorTest.failedCompletionWriteRemainsRetryable(FoundationRefactorTest.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+20:50:10.570 [main] WARN com.yuhui.marketing.task.service.TaskServiceImpl - Outbox retry pending messageId:1
+java.lang.IllegalStateException: confirm failed
+	at com.yuhui.marketing.task.service.TaskServiceImpl.dispatchPendingBatch(TaskServiceImpl.java:17)
+	at com.yuhui.marketing.FoundationRefactorTest.outboxConfirmFailureIsRetryableAndLaterTasksStillRun(FoundationRefactorTest.java:22)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.258 s - in com.yuhui.marketing.FoundationRefactorTest
+[INFO] Running com.yuhui.marketing.RewardFulfillmentTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in com.yuhui.marketing.RewardFulfillmentTest
+[INFO] Running com.yuhui.marketing.PolicyCompositionTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in com.yuhui.marketing.PolicyCompositionTest
+[INFO] Running com.yuhui.marketing.RaffleBoundaryTest
+20:50:10.664 [main] DEBUG com.yuhui.marketing.raffle.service.RaffleExecution - [RaffleExecution]抽奖责任链通过 用户ID：u, 策略ID：2, 奖品ID：7, 奖品规则模型：blacklist
+20:50:10.666 [main] ERROR com.yuhui.marketing.raffle.service.RaffleExecution - [RaffleExecution]抽奖失败,strategyId/activityId为 null 用户ID：u
+20:50:10.667 [main] DEBUG com.yuhui.marketing.raffle.service.RaffleExecution - [RaffleExecution]抽奖责任链通过 用户ID：u, 策略ID：2, 奖品ID：7, 奖品规则模型：default
+20:50:10.667 [main] DEBUG com.yuhui.marketing.raffle.service.RaffleExecution - [RaffleExecution]默认规则执行规则树 用户ID：u, 策略ID：2, 奖品ID：8, 奖品规则模型：null
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s - in com.yuhui.marketing.RaffleBoundaryTest
+[INFO] Running com.yuhui.marketing.CacheMigrationTest
+20:50:10.721 [main] DEBUG io.netty.util.internal.logging.InternalLoggerFactory - Using SLF4J as the default logging framework
+20:50:10.722 [main] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+20:50:10.722 [main] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+20:50:10.728 [main] DEBUG io.netty.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+20:50:10.728 [main] DEBUG io.netty.util.internal.PlatformDependent0 - Java version: 17
+20:50:10.728 [main] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+20:50:10.728 [main] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+20:50:10.728 [main] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.storeFence: available
+20:50:10.728 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+20:50:10.728 [main] DEBUG io.netty.util.internal.PlatformDependent0 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
+20:50:10.729 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+20:50:10.729 [main] DEBUG io.netty.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @79a00180
+20:50:10.729 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, int): unavailable
+20:50:10.729 [main] DEBUG io.netty.util.internal.PlatformDependent - sun.misc.Unsafe: available
+20:50:10.730 [main] DEBUG io.netty.util.internal.PlatformDependent - maxDirectMemory: 9663676416 bytes (maybe)
+20:50:10.730 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.tmpdir: /var/folders/6j/sgsn69j12kj58y40sg4qslyh0000gn/T (java.io.tmpdir)
+20:50:10.730 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+20:50:10.730 [main] DEBUG io.netty.util.internal.PlatformDependent - Platform: MacOS
+20:50:10.730 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
+20:50:10.730 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+20:50:10.730 [main] DEBUG io.netty.util.internal.CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
+20:50:10.730 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+20:50:10.734 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+20:50:10.734 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+20:50:10.735 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 24
+20:50:10.735 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 24
+20:50:10.735 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+20:50:10.735 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 9
+20:50:10.735 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 4194304
+20:50:10.735 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+20:50:10.735 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+20:50:10.736 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+20:50:10.736 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+20:50:10.736 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+20:50:10.736 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: false
+20:50:10.736 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+20:50:10.741 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: pooled
+20:50:10.741 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
+20:50:10.741 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+20:50:10.744 [main] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkAccessible: true
+20:50:10.744 [main] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkBounds: true
+20:50:10.745 [main] DEBUG io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@bdd2027
+20:50:10.746 [main] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxCapacityPerThread: 4096
+20:50:10.746 [main] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.ratio: 8
+20:50:10.746 [main] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.chunkSize: 32
+20:50:10.746 [main] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.blocking: false
+20:50:10.746 [main] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.batchFastThreadLocalOnly: true
+20:50:10.749 [main] DEBUG io.netty.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.11 s - in com.yuhui.marketing.CacheMigrationTest
+[INFO] Running com.yuhui.operating.V3ReviewConfigTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in com.yuhui.operating.V3ReviewConfigTest
+[INFO] Running com.yuhui.operating.V3RulesTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.yuhui.operating.V3RulesTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 22, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for yuhui-platform 1.0-SNAPSHOT:
+[INFO] 
+[INFO] yuhui-platform ..................................... SUCCESS [  0.001 s]
+[INFO] shared ............................................. SUCCESS [  1.547 s]
+[INFO] contracts .......................................... SUCCESS [  1.172 s]
+[INFO] marketing .......................................... SUCCESS [  1.363 s]
+[INFO] readmodel .......................................... SUCCESS [  0.408 s]
+[INFO] storage ............................................ SUCCESS [  1.413 s]
+[INFO] entrypoints ........................................ SUCCESS [  2.715 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.773 s
+[INFO] Finished at: 2026-10-14T20:50:11+08:00
+[INFO] ------------------------------------------------------------------------

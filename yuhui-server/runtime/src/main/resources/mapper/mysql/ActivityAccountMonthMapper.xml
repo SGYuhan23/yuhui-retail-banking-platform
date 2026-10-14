@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yuhui.infrastructure.dao.ActivityAccountMonthMapper">
+
+    <resultMap id="BaseResultMap" type="com.yuhui.infrastructure.dao.po.ActivityAccountMonth">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="userId" column="user_id" jdbcType="VARCHAR"/>
+            <result property="activityId" column="activity_id" jdbcType="BIGINT"/>
+            <result property="month" column="month" jdbcType="VARCHAR"/>
+            <result property="monthCount" column="month_count" jdbcType="INTEGER"/>
+            <result property="monthCountSurplus" column="month_count_surplus" jdbcType="INTEGER"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <update id="updateAccount">
+        update activity_account_month
+        set month_count_surplus = month_count_surplus + #{monthCountSurplus},
+            month_count = month_count + #{monthCount},
+            update_time = now()
+        where user_id = #{userId} and activity_id = #{activityId} and month = #{month}
+    </update>
+
+</mapper>

@@ -1,0 +1,281 @@
+.pageCard {
+  min-height: calc(100vh - 136px);
+}
+
+.editorLayout {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.sideCard {
+  border-radius: 16px;
+}
+
+.sectionTitle {
+  margin-bottom: 12px;
+}
+
+.templateList {
+  display: grid;
+  gap: 12px;
+}
+
+.templateButton {
+  width: 100%;
+  justify-content: flex-start;
+  height: auto;
+  padding: 12px 14px;
+  border-radius: 14px;
+}
+
+.templateMeta {
+  display: grid;
+  gap: 4px;
+  text-align: left;
+}
+
+.graphPanel {
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.graphCanvas {
+  position: relative;
+  min-height: 560px;
+  border-radius: 18px;
+  border: 1px solid #e5edf8;
+  background:
+    radial-gradient(circle at top left, rgba(7, 114, 201, 0.08), transparent 30%),
+    linear-gradient(180deg, #fbfdff 0%, #f4f8fd 100%);
+  overflow: auto;
+}
+
+.canvasSvg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.canvasInner {
+  position: relative;
+  min-height: 560px;
+}
+
+.nodeCard {
+  position: absolute;
+  width: 196px;
+  height: 152px;
+  border-radius: 18px;
+  cursor: grab;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+  box-shadow: 0 14px 30px rgba(31, 56, 88, 0.08);
+}
+
+.nodeCard :global(.ant-card-body) {
+  height: 100%;
+  padding: 18px 18px 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nodeCard:hover {
+  transform: translateY(-2px);
+}
+
+.nodeDragging {
+  cursor: grabbing;
+  transform: none;
+  z-index: 2;
+}
+
+.nodeSelected {
+  border-color: #1677ff;
+  box-shadow: 0 18px 40px rgba(22, 119, 255, 0.18);
+}
+
+.nodeHandle {
+  position: absolute;
+  top: calc(50% - 8px);
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ffffff;
+  border-radius: 999px;
+  background: #1677ff;
+  box-shadow: 0 6px 16px rgba(22, 119, 255, 0.28);
+  cursor: crosshair;
+  z-index: 1;
+}
+
+.nodeHandleInput {
+  left: -8px;
+}
+
+.nodeHandleOutput {
+  right: -8px;
+}
+
+.nodeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.nodeName {
+  display: block;
+}
+
+.nodeDesc {
+  min-height: 34px;
+  margin-bottom: 0;
+}
+
+.nodeFooter {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: auto;
+  align-items: center;
+}
+
+.edgeLabel {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+  padding: 3px 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #d7e5fb;
+  color: #1f3b66;
+  font-size: 11px;
+  line-height: 1;
+  pointer-events: auto;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.edgeAllow {
+  background: rgba(82, 196, 26, 0.12);
+  border-color: rgba(82, 196, 26, 0.4);
+  color: #237804;
+}
+
+.edgeTakeOver {
+  background: rgba(255, 77, 79, 0.12);
+  border-color: rgba(255, 77, 79, 0.38);
+  color: #cf1322;
+}
+
+.edgeSelected {
+  border-color: #1677ff;
+  color: #1677ff;
+  box-shadow: 0 8px 18px rgba(22, 119, 255, 0.16);
+}
+
+.edgeDelete {
+  width: 14px;
+  height: 14px;
+  border: 0;
+  border-radius: 999px;
+  background: #ffe7e7;
+  color: #d4380d;
+  font-size: 10px;
+  line-height: 14px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.edgeEdit {
+  width: 14px;
+  height: 14px;
+  border: 0;
+  border-radius: 999px;
+  background: #edf5ff;
+  color: #1677ff;
+  font-size: 11px;
+  line-height: 14px;
+  cursor: pointer;
+  padding: 0;
+  text-align: center;
+}
+
+.emptyCanvas {
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.legendList {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.legendItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #f7f9fc;
+}
+
+.detailList {
+  display: grid;
+  gap: 10px;
+}
+
+.detailRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #f7f9fc;
+}
+
+.detailLabel {
+  color: #5f6b7a;
+}
+
+.detailValue {
+  max-width: 220px;
+  text-align: right;
+  word-break: break-all;
+}
+
+.detailActions {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.treeMeta {
+  display: grid;
+  gap: 12px;
+}
+
+.drawerTitle {
+  margin: 0;
+}
+
+@media (max-width: 1400px) {
+  .editorLayout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .graphCanvas,
+  .canvasInner,
+  .emptyCanvas {
+    min-height: 500px;
+  }
+}

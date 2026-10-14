@@ -1,0 +1,1078 @@
+.greeting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+.greeting > span:first-child {
+  font-family: 'Songti SC', 'STSong', serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.greeting > span:last-child {
+  color: #8d8377;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+.heroRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 282px;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+.hero {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 326px;
+  background: #eee5d7;
+}
+.hero > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60% 55%;
+}
+.hero:after {
+  position: absolute;
+  content: '';
+  inset: 0;
+  background: linear-gradient(90deg, #f8f1e8 0%, #f8f1e8ee 20%, #f8f1e888 47%, transparent 77%);
+}
+.heroCopy {
+  position: relative;
+  z-index: 1;
+  padding: 38px 32px;
+}
+.eyebrow {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #8c725b;
+}
+.hero h1 {
+  font-family: 'Songti SC', 'STSong', 'SimSun', serif;
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 1px;
+  margin: 15px 0 12px;
+  color: #29241f;
+}
+.hero h1 em {
+  font-style: normal;
+  color: #b3422c;
+}
+.hero p {
+  font-family: 'Songti SC', serif;
+  font-size: 15px;
+  color: #716050;
+  margin: 0 0 22px;
+}
+.primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-height: 44px;
+  border: 0;
+  border-radius: 24px;
+  padding: 0 23px;
+  background: #bd452d;
+  color: #fff !important;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.primary:hover {
+  background: #a63a25;
+}
+.cityStamp {
+  position: absolute;
+  bottom: 17px;
+  right: 18px;
+  z-index: 1;
+  color: white;
+  background: #3a2a1c55;
+  border: 1px solid #ffffff66;
+  padding: 3px 9px;
+  border-radius: 3px;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+.account {
+  position: relative;
+  background: #30251f;
+  color: #f9f0e3;
+  border-radius: 20px;
+  padding: 25px 26px;
+  overflow: hidden;
+}
+.account:after {
+  content: '';
+  width: 210px;
+  height: 210px;
+  border: 1px solid #dcc5a333;
+  box-shadow: 0 0 0 9px #dcc5a309, 0 0 0 19px #dcc5a30a, 0 0 0 29px #dcc5a30a, 0 0 0 40px #dcc5a307;
+  border-radius: 47% 53% 35% 65%;
+  position: absolute;
+  right: -105px;
+  top: -55px;
+  transform: rotate(-30deg);
+  pointer-events: none;
+}
+.account > span {
+  font-family: 'Songti SC', serif;
+  font-size: 17px;
+  display: flex;
+  justify-content: space-between;
+}
+.account > strong {
+  display: block;
+  font-size: 55px;
+  line-height: 1.2;
+  margin: 13px 0 3px;
+  font-family: Georgia, serif;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+.account > small {
+  font-size: 10px;
+  color: #c7b8a8;
+}
+.accountStats {
+  border-top: 1px solid #ffffff24;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 18px;
+  padding-top: 16px;
+}
+.accountStats > div + div {
+  border-left: 1px solid #ffffff24;
+  padding-left: 20px;
+}
+.accountStats span {
+  font-size: 11px;
+  color: #c7b8a8;
+  display: block;
+}
+.accountStats b {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+.accountStats b small {
+  font-size: 11px;
+}
+.accountStats b.signState {
+  font: 16px/2.6 sans-serif;
+}
+.account > button {
+  width: 100%;
+  margin-top: 13px;
+  border: 0;
+  border-radius: 24px;
+  background: #fbf6ef;
+  color: #3a2d24;
+  min-height: 40px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.account > button:disabled {
+  background: #ded4c6;
+  color: #63594e;
+  cursor: default;
+}
+.contentRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 282px;
+  gap: 20px;
+  align-items: stretch;
+}
+.lotterySection,
+.tasks {
+  background: #fffdf9;
+  border: 1px solid #ece7df;
+  border-radius: 20px;
+  padding: 24px;
+  scroll-margin-top: 24px;
+}
+.sectionHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.sectionHead h2 {
+  font-family: 'Songti SC', 'STSong', serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0;
+  color: #31281f;
+}
+.sectionHead > a {
+  font-size: 12px;
+  color: #74665a;
+}
+.kicker {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 1.8px;
+  color: #a08b76;
+  margin-bottom: 5px;
+}
+.textButton {
+  border: 0;
+  background: none;
+  color: #75695d;
+  font-size: 12px;
+  min-height: 44px;
+  padding: 0 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.textButton:hover {
+  color: #b3422c;
+}
+.lotteryInner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.04fr) minmax(0, 1fr);
+  gap: 24px;
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+.prize {
+  border: 1px solid #f0e8dc;
+  border-radius: 12px;
+  background: #f8f1e6;
+  min-height: 108px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6px 4px;
+  position: relative;
+  transition: box-shadow 0.12s, background 0.12s;
+}
+.prize strong {
+  font-size: 10px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.4;
+  margin: 4px 0 2px;
+}
+.prize > span {
+  font-size: 8px;
+  color: #8b7b69;
+  white-space: nowrap;
+}
+.prize .art {
+  width: 74px;
+  height: 49px;
+  border-radius: 8px;
+  mix-blend-mode: multiply;
+}
+.prize.locked {
+  background: #f2f0e9;
+}
+.prize.locked .art {
+  opacity: 0.55;
+  filter: saturate(0.4);
+}
+.prize.selected {
+  box-shadow: inset 0 0 0 3px #bd452d;
+  background: #ffe5c5;
+}
+.drawButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  min-height: 108px;
+  background: linear-gradient(135deg, #d45a36, #b33725);
+  border-radius: 50%;
+  border: 5px solid #f1c6a4;
+  outline: 1px solid #e8a97c;
+  color: #fff9ef;
+  cursor: pointer;
+  box-shadow: 0 4px 12px #b3432720;
+}
+.drawButton > span:first-child {
+  font-size: 18px;
+}
+.drawButton strong {
+  font-family: 'Songti SC', serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+.drawButton > span:last-child {
+  font-size: 9px;
+}
+.drawButton:disabled {
+  cursor: not-allowed;
+  filter: saturate(0.65);
+}
+.drawButton:focus-visible {
+  outline: 3px solid #8a301e;
+  outline-offset: 2px;
+}
+.boardNote {
+  font-size: 9px;
+  color: #8e8072;
+  text-align: center;
+  margin: 14px 0 0;
+}
+.dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #849c82;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.exchange {
+  border-left: 1px solid #eee6dc;
+  padding-left: 24px;
+  scroll-margin-top: 30px;
+}
+.exchange h3 {
+  font-family: 'Songti SC', serif;
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+.exchange > p {
+  color: #8e8175;
+  font-size: 11px;
+  margin: 0 0 16px;
+}
+.exchangeList {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.exchangeItem {
+  border: 1px solid #f0e9e0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  padding: 10px 9px;
+  min-height: 62px;
+}
+.packageIcon {
+  color: #b74831;
+  font-size: 20px;
+}
+.exchangeItem > div {
+  flex: 1;
+  min-width: 0;
+}
+.exchangeItem b {
+  font-size: 11px;
+  font-weight: 600;
+  display: block;
+}
+.exchangeItem div > span {
+  font-size: 10px;
+  display: block;
+  color: #9a7660;
+}
+.exchangeItem small {
+  font-size: 8px;
+  color: #929082;
+  margin-left: 2px;
+}
+.exchangeItem button,
+.task button,
+.task a {
+  border: 0;
+  border-radius: 22px;
+  min-height: 32px;
+  padding: 0 14px;
+  background: #f8eae2;
+  color: #b54933;
+  font-size: 11px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.exchangeItem button:disabled,
+.task button:disabled {
+  background: #f2eee7;
+  color: #9b9185;
+  cursor: default;
+}
+.exchangeFoot {
+  display: flex;
+  gap: 8px;
+  color: #9f9080;
+  font-size: 9px;
+  margin-top: 17px;
+  align-items: center;
+}
+.tasks {
+  padding: 24px 20px;
+}
+.tasks h2 {
+  font-size: 22px;
+}
+.taskTag {
+  font-size: 9px;
+  color: #a6907c;
+}
+.task {
+  display: flex;
+  gap: 12px;
+  padding: 16px 0;
+  border-top: 1px solid #eee7dd;
+}
+.taskIcon {
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #fae8db;
+  color: #c35031;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 21px;
+}
+.taskIcon.sage {
+  background: #e9efe6;
+  color: #719477;
+}
+.task h3 {
+  font-size: 13px;
+  margin: 0 0 2px;
+  font-weight: 600;
+}
+.task p {
+  font-size: 10px;
+  color: #8c8276;
+  margin: 0 0 8px;
+}
+.task a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.taskQuote {
+  color: #ae9580;
+  text-align: center;
+  padding: 12px 0 0;
+}
+.taskQuote > span,
+.taskQuote p {
+  font-family: 'Songti SC', serif;
+  letter-spacing: 3px;
+  font-size: 17px;
+  margin: 0;
+}
+.taskQuote small {
+  font-size: 7px;
+  letter-spacing: 1.8px;
+}
+.art {
+  background-image: url('/assets/rewards-art-v2.png');
+  background-repeat: no-repeat;
+  background-size: 200% 200%;
+  aspect-ratio: 1.5;
+}
+.coffee {
+  background-position: 0 0;
+}
+.cable {
+  background-position: 100% 0;
+}
+.gift {
+  background-position: 0 100%;
+}
+.travel {
+  background-position: 100% 100%;
+}
+.benefits {
+  margin-top: 30px;
+  scroll-margin-top: 24px;
+}
+.inlineTitle {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+.inlineTitle > span {
+  color: #8c8073;
+  font-size: 11px;
+}
+.benefitGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+.benefitCard {
+  background: #fffdf9;
+  border: 1px solid #e9e0d4;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.benefitCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px #79614b0c;
+}
+.benefitCard > .art {
+  width: 100%;
+  aspect-ratio: 1.65;
+}
+.benefitCopy {
+  padding: 16px 18px 18px;
+}
+.benefitCopy > span {
+  font-size: 9px;
+  color: #a38468;
+  letter-spacing: 1px;
+}
+.benefitCopy h3 {
+  font-family: 'Songti SC', serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 2px 0 4px;
+}
+.benefitCopy p {
+  font-size: 10px;
+  color: #918273;
+  margin: 0 0 12px;
+}
+.benefitCopy b {
+  font-size: 11px;
+  color: #b5432e;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.history {
+  margin-top: 30px;
+  background: #fffdf9;
+  border: 1px solid #ece5da;
+  padding: 22px 24px;
+  border-radius: 18px;
+}
+.historyList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.historyItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  min-width: 0;
+  border-top: 1px solid #f1ebe2;
+}
+.historyItem .art {
+  width: 52px;
+  height: 39px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+.historyItem > div:not(.art) {
+  flex: 1;
+}
+.historyItem b {
+  font-size: 12px;
+  display: block;
+  font-weight: 500;
+}
+.historyItem span {
+  font-size: 10px;
+  display: block;
+  color: #9d9082;
+}
+.historyItem small {
+  font-size: 9px;
+  color: #729079;
+  white-space: nowrap;
+}
+.emptyHistory {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px;
+  color: #9a8977;
+  font-size: 12px;
+}
+.emptyHistory a {
+  color: #b5432e;
+}
+.error {
+  margin-bottom: 20px;
+}
+.rules {
+  line-height: 1.85;
+  color: #6f665d;
+}
+.rules ol {
+  padding-left: 20px;
+}
+.rules li {
+  margin-bottom: 10px;
+}
+.rules > p:last-child {
+  font-size: 12px;
+  color: #99816e;
+}
+.result {
+  padding: 24px 8px;
+  text-align: center;
+}
+.result > .art {
+  width: 150px;
+  margin: 0 auto 20px;
+  border-radius: 18px;
+}
+.result > span {
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #a18d78;
+}
+.result h2 {
+  font-family: 'Songti SC', serif;
+  font-size: 28px;
+  margin: 10px 0;
+}
+.result h3 {
+  color: #b7432d;
+  font-size: 16px;
+}
+.result p {
+  font-size: 12px;
+  color: #958676;
+  margin-bottom: 24px;
+}
+@media (min-width: 1440px) {
+  .hero h1 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 1050px) {
+  .heroRow,
+  .contentRow {
+    grid-template-columns: minmax(0, 1fr) 245px;
+    gap: 16px;
+  }
+  .lotteryInner {
+    grid-template-columns: 1fr;
+  }
+  .exchange {
+    border-left: 0;
+    border-top: 1px solid #eee6dc;
+    padding: 18px 0 0;
+  }
+  .exchangeList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .board {
+    max-width: 420px;
+    margin: auto;
+  }
+  .prize {
+    min-height: 112px;
+  }
+  .hero h1 {
+    font-size: 40px;
+  }
+  .heroCopy {
+    padding: 36px 24px;
+  }
+  .inlineTitle {
+    gap: 8px;
+  }
+  .inlineTitle > span {
+    font-size: 10px;
+  }
+  .benefitCopy {
+    padding: 14px;
+  }
+  .benefitCopy p {
+    min-height: 30px;
+  }
+}
+@media (max-width: 760px) {
+  .heroRow,
+  .contentRow {
+    grid-template-columns: 1fr;
+  }
+  .hero {
+    min-height: 310px;
+  }
+  .account {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 22px;
+    gap: 0 22px;
+  }
+  .account > span,
+  .account > strong,
+  .account > small {
+    grid-column: 1;
+  }
+  .account > strong {
+    font-size: 46px;
+    margin: 6px 0;
+  }
+  .accountStats {
+    grid-column: 2;
+    grid-row: 1 / 4;
+    margin: 0;
+    padding: 5px 0 0 18px;
+    border-top: 0;
+    border-left: 1px solid #ffffff24;
+    gap: 12px;
+  }
+  .accountStats > div + div {
+    padding-left: 10px;
+  }
+  .accountStats b {
+    font-size: 23px;
+  }
+  .accountStats b.signState {
+    font-size: 14px;
+  }
+  .account > button {
+    grid-column: 1/-1;
+    margin-top: 18px;
+    min-height: 42px;
+  }
+  .lotteryInner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
+    gap: 20px;
+  }
+  .exchange {
+    border-top: 0;
+    border-left: 1px solid #eee6dc;
+    padding: 0 0 0 18px;
+  }
+  .exchangeList {
+    display: flex;
+  }
+  .prize {
+    min-height: 105px;
+  }
+  .prize .art {
+    width: 65px;
+    height: 43px;
+  }
+  .drawButton strong {
+    font-size: 16px;
+  }
+  .tasks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 20px;
+  }
+  .tasks > .sectionHead {
+    grid-column: 1/-1;
+  }
+  .taskQuote {
+    align-self: center;
+  }
+  .benefitGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .historyList {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .history .inlineTitle > span {
+    display: none;
+  }
+}
+@media (max-width: 520px) {
+  .greeting {
+    margin-bottom: 16px;
+  }
+  .greeting > span:first-child {
+    font-size: 15px;
+  }
+  .greeting > span:last-child {
+    font-size: 9px;
+  }
+  .hero {
+    min-height: 310px;
+  }
+  .heroCopy {
+    padding: 27px 23px;
+  }
+  .hero h1 {
+    font-size: 38px;
+    line-height: 1.32;
+  }
+  .hero p {
+    font-size: 12px;
+    max-width: 160px;
+  }
+  .hero > img {
+    object-position: 63% 55%;
+  }
+  .hero:after {
+    background: linear-gradient(90deg, #f8f1e8ee 0%, #f8f1e8aa 35%, #f8f1e833 70%, transparent);
+  }
+  .eyebrow {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+  .cityStamp {
+    font-size: 8px;
+    bottom: 12px;
+    right: 12px;
+  }
+  .account {
+    gap: 0 12px;
+  }
+  .accountStats {
+    padding-left: 12px;
+  }
+  .accountStats span {
+    font-size: 9px;
+  }
+  .account > small {
+    font-size: 8px;
+  }
+  .account > span {
+    font-size: 15px;
+  }
+  .lotterySection {
+    padding: 20px 15px;
+  }
+  .sectionHead h2 {
+    font-size: 22px;
+  }
+  .lotteryInner {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .board {
+    gap: 8px;
+  }
+  .prize {
+    min-height: 107px;
+  }
+  .prize .art {
+    width: 78px;
+    height: 52px;
+  }
+  .prize strong {
+    font-size: 10px;
+  }
+  .drawButton strong {
+    font-size: 18px;
+  }
+  .exchange {
+    border-left: 0;
+    border-top: 1px solid #eee6dc;
+    padding: 20px 0 0;
+  }
+  .exchangeList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .exchangeItem {
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  .exchangeItem button {
+    width: 100%;
+  }
+  .exchangeItem b {
+    font-size: 10px;
+  }
+  .exchangeItem small {
+    display: none;
+  }
+  .tasks {
+    display: block;
+    padding: 20px;
+  }
+  .task {
+    padding: 18px 0;
+  }
+  .task h3 {
+    font-size: 14px;
+  }
+  .task p {
+    font-size: 12px;
+  }
+  .task button,
+  .task a {
+    min-height: 36px;
+    font-size: 12px;
+  }
+  .taskQuote {
+    padding: 14px 0 8px;
+  }
+  .benefits .inlineTitle > span {
+    display: none;
+  }
+  .benefitGrid {
+    gap: 12px;
+  }
+  .benefitCopy {
+    padding: 12px;
+  }
+  .benefitCopy h3 {
+    font-size: 20px;
+  }
+  .benefitCopy p {
+    font-size: 10px;
+    line-height: 1.6;
+    min-height: 32px;
+  }
+  .history {
+    padding: 20px 16px;
+  }
+  .emptyHistory {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .boardNote {
+    font-size: 9px;
+  }
+  .primary {
+    font-size: 12px;
+  }
+}
+/* Reading sizes stay legible at actual browser scale, rather than mockup scale. */
+.prize strong {
+  font-size: 12px;
+}
+.prize > span {
+  font-size: 10px;
+}
+.prize {
+  min-height: 116px;
+}
+.prize .art {
+  width: 80px;
+  height: 53px;
+}
+.exchangeItem b {
+  font-size: 12px;
+}
+.exchangeItem div > span {
+  font-size: 11px;
+}
+.exchangeItem button {
+  font-size: 12px;
+  min-height: 36px;
+}
+.exchange > p {
+  font-size: 12px;
+}
+.task p {
+  font-size: 12px;
+}
+.task button,
+.task a {
+  font-size: 12px;
+  min-height: 36px;
+}
+.benefitCopy p {
+  font-size: 12px;
+}
+.benefitCopy b {
+  font-size: 12px;
+}
+.historyItem b {
+  font-size: 13px;
+}
+.historyItem span {
+  font-size: 11px;
+}
+.historyItem small {
+  font-size: 10px;
+}
+.account > small {
+  font-size: 11px;
+}
+.boardNote {
+  font-size: 10px;
+}
+.account > button {
+  font-size: 13px;
+}
+@media (max-width: 520px) {
+  .prize strong {
+    font-size: 11px;
+  }
+  .prize > span {
+    font-size: 9px;
+  }
+  .exchangeItem b {
+    font-size: 11px;
+  }
+  .account > small {
+    font-size: 9px;
+  }
+  .benefitCopy p {
+    font-size: 11px;
+  }
+  .benefitCopy b {
+    font-size: 11px;
+  }
+}
+.operations {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 24px;
+  padding: 22px 24px;
+  border: 1px solid #e8d9ca;
+  border-radius: 18px;
+  background: #fffaf3;
+}
+.operationsIntro {
+  flex: 0 0 235px;
+  strong { display: block; font-size: 17px; }
+  span { display: block; margin-top: 6px; color: #80786f; font-size: 12px; }
+}
+.operationsLinks {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  flex: 1;
+  a { border-left: 1px solid #e8d9ca; padding: 4px 0 4px 18px; }
+  strong { display: flex; align-items: center; justify-content: space-between; gap: 8px; color: #a34630; font-size: 14px; }
+  span { display: block; margin-top: 5px; color: #80786f; font-size: 11px; }
+  strong span { margin: 0; color: inherit; }
+  a:hover strong { color: #702b1d; }
+}
+@media (max-width: 1000px) {
+  .operations { display: block; }
+  .operationsIntro { margin-bottom: 18px; }
+}
+@media (max-width: 600px) {
+  .operations { padding: 18px; }
+  .operationsLinks { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 12px; }
+  .operationsLinks a { padding-left: 10px; }
+}
+
+/* Primary record details remain readable on desktop and mobile. */
+.historyItem b { font-size: 14px; }
+.historyItem span, .historyItem small { font-size: 12px; }
+.history .inlineTitle > span { font-size: 12px; }

@@ -1,0 +1,40 @@
+# Build / dependencies
+**/node_modules/
+**/target/
+**/dist/
+**/.umi*/
+**/__pycache__/
+*.pyc
+*.class
+*.jar
+*.zip
+# Local runtime / IDE
+.runtime/
+data/
+**/data/applogs/
+**/.idea/
+**/.vscode/
+**/.DS_Store
+**/.eslintcache
+*.pid
+*.tmp
+*.swp
+*.log
+!verification/final-patch/*.log
+# Secrets
+.env
+.env.*
+!.env.example
+!**/.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+/runtime/
+/temp/
+/cache/
+/scratch/
+/legacy-review/
+
+**/.local-config

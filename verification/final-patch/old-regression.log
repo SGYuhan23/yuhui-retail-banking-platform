@@ -1,0 +1,81 @@
+
+RUN smoke.py 2026-10-14T15:53:06.285477
+/erp/activity/query_activity 1000 success 1
+/erp/activity_count/query_activity_count 1000 success 4
+/erp/activity_sku/query_activity_sku 1000 success 4
+/erp/award/query_award 1000 success 9
+/erp/behavior/query_behavior 1000 success 3
+/erp/behavior/query_behavior_gift 1000 success 1
+/erp/query_activity_account 1000 success 24
+/erp/query_activity_record 1000 success 76
+/erp/query_credit_account 1000 success 24
+/erp/query_credit_record 1000 success 48
+/erp/query_user_award_record 1000 success 57
+/erp/query_user_award_record_by_activity_id 1000 success 20
+/erp/query_user_behavior_rebate_order 1000 success 63
+/erp/query_user_order 1000 success 37
+/erp/rule/query_rule 1000 success 2
+/erp/rule/tree/node/line/query_rule_tree_node_line 1000 success 11
+/erp/rule/tree/node/query_rule_tree_node 1000 success 13
+/erp/rule/tree/node/query_rule_tree_node_one 1000 success 3
+/erp/rule/tree/query_rule_tree 1000 success 5
+/erp/strategy/award/query_strategy_award 1000 success 8
+/erp/strategy/query_strategy 1000 success 2
+EXIT 0
+
+RUN check-crud.py 2026-10-14T15:53:06.755744
+strategy create/update/read PASS
+activity create/update/read PASS
+activity_count create/update/read PASS
+award create/update/read PASS
+rule create/update/read PASS
+rule_tree create/update/read PASS
+activity_sku create/update/read PASS
+behavior create/update/read PASS
+rule_tree_node create/update/read PASS
+rule_tree_node_line create/update/read PASS
+strategy_award create/update/read PASS
+strategy_award delete True
+rule_tree_node_line delete True
+rule_tree_node delete True
+behavior delete True
+activity_sku delete True
+rule_tree delete True
+rule delete True
+award delete True
+activity_count delete True
+activity delete True
+strategy delete True
+EXIT 0
+
+RUN check-flow.py 2026-10-14T15:53:07.556694
+PASS: 20 checks; test user: replica-check-1791964387
+EXIT 0
+
+RUN check-alias.py 2026-10-14T15:53:09.635602
+PASS 25 assertions; 1000000 seeded samples: [199795, 300627, 499578, 0]
+EXIT 0
+
+RUN check-wallet.py 2026-10-14T15:53:10.097986
+PASS wallet: 5 checks
+EXIT 0
+
+RUN check-outbox.py 2026-10-14T15:53:10.593516
+PASS outbox: 2 checks
+EXIT 0
+
+RUN check-gift-cache.py 2026-10-14T15:53:17.923261
+Gift receipt cache-miss regression PASS
+EXIT 0
+
+RUN check-credit-concurrency.py 2026-10-14T15:53:18.159414
+PASS credit concurrency: 6 checks
+EXIT 0
+
+RUN check-award-replay.py 2026-10-14T15:53:22.171560
+PASS award replay: 5 checks
+EXIT 0
+
+RUN check-warmup.py 2026-10-14T15:53:28.377226
+PASS warmup: existing stock preserved
+EXIT 0

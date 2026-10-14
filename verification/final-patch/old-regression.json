@@ -1,0 +1,52 @@
+[
+  {
+    "script": "smoke.py",
+    "result": "PASS",
+    "exit_code": 0
+  },
+  {
+    "script": "check-crud.py",
+    "result": "PASS",
+    "exit_code": 0
+  },
+  {
+    "script": "check-flow.py",
+    "result": "PASS",
+    "exit_code": 0
+  },
+  {
+    "script": "check-alias.py",
+    "result": "PASS",
+    "exit_code": 0
+  },
+  {
+    "script": "check-wallet.py",
+    "result": "PASS",
+    "exit_code": 0
+  },
+  {
+    "script": "check-outbox.py",
+    "result": "PASS",
+    "exit_code": 0
+  },
+  {
+    "script": "check-gift-cache.py",
+    "result": "PASS",
+    "exit_code": 0
+  },
+  {
+    "script": "check-credit-concurrency.py",
+    "result": "PASS",
+    "exit_code": 0
+  },
+  {
+    "script": "check-award-replay.py",
+    "result": "PASS",
+    "exit_code": 0
+  },
+  {
+    "script": "check-warmup.py",
+    "result": "PASS",
+    "exit_code": 0
+  }
+]

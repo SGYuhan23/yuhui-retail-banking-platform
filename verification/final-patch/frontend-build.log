@@ -1,0 +1,109 @@
+
+> ant-design-pro@6.0.0 build
+> max build
+
+😄 Hello PRO
+info  - [你知道吗？] @umijs/max 是蚂蚁内网框架 Bigfish 的对外版本。
+info  - Umi v4.5.3
+info  - Preparing...
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+Browserslist: browsers data (caniuse-lite) is 11 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+ℹ Compiling Webpack
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+✔ Webpack: Compiled successfully in 9.33s
+info  - Memory Usage: 990.28 MB (RSS: 1276.33 MB)
+
+info  - File sizes after gzip:
+
+  378.03 kB  dist/umi.4dd3356a.js
+  136.24 kB  dist/6074.0a79259d.async.js
+  49.67 kB   dist/1438.ceb3a7cf.async.js
+  40.88 kB   dist/9451.f01fe0ac.async.js
+  38.29 kB   dist/3690.69316d81.async.js
+  35.9 kB    dist/9650.db962cf3.async.js
+  35.63 kB   dist/9484.3a0e0a80.async.js
+  30.65 kB   dist/2661.e0c5a2b4.async.js
+  16.43 kB   dist/802.4fbc1cee.async.js
+  15.85 kB   dist/5202.1990f481.async.js
+  14.07 kB   dist/9377.0d878c59.async.js
+  12.88 kB   dist/9687.db9375f1.async.js
+  12.07 kB   dist/p__RuleTreeEditor__index.f81736d3.async.js
+  11.73 kB   dist/p__Operating__Review.995c056b.async.js
+  11.28 kB   dist/p__Activity__index.5ef6db31.async.js
+  10.6 kB    dist/1156.5080c8b8.async.js
+  10.35 kB   dist/2148.c046eb04.async.js
+  9.1 kB     dist/p__Experience__index.bba563aa.async.js
+  9.04 kB    dist/p__Operating__Campaigns.ddb95c36.async.js
+  8.77 kB    dist/p__Operating__Overview.06add236.async.js
+  8.76 kB    dist/p__Auth__Roles__index.ec4f3ddc.async.js
+  8.46 kB    dist/5814.0793e629.async.js
+  8.41 kB    dist/9605.2acf3477.async.js
+  7.65 kB    dist/5511.4e9df712.async.js
+  7.57 kB    dist/p__Auth__Permissions__index.84ff85af.async.js
+  7.53 kB    dist/p__Auth__LoginMethods__index.ec0b1c97.async.js
+  7.44 kB    dist/p__Operating__Segments.f2aeeb1b.async.js
+  6.97 kB    dist/9394.e3eded8d.async.js
+  6.77 kB    dist/p__Operating__Merchants.c30c65f8.async.js
+  6.59 kB    dist/9018.76cee0b0.async.js
+  6.38 kB    dist/8250.f8f301c0.async.js
+  6.28 kB    dist/6765.117616d4.async.js
+  5.94 kB    dist/2220.193ec02c.async.js
+  5.89 kB    dist/p__Operating__Budget.ee32a004.async.js
+  5.84 kB    dist/p__DCC__index.d4e3cda4.async.js
+  5.54 kB    dist/p__Operating__Settings.d8c44914.async.js
+  5.34 kB    dist/6380.47ba083e.async.js
+  5.33 kB    dist/6380.d263e216.chunk.css
+  5.07 kB    dist/1725.e7716fcf.async.js
+  4.95 kB    dist/p__Award__index.570035f0.async.js
+  4.89 kB    dist/7820.24be5420.async.js
+  4.88 kB    dist/7641.c06e3dfa.async.js
+  4.74 kB    dist/p__StrategyAward__index.bd56656a.async.js
+  4.71 kB    dist/p__Account__Center__index.a17efb2e.async.js
+  4.5 kB     dist/p__BehaviorRebate__index.454fd5c3.async.js
+  4.41 kB    dist/p__RuleTree__index.a2b36b75.async.js
+  4.22 kB    dist/8746.d167336d.async.js
+  4.04 kB    dist/p__RuleTreeNodeLine__index.55de4f55.async.js
+  4.02 kB    dist/p__ActivitySku__index.c10020bf.async.js
+  3.9 kB     dist/p__Strategy__index.dd99515f.async.js
+  3.82 kB    dist/p__ActivityCount__index.1a9fb7cf.async.js
+  3.68 kB    dist/p__RuleTreeNode__index.768ba3cb.async.js
+  3.33 kB    dist/t__plugin-layout__Layout.a38e18c3.async.js
+  3.17 kB    dist/6896.03e303f8.async.js
+  3.12 kB    dist/p__Auth__Users__index.d162f689.async.js
+  3.11 kB    dist/p__Wallet__index.cb1b050d.async.js
+  2.91 kB    dist/p__Rule__index.46055525.async.js
+  2.05 kB    dist/umi.0d458706.css
+  1.47 kB    dist/p__RuleTreeEditor__index.01164a94.chunk.css
+  1.3 kB     dist/scripts/loading.js
+  1.24 kB    dist/p__Activity__index.df62d78c.chunk.css
+  1.08 kB    dist/p__Wallet__index.de552dec.chunk.css
+  1.05 kB    dist/p__Award__index.6dff2d3d.chunk.css
+  1.03 kB    dist/p__ActivityRecord__index.b4ae4826.async.js
+  984 B      dist/p__UserAwardRecord__index.55dba6b1.async.js
+  923 B      dist/p__CreditRecord__index.77615cef.async.js
+  923 B      dist/p__UserOrder__index.63776e75.async.js
+  907 B      dist/p__CreditAccount__index.cc3268ab.async.js
+  894 B      dist/p__ActivityAccount__index.b9bc041a.async.js
+  874 B      dist/p__BehaviorRebate__index.81bfc767.chunk.css
+  874 B      dist/p__ActivityCount__index.3856b4ab.chunk.css
+  870 B      dist/p__StrategyAward__index.5b9bb60c.chunk.css
+  863 B      dist/p__UserBehaviorRebateOrder__index.b8bf008c.async.js
+  597 B      dist/p__ActivitySku__index.70aba24f.chunk.css
+  581 B      dist/p__RuleTree__index.638ef4fa.chunk.css
+  563 B      dist/p__Experience__index.d5531cdf.chunk.css
+  372 B      dist/t__plugin-layout__Layout.5012e1ab.chunk.css
+  369 B      dist/p__Operating__Budget.42f574f2.chunk.css
+  369 B      dist/p__Operating__Campaigns.42f574f2.chunk.css
+  369 B      dist/p__Operating__Merchants.42f574f2.chunk.css
+  369 B      dist/p__Operating__Overview.42f574f2.chunk.css
+  369 B      dist/p__Operating__Review.42f574f2.chunk.css
+  369 B      dist/p__Operating__Segments.42f574f2.chunk.css
+  369 B      dist/p__Operating__Settings.42f574f2.chunk.css
+  356 B      dist/p__404.b0b579ea.async.js
+  221 B      dist/2617.c64a5313.async.js
+
+event - Build index.html

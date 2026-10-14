@@ -1,0 +1,95 @@
+.pageCard {
+  border-radius: 24px;
+  box-shadow: 0 14px 30px rgba(31, 56, 88, 0.08);
+}
+
+.groupCollapse {
+  background: transparent;
+}
+
+.groupHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+}
+
+.groupHeaderRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.groupHeaderActions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.skuCard {
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0 12px 26px rgba(31, 56, 88, 0.08);
+}
+
+.cardTitle {
+  max-width: 200px;
+}
+
+.metaRow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.metaChip {
+  border-radius: 18px;
+  padding: 16px;
+  display: grid;
+  gap: 8px;
+  border: 1px solid transparent;
+}
+
+.primaryChip {
+  background: #edf3fb;
+  border-color: #cfe0f6;
+}
+
+.warningChip {
+  background: #f5efe1;
+  border-color: #eed8a7;
+}
+
+.amountChip {
+  background: #f7f9fc;
+  border-color: #dfe7f2;
+}
+
+.infoLabel {
+  color: #7d8797;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.infoValue {
+  color: #1d2c49;
+  font-size: 16px;
+}
+
+@media (max-width: 900px) {
+  .groupHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .groupHeaderRight {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .metaRow {
+    grid-template-columns: 1fr;
+  }
+}

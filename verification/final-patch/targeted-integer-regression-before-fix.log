@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/yuhui-retail-banking-platform/scripts/check-v3-final-patch.py", line 4, in <module>
+    first=reset();baseline=fingerprint(first)
+  File "/workspace/yuhui-retail-banking-platform/scripts/v3_test_support.py", line 26, in reset
+    def reset():return call('/demo/reset',{'seed':202610,'confirmation':'RESET_V3_DEMO'})
+  File "/workspace/yuhui-retail-banking-platform/scripts/v3_test_support.py", line 15, in call
+    if ok: assert value.get('code')==1000,(path,value)
+AssertionError: ('/demo/reset', {'code': 4000, 'message': 'For input string: "600000.0"'})

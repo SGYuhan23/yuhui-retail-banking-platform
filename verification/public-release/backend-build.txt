@@ -1,0 +1,266 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] yuhui-platform                                                     [pom]
+[INFO] shared                                                             [jar]
+[INFO] contracts                                                          [jar]
+[INFO] marketing                                                          [jar]
+[INFO] readmodel                                                          [jar]
+[INFO] storage                                                            [jar]
+[INFO] entrypoints                                                        [jar]
+[INFO] runtime                                                            [jar]
+[INFO] 
+[INFO] ----------------------< com.yuhui:yuhui-platform >----------------------
+[INFO] Building yuhui-platform 1.0-SNAPSHOT                               [1/8]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --------------------------< com.yuhui:shared >--------------------------
+[INFO] Building shared 1.0-SNAPSHOT                                       [2/8]
+[INFO]   from shared/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Parameter 'propertiesEncoding' is unknown for plugin 'maven-resources-plugin:2.5:resources (default-resources)'
+[WARNING] Parameter 'parameters' is unknown for plugin 'maven-compiler-plugin:3.0:compile (default-compile)'
+[WARNING] Parameter 'propertiesEncoding' is unknown for plugin 'maven-resources-plugin:2.5:testResources (default-testResources)'
+[WARNING] Parameter 'parameters' is unknown for plugin 'maven-compiler-plugin:3.0:testCompile (default-testCompile)'
+[INFO] 
+[INFO] --- resources:2.5:resources (default-resources) @ shared ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/shared/src/main/resources
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/shared/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.0:compile (default-compile) @ shared ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:2.5:testResources (default-testResources) @ shared ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/shared/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.0:testCompile (default-testCompile) @ shared ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ shared ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.2.2:jar (default-jar) @ shared ---
+[INFO] 
+[INFO] ------------------------< com.yuhui:contracts >-------------------------
+[INFO] Building contracts 1.0-SNAPSHOT                                    [3/8]
+[INFO]   from contracts/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Parameter 'propertiesEncoding' is unknown for plugin 'maven-resources-plugin:2.5:resources (default-resources)'
+[WARNING] Parameter 'parameters' is unknown for plugin 'maven-compiler-plugin:3.0:compile (default-compile)'
+[WARNING] Parameter 'propertiesEncoding' is unknown for plugin 'maven-resources-plugin:2.5:testResources (default-testResources)'
+[WARNING] Parameter 'parameters' is unknown for plugin 'maven-compiler-plugin:3.0:testCompile (default-testCompile)'
+[INFO] 
+[INFO] --- resources:2.5:resources (default-resources) @ contracts ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/contracts/src/main/resources
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/contracts/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.0:compile (default-compile) @ contracts ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:2.5:testResources (default-testResources) @ contracts ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/contracts/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.0:testCompile (default-testCompile) @ contracts ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ contracts ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.2.2:jar (default-jar) @ contracts ---
+[INFO] 
+[INFO] ------------------------< com.yuhui:marketing >-------------------------
+[INFO] Building marketing 1.0-SNAPSHOT                                    [4/8]
+[INFO]   from marketing/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Parameter 'propertiesEncoding' is unknown for plugin 'maven-resources-plugin:2.5:resources (default-resources)'
+[WARNING] Parameter 'parameters' is unknown for plugin 'maven-compiler-plugin:3.0:compile (default-compile)'
+[WARNING] Parameter 'propertiesEncoding' is unknown for plugin 'maven-resources-plugin:2.5:testResources (default-testResources)'
+[WARNING] Parameter 'parameters' is unknown for plugin 'maven-compiler-plugin:3.0:testCompile (default-testCompile)'
+[INFO] 
+[INFO] --- resources:2.5:resources (default-resources) @ marketing ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/marketing/src/main/resources
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/marketing/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.0:compile (default-compile) @ marketing ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 153 source files to <workspace>/yuhui-retail-banking-platform/yuhui-server/marketing/target/classes
+[INFO] 
+[INFO] --- resources:2.5:testResources (default-testResources) @ marketing ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/marketing/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.0:testCompile (default-testCompile) @ marketing ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ marketing ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.2.2:jar (default-jar) @ marketing ---
+[INFO] Building jar: <workspace>/yuhui-retail-banking-platform/yuhui-server/marketing/target/marketing.jar
+[INFO] 
+[INFO] ------------------------< com.yuhui:readmodel >-------------------------
+[INFO] Building readmodel 1.0-SNAPSHOT                                    [5/8]
+[INFO]   from readmodel/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Parameter 'propertiesEncoding' is unknown for plugin 'maven-resources-plugin:2.5:resources (default-resources)'
+[WARNING] Parameter 'parameters' is unknown for plugin 'maven-compiler-plugin:3.0:compile (default-compile)'
+[WARNING] Parameter 'propertiesEncoding' is unknown for plugin 'maven-resources-plugin:2.5:testResources (default-testResources)'
+[WARNING] Parameter 'parameters' is unknown for plugin 'maven-compiler-plugin:3.0:testCompile (default-testCompile)'
+[INFO] 
+[INFO] --- resources:2.5:resources (default-resources) @ readmodel ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/readmodel/src/main/resources
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/readmodel/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.0:compile (default-compile) @ readmodel ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:2.5:testResources (default-testResources) @ readmodel ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/readmodel/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.0:testCompile (default-testCompile) @ readmodel ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ readmodel ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.2.2:jar (default-jar) @ readmodel ---
+[INFO] 
+[INFO] -------------------------< com.yuhui:storage >--------------------------
+[INFO] Building storage 1.0-SNAPSHOT                                      [6/8]
+[INFO]   from storage/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Parameter 'propertiesEncoding' is unknown for plugin 'maven-resources-plugin:2.5:resources (default-resources)'
+[WARNING] Parameter 'parameters' is unknown for plugin 'maven-compiler-plugin:3.0:compile (default-compile)'
+[WARNING] Parameter 'propertiesEncoding' is unknown for plugin 'maven-resources-plugin:2.5:testResources (default-testResources)'
+[WARNING] Parameter 'parameters' is unknown for plugin 'maven-compiler-plugin:3.0:testCompile (default-testCompile)'
+[INFO] 
+[INFO] --- resources:2.5:resources (default-resources) @ storage ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/storage/src/main/resources
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/storage/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.0:compile (default-compile) @ storage ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 88 source files to <workspace>/yuhui-retail-banking-platform/yuhui-server/storage/target/classes
+[WARNING] <workspace>/yuhui-retail-banking-platform/yuhui-server/storage/src/main/java/com/yuhui/infrastructure/redis/RedisServiceImpl.java: 某些输入文件使用或覆盖了已过时的 API。
+[WARNING] <workspace>/yuhui-retail-banking-platform/yuhui-server/storage/src/main/java/com/yuhui/infrastructure/redis/RedisServiceImpl.java: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+[INFO] 
+[INFO] --- resources:2.5:testResources (default-testResources) @ storage ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/storage/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.0:testCompile (default-testCompile) @ storage ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ storage ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.2.2:jar (default-jar) @ storage ---
+[INFO] Building jar: <workspace>/yuhui-retail-banking-platform/yuhui-server/storage/target/storage.jar
+[INFO] 
+[INFO] -----------------------< com.yuhui:entrypoints >------------------------
+[INFO] Building entrypoints 1.0-SNAPSHOT                                  [7/8]
+[INFO]   from entrypoints/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Parameter 'propertiesEncoding' is unknown for plugin 'maven-resources-plugin:2.5:resources (default-resources)'
+[WARNING] Parameter 'parameters' is unknown for plugin 'maven-compiler-plugin:3.0:compile (default-compile)'
+[WARNING] Parameter 'propertiesEncoding' is unknown for plugin 'maven-resources-plugin:2.5:testResources (default-testResources)'
+[WARNING] Parameter 'parameters' is unknown for plugin 'maven-compiler-plugin:3.0:testCompile (default-testCompile)'
+[WARNING] 2 problems were encountered while building the effective model for org.apache.yetus:audience-annotations:jar:0.5.0 during dependency collection step for project (use -X to see details)
+[INFO] 
+[INFO] --- resources:2.5:resources (default-resources) @ entrypoints ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/entrypoints/src/main/resources
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/entrypoints/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.0:compile (default-compile) @ entrypoints ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:2.5:testResources (default-testResources) @ entrypoints ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/entrypoints/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.0:testCompile (default-testCompile) @ entrypoints ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ entrypoints ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.2.2:jar (default-jar) @ entrypoints ---
+[INFO] Building jar: <workspace>/yuhui-retail-banking-platform/yuhui-server/entrypoints/target/entrypoints.jar
+[INFO] 
+[INFO] -------------------------< com.yuhui:runtime >--------------------------
+[INFO] Building runtime 1.0-SNAPSHOT                                      [8/8]
+[INFO]   from runtime/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Parameter 'propertiesEncoding' is unknown for plugin 'maven-resources-plugin:2.5:resources (default-resources)'
+[WARNING] Parameter 'parameters' is unknown for plugin 'maven-compiler-plugin:3.0:compile (default-compile)'
+[WARNING] Parameter 'propertiesEncoding' is unknown for plugin 'maven-resources-plugin:2.5:testResources (default-testResources)'
+[WARNING] Parameter 'parameters' is unknown for plugin 'maven-compiler-plugin:3.0:testCompile (default-testCompile)'
+[INFO] 
+[INFO] --- resources:2.5:resources (default-resources) @ runtime ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 34 resources
+[INFO] 
+[INFO] --- compiler:3.0:compile (default-compile) @ runtime ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 24 source files to <workspace>/yuhui-retail-banking-platform/yuhui-server/runtime/target/classes
+[WARNING] <workspace>/yuhui-retail-banking-platform/yuhui-server/runtime/src/main/java/com/yuhui/aop/RateLimiterAOP.java: <workspace>/yuhui-retail-banking-platform/yuhui-server/runtime/src/main/java/com/yuhui/aop/RateLimiterAOP.java使用或覆盖了已过时的 API。
+[WARNING] <workspace>/yuhui-retail-banking-platform/yuhui-server/runtime/src/main/java/com/yuhui/aop/RateLimiterAOP.java: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+[INFO] 
+[INFO] --- resources:2.5:testResources (default-testResources) @ runtime ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory <workspace>/yuhui-retail-banking-platform/yuhui-server/runtime/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.0:testCompile (default-testCompile) @ runtime ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- surefire:2.6:test (default-test) @ runtime ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.2.2:jar (default-jar) @ runtime ---
+[INFO] Building jar: <workspace>/yuhui-retail-banking-platform/yuhui-server/runtime/target/yuhui-server.jar
+[INFO] 
+[INFO] --- spring-boot:2.7.12:repackage (repackage) @ runtime ---
+[INFO] Layout: JAR
+[INFO] Replacing main artifact with repackaged archive
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for yuhui-platform 1.0-SNAPSHOT:
+[INFO] 
+[INFO] yuhui-platform ..................................... SUCCESS [  0.001 s]
+[INFO] shared ............................................. SUCCESS [  0.901 s]
+[INFO] contracts .......................................... SUCCESS [  0.079 s]
+[INFO] marketing .......................................... SUCCESS [  2.117 s]
+[INFO] readmodel .......................................... SUCCESS [  0.037 s]
+[INFO] storage ............................................ SUCCESS [  1.576 s]
+[INFO] entrypoints ........................................ SUCCESS [  0.231 s]
+[INFO] runtime ............................................ SUCCESS [  1.770 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.869 s
+[INFO] Finished at: 2026-10-14T20:07:23+08:00
+[INFO] ------------------------------------------------------------------------

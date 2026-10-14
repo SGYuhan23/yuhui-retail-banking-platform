@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yuhui.infrastructure.es.EsUserBehaviorRebateOrderMapper">
+
+    <resultMap id="BaseResultMap" type="com.yuhui.infrastructure.es.po.EsUserBehaviorRebateOrder">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="userId" column="_user_id" jdbcType="VARCHAR"/>
+        <result property="activityId" column="_activity_id" jdbcType="BIGINT"/>
+        <result property="behaviorType" column="_behavior_type" jdbcType="VARCHAR"/>
+        <result property="rebateDesc" column="_rebate_desc" jdbcType="VARCHAR"/>
+        <result property="rebateType" column="_rebate_type" jdbcType="VARCHAR"/>
+        <result property="rebateConfig" column="_rebate_config" jdbcType="VARCHAR"/>
+        <result property="outBusinessNo" column="_out_business_no" jdbcType="VARCHAR"/>
+        <result property="bizId" column="_biz_id" jdbcType="VARCHAR"/>
+        <result property="createTime" column="_create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="_update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <select id="queryUserBehaviorRebateOrderVOListEs" resultMap="BaseResultMap">
+        select _user_id, _activity_id,_behavior_type, _rebate_desc, _rebate_type, _rebate_config, _out_business_no, _biz_id, _create_time, _update_time
+        from "marketing.user_behavior_rebate_order"
+        order by _update_time desc
+    </select>
+</mapper>

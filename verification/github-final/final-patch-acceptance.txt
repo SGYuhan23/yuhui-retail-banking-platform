@@ -1,0 +1,23 @@
+PASS TARGET-1: fixed demo target 150 / actual 224 / delta 74 / 149.333% / met
+PASS TARGET frozen version and independent window SQL
+PASS TIME-2 demo all entitlements terminal
+PASS TARGET-2: ten post-window observations excluded (SQL total 234)
+PASS BUDGET-1: total6000 hard2400, 2400 success then 1 rejected
+PASS BUDGET-2: null hard, 3000+3000 allowed then 1 rejected
+PASS BUDGET-3: hard5000, 2400+2600 allowed then 1 rejected
+PASS BUDGET-4: concurrent Run allocation serialized on campaign
+PASS REVIEW-2: approved budget mutation rejected and DRAFT persists
+PASS REVIEW approve retains exact submitted payload
+PASS REVIEW-3: segment-only change after submit rejected at publish
+PASS REVIEW-1/4: re-review succeeds; published payload equals approved
+PASS REVIEW-3b: segment-only AFTER APPROVAL mutation rejected
+PASS REVIEW-5: published version and snapshot immutable
+PASS TIME-1: ended Run with available entitlements is ONGOING
+PASS TIME ongoing fulfillment permits decision with frozen time semantics
+PASS TIME-3: redeem AFTER configured end changes cumulative costs, not target
+PASS Decision history unchanged after fulfillment
+PASS TIME-4/BUDGET-5: post-end expiry releases once and settles
+PASS Fulfillment count independently reconciles to entitlement SQL
+PASS Review exposes separate as-of, delivery and observation windows
+PASS FINAL PATCH reset restores unchanged seed, customers, events and costs
+{"result": "PASS", "assertions": 22}

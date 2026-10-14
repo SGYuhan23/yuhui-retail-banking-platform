@@ -1,0 +1,49 @@
+name: Repository quality
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  backend-unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+      - name: Independent V3 unit tests
+        run: mvn -B -f yuhui-server/pom.xml -pl entrypoints -am test
+  frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: yuhui-web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: '10'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: pnpm
+          cache-dependency-path: yuhui-web/pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run postinstall
+      - run: pnpm run tsc
+      - run: pnpm run build
+        env:
+          REPLICA_LOCAL: 'true'
+
+  public-hygiene:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 scripts/portfolio_verify.py --strict .

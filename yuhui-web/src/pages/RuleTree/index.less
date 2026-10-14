@@ -1,0 +1,93 @@
+.pageCard {
+  border-radius: 24px;
+  box-shadow: 0 14px 30px rgba(31, 56, 88, 0.08);
+}
+
+.treeCard {
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0 12px 26px rgba(31, 56, 88, 0.08);
+}
+
+.cardTitle {
+  max-width: 180px;
+}
+
+.cardBody {
+  width: 100%;
+}
+
+.metaPanel {
+  border-radius: 14px;
+  padding: 6px 12px;
+  min-height: 38px;
+  background: #f7f9fc;
+  border: 1px solid #e4ebf5;
+  display: flex;
+  align-items: center;
+}
+
+.metaInlineRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.entryPanel {
+  flex: 1;
+  min-width: 0;
+}
+
+.editorPanel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: transparent;
+  border-color: transparent;
+  padding: 0;
+}
+
+.infoLabel {
+  color: #7d8797;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.inlineLabel {
+  color: #8c98ab;
+  font-weight: 700;
+}
+
+.infoValue {
+  margin: 0 !important;
+  color: #1d2c49;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.infoInlineText {
+  display: block;
+  width: 100%;
+  color: #1d2c49;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.editorButton {
+  padding-inline: 14px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .metaInlineRow {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .editorPanel {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

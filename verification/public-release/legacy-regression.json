@@ -1,0 +1,52 @@
+[
+  {
+    "test": "smoke",
+    "exit_code": 0,
+    "seconds": 0.18
+  },
+  {
+    "test": "check-crud",
+    "exit_code": 0,
+    "seconds": 0.6
+  },
+  {
+    "test": "check-flow",
+    "exit_code": 0,
+    "seconds": 2.1
+  },
+  {
+    "test": "check-alias",
+    "exit_code": 0,
+    "seconds": 0.41
+  },
+  {
+    "test": "check-wallet",
+    "exit_code": 0,
+    "seconds": 0.47
+  },
+  {
+    "test": "check-outbox",
+    "exit_code": 0,
+    "seconds": 7.58
+  },
+  {
+    "test": "check-gift-cache",
+    "exit_code": 0,
+    "seconds": 0.2
+  },
+  {
+    "test": "check-credit-concurrency",
+    "exit_code": 0,
+    "seconds": 3.92
+  },
+  {
+    "test": "check-award-replay",
+    "exit_code": 0,
+    "seconds": 6.16
+  },
+  {
+    "test": "check-warmup",
+    "exit_code": 0,
+    "seconds": 1.19
+  }
+]

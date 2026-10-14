@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yuhui.infrastructure.es.EsUserAwardRecordMapper">
+
+    <resultMap id="BaseResultMap" type="com.yuhui.infrastructure.es.po.EsUserAwardRecord">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="userId" column="_user_id" jdbcType="VARCHAR"/>
+            <result property="activityId" column="_activity_id" jdbcType="BIGINT"/>
+            <result property="strategyId" column="_strategy_id" jdbcType="BIGINT"/>
+            <result property="userOrderId" column="_user_order_id" jdbcType="BIGINT"/>
+            <result property="awardId" column="_award_id" jdbcType="BIGINT"/>
+            <result property="awardTitle" column="_award_title" jdbcType="VARCHAR"/>
+            <result property="awardTime" column="_award_time" jdbcType="TIMESTAMP"/>
+            <result property="awardState" column="_award_state" jdbcType="VARCHAR"/>
+            <result property="createTime" column="_create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="_update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <resultMap id="SimpleResultMap" type="com.yuhui.infrastructure.es.po.EsUserAwardRecordSimple">
+            <result property="userId" column="_user_id" jdbcType="VARCHAR"/>
+            <result property="awardId" column="_award_id" jdbcType="BIGINT"/>
+            <result property="awardTitle" column="_award_title" jdbcType="VARCHAR"/>
+            <result property="awardTime" column="_award_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <select id="queryUserAwardRecordVOListEs" resultMap="BaseResultMap">
+        select _user_id, _activity_id, _strategy_id, _user_order_id, _award_id, _award_title, _award_time, _award_state, _create_time, _update_time
+        from "marketing.user_award_record"
+        order by _update_time desc
+    </select>
+    <select id="queryUserAwardRecordVOListEsByActivityId" resultMap="BaseResultMap">
+        select _user_id, _activity_id, _strategy_id, _user_order_id, _award_id, _award_title, _award_time, _award_state, _create_time, _update_time
+        from "marketing.user_award_record"
+        order by _award_time desc
+        limit 5
+    </select>
+
+    <select id="queryUserAwardRecordSimpleEsByActivityId" resultMap="SimpleResultMap">
+        select _user_id, _award_id, _award_title, _award_time
+        from "marketing.user_award_record"
+        where _activity_id = #{activityId}
+        order by _award_time desc
+        limit 20
+    </select>
+</mapper>

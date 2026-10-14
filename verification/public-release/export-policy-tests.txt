@@ -1,0 +1,6 @@
+PASS: 11 forbidden artifact paths excluded
+PASS: 5 source/config/evidence paths retained
+PASS: clean actual staged tree passes strict verification
+PASS: injected runtime log causes strict failure
+PASS: injected private path and private IP cause strict failure
+PASS: removing probes restores strict PASS

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yuhui.infrastructure.es.EsActivityRecordMapper">
+
+    <resultMap id="BaseResultMap" type="com.yuhui.infrastructure.es.po.EsActivityRecord">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="userId" column="_user_id" jdbcType="VARCHAR"/>
+        <result property="activityId" column="_activity_id" jdbcType="BIGINT"/>
+        <result property="sku" column="_sku" jdbcType="BIGINT"/>
+        <result property="activityName" column="_activity_name" jdbcType="VARCHAR"/>
+        <result property="totalCount" column="_total_count" jdbcType="INTEGER"/>
+        <result property="dayCount" column="_day_count" jdbcType="INTEGER"/>
+        <result property="monthCount" column="_month_count" jdbcType="INTEGER"/>
+        <result property="payAmount" column="_pay_amount" jdbcType="DECIMAL"/>
+        <result property="state" column="_state" jdbcType="VARCHAR"/>
+        <result property="outBusinessNo" column="_out_business_no" jdbcType="VARCHAR"/>
+        <result property="createTime" column="_create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="_update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <select id="queryActivityRecordVOListEs" resultMap="BaseResultMap">
+        select _user_id, _activity_id, _sku, _activity_name, _total_count, _day_count, _month_count, _pay_amount, _state, _out_business_no, _create_time, _update_time
+        from "marketing.activity_record"
+        order by _update_time desc
+    </select>
+</mapper>

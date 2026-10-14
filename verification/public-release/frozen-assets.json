@@ -1,0 +1,18 @@
+{
+  "infra/init/05-bank-rule-labels.sql": "1ca5859e14651b9ac0725158bbb5b434d8a9d3eba90e3524011dee95aed2f3e8",
+  "infra/init/03-local-entitlement.sql": "aa721386ad32a2c77ba71df87342e70c12fd9a8c377981c139decedce8d8acf9",
+  "infra/init/04-bank-theme.sql": "a5fc9a19a9d3b666b21471f84bd043596379353022e28d3583b6f8bcf7fd3672",
+  "infra/init/06-v3-operating.sql": "b5ac19434bd32c36e7bdceff794c1ed44fc1de3a39b1fe07c7488ad91ac6bbf8",
+  "infra/init/02-marketing_02.sql": "ef8c6fc8a9c4560dae2e66d644aa6c31bd4516bf5430bf737b8572a682e3051b",
+  "infra/init/01-marketing_01.sql": "231a7f639967096ac3fbe301f26acc242e3d09fa347c63078b4b16e11019854c",
+  "infra/init/00-marketing.sql": "1eb28686023a88b4071237cece6585473982edcad752d3a9b5550ad9b44ab9da",
+  "infra/migration/07-v3-final-patch.sql": "b8bced3de612ed5f89ff5de7c6f121280d7e47471ccfae6e6ab8338ed49ef0af",
+  "assets/demo/README.md": "a1da841b66600489979b1ea8233407da270e30317f64555ac032bfa6ba007f43",
+  "assets/screenshots/01-segment-management.jpg": "5ee6fc03c34b2155f3c114a069f334aab99b1c087138fb77009a5af69a4e876d",
+  "assets/screenshots/02-campaign-plan.jpg": "7117c5d25c4360b817f564d04b0798e5f8d73ec610188c287678393a1a3887e0",
+  "assets/screenshots/05-merchant-redemption.jpg": "fe35e5a75ef1af9af4fae509a0ff3ad653255a0c68d40250e78476cafb616b32",
+  "assets/screenshots/06-ongoing-review.jpg": "1156972a9bf86bd74eb0df744a33df640cbb58481be4218f9dab5bd9e862f143",
+  "assets/screenshots/04-customer-wallet.jpg": "017e4cba8355138dae84a15ead2e8d61f9c591ab5ea12f06426b58edf29ca2a0",
+  "assets/screenshots/07-final-review.jpg": "d94f0df03d02d9f8e486619256992f89297181a43c205c9916e93c2cc1136732",
+  "assets/screenshots/03-review-config.jpg": "d20df74fab6eca302bb79cce75552e7426a07cb10505292fec95ede903b3377f"
+}

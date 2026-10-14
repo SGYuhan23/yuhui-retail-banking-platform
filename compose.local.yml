@@ -1,0 +1,45 @@
+# DEMO_ONLY: fixed local credentials; bind services to loopback, never reuse in production.
+name: yuhui-retail-banking-platform
+services:
+  mysql:
+    image: public.ecr.aws/docker/library/mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: yuhui_local_only
+      TZ: Asia/Shanghai
+    ports: ["127.0.0.1:13306:3306"]
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./infra/init:/docker-entrypoint-initdb.d:ro
+    command: ["--default-authentication-plugin=mysql_native_password", "--default-time-zone=+08:00"]
+  redis:
+    image: redis:7
+    ports: ["127.0.0.1:16379:6379"]
+    volumes: ["redis-data:/data"]
+    command: ["redis-server", "--appendonly", "yes"]
+  rabbitmq:
+    image: public.ecr.aws/docker/library/rabbitmq:3.13-management
+    environment:
+      RABBITMQ_DEFAULT_USER: yuhui
+      RABBITMQ_DEFAULT_PASS: yuhui_local_only
+    ports: ["127.0.0.1:15672:5672", "127.0.0.1:15673:15672"]
+    volumes: ["rabbit-data:/var/lib/rabbitmq"]
+  zookeeper:
+    image: public.ecr.aws/docker/library/zookeeper:3.8
+    ports: ["127.0.0.1:12181:2181"]
+    volumes: ["zk-data:/data", "zk-log:/datalog"]
+  elasticsearch:
+    profiles: ["full-search"]
+    image: public.ecr.aws/docker/library/elasticsearch:7.17.14
+    environment:
+      discovery.type: single-node
+      xpack.security.enabled: 'false'
+      ES_JAVA_OPTS: -Xms256m -Xmx256m
+    ports: ["127.0.0.1:19200:9200"]
+    volumes: ["es-data:/usr/share/elasticsearch/data"]
+volumes:
+  mysql-data:
+  redis-data:
+  rabbit-data:
+  zk-data:
+  zk-log:
+  es-data:

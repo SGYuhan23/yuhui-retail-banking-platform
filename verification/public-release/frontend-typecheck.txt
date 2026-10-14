@@ -1,0 +1,4 @@
+
+> yuhui-web@6.0.0 tsc
+> tsc --noEmit
+

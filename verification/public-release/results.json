@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-14",
+  "backend_build": "PASS",
+  "unit_tests": "22/22, zero skipped",
+  "final_patch_targeted": "22/22",
+  "full_v3": "48/48",
+  "legacy_regression": "10/10 groups",
+  "frontend_typecheck": "PASS",
+  "frontend_build": "PASS, REPLICA_LOCAL=true",
+  "fixed_seed_reproducibility": "PASS, seed 202610",
+  "java_business_source_sql_frontend_src_assets_changed": [],
+  "screenshots": "7/7 visually inspected, original bytes retained",
+  "environment": "JDK 17, Maven 3.9.14, Node 20; separate local Compose volumes initialized from existing SQL",
+  "frontend_dependency_scope": "reused installed dependencies; clean online install not claimed",
+  "github_actions": "workflow included; first public run pending",
+  "legacy_fixture_note": "Fresh volume lacked the fixed gift-cache user receipt. Existing API established TEST_ONLY gift receipt before the unchanged regression assertions passed. No expected numbers changed."
+}

@@ -1,0 +1,12 @@
+{
+  "yuhui-server/entrypoints/src/test/java/com/yuhui/operating/V3ReviewConfigTest.java": "8e2fb72e78a20eb8d15a41ece7efb2ad45a22ade128e85edd080ceb726ac16d3",
+  "yuhui-server/entrypoints/src/test/java/com/yuhui/operating/V3RulesTest.java": "0ffa94a06535a79cbfb405437c8649b0105b00e34d3541d702b54c6d612bc3a4",
+  "yuhui-server/entrypoints/src/main/java/com/yuhui/operating/V3Store.java": "7731b74f3de666ad5c15f055d2a45ca0b4f78c130acb39b2f16f5c042c7497a9",
+  "yuhui-server/entrypoints/src/main/java/com/yuhui/operating/V3Review.java": "5d4956fb6a4509e59d9a51689d5a111d2a5250af48e9a2548c0a25412ba153a2",
+  "yuhui-server/entrypoints/src/main/java/com/yuhui/operating/V3ReviewConfig.java": "0a0df993a35ff079420540e7a01b332582f6508aae64d2b7471e17f9563f3033",
+  "yuhui-server/entrypoints/src/main/java/com/yuhui/operating/V3Campaigns.java": "991d256dbafdad592d7d4140f1525399396f4e575f0230e8d8226f43d95a5cb2",
+  "yuhui-server/entrypoints/src/main/java/com/yuhui/operating/V3Demo.java": "1768ef78a97a571aacf4825775537659040a756200fc4006b32ab67bc1946d58",
+  "yuhui-server/entrypoints/src/main/java/com/yuhui/operating/V3Rules.java": "028357fda5e785cc1610a823cdb81dbed0655e8a28c14b504e2265c2938282a1",
+  "yuhui-server/entrypoints/src/main/java/com/yuhui/operating/V3Execution.java": "f3a2bd796eea8030f290576f3de3c14d78eb43ef759836b802f8864b893a15a2",
+  "yuhui-server/entrypoints/src/main/java/com/yuhui/operating/V3Controller.java": "03928e2f45686e50765a6012db37db32fa63f5b111f3a9ff7439fa66e9e92a41"
+}

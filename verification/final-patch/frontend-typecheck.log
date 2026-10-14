@@ -1,0 +1,4 @@
+
+> ant-design-pro@6.0.0 tsc
+> tsc --noEmit
+
