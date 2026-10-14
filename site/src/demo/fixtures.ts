@@ -23,8 +23,7 @@ export const fixtures = {
       ["营销许可", "已许可"],
     ],
   },
-  // Customer identifier is present in the genuine wallet screenshot; no invented attributes.
-  customers: [{ id: "SYN00022", source: "真实钱包截图中的合成客户" }],
+  customers: [{ id: "SYN00022" }],
   scenes: ["社区生活", "餐饮消费", "山城文旅", "乡村 / 重庆特色消费"],
   merchants: [
     "渝邻便利（虚构）",

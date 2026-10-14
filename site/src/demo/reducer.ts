@@ -149,7 +149,8 @@ export function reducer(s: DemoState, a: Action): DemoState {
         ? {
             ...s,
             fulfillmentStatus: "履约完成",
-            notice: "已回放其余合成客户的固定履约结果，全部权益进入终态。",
+            notice:
+              "案例履约已完成：已核销权益计入实际成本，未使用到期权益释放预占预算。",
           }
         : s;
     case "decision":

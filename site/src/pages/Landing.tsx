@@ -60,25 +60,15 @@ export default function Landing() {
                   开始交互演示
                 </Button>
               </Link>
-              <Button
-                size="large"
-                onClick={() =>
-                  document
-                    .getElementById("understand")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
-              >
-                30 秒看懂
-              </Button>
               <a href={source}>查看源码 ↗</a>
             </div>
           </div>
           <div className="hero-aside">
             <span className="eyebrow">一次经营活动，三个关键判断</span>
             <h3>
-              钱什么时候
+              一笔权益预算，
               <br />
-              才算真正花掉？
+              什么时候才算真正花掉？
             </h3>
             <ol>
               <li>
@@ -99,7 +89,7 @@ export default function Landing() {
         </section>
         <section id="understand">
           <p className="eyebrow">从一次经营活动说起</p>
-          <h2>30 秒看懂渝惠</h2>
+          <h2>快速看懂渝惠</h2>
           <div className="five-cards">
             {cards.map(([title, text], i) => {
               const Icon = icons[i];
@@ -112,20 +102,18 @@ export default function Landing() {
               );
             })}
           </div>
-        </section>
-        <section>
-          <h2>一条业务闭环</h2>
+          <h3 className="flow-heading">一次活动怎么跑完</h3>
           <div className="flow">
             {flow.map((x, i) => (
               <div key={x}>
                 <small>{String(i + 1).padStart(2, "0")}</small>
                 {x}
-                <span>→</span>
+                {i < flow.length - 1 && <span>→</span>}
               </div>
             ))}
           </div>
           <p className="muted">
-            先观察并留存客群；正式经营名单在复核发布时冻结。审核什么，就执行什么。
+            发布时冻结实际经营名单；核销形成实际成本，未使用权益到期释放预算；复盘后记录下一轮扩大、保持、缩减或停止。
           </p>
         </section>
         <section className="demo-entry">
@@ -158,15 +146,15 @@ export default function Landing() {
           </div>
         </section>
         <section className="boundary">
-          <h2>Synthetic Demo 边界</h2>
+          <h2>演示说明</h2>
           <p>
-            {boundary}{" "}
-            交互按钮回放预设流程，不产生实际交易；观察结果不代表真实经营业绩或营销因果效果。
+            {boundary}
+            页面中的客户、商户、交易和经营结果仅用于展示系统如何执行与复盘，不代表真实经营业绩或营销因果效果。
           </p>
         </section>
         <section className="source">
-          <h2>完整实现，保留在源码中</h2>
-          <p>后端、前端、数据库初始化与工程验收记录均可查看。</p>
+          <h2>查看完整项目实现</h2>
+          <p>完整前后端源码、数据库初始化、运行说明和工程验收记录均可查看。</p>
           <a href={source} target="_blank" rel="noreferrer">
             <Button>查看源码 ↗</Button>
           </a>

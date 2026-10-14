@@ -162,7 +162,7 @@ export default function Demo() {
         <Card title="从头体验一次经营活动">
           <p>这套演示会带你从“选哪些客户”走到“活动结束后下一轮怎么决策”。</p>
           <p className="muted">
-            先回放一个客户的领取与核销，再推进到完整案例的固定结果；点击不会增加历史汇总数字。
+            先体验一名客户从领取到核销，再进入完整经营结果与复盘。
           </p>
           <Button type="primary" onClick={() => go("segments")}>
             从选择客群开始
@@ -211,10 +211,7 @@ export default function Demo() {
                   rowKey="id"
                   pagination={false}
                   dataSource={f.customers}
-                  columns={[
-                    { title: "合成客户", dataIndex: "id" },
-                    { title: "说明", dataIndex: "source" },
-                  ]}
+                  columns={[{ title: "合成客户 ID", dataIndex: "id" }]}
                 />
               ),
             },
@@ -261,7 +258,7 @@ export default function Demo() {
                     style={{ width: 260, maxWidth: "100%" }}
                   />
                   <p className="muted">
-                    预设方案用于稳定回放，不开放自由修改预算、目标或人数。
+                    本次演示使用固定经营方案，便于完整体验从发布到复盘的流程。
                   </p>
                   <Button
                     type="primary"
@@ -352,7 +349,7 @@ export default function Demo() {
               label: "为什么需要重新复核？",
               children: (
                 <p>
-                  已审核后的客群规则、预算或关键配置发生变化，原审核失效，需要重新复核。发布后的版本不可编辑；这个预设反例不会改动固定案例数字。
+                  如果复核后的客群规则、预算或关键配置发生变化，原复核结果失效，需要重新提交。发布后的版本不可编辑。
                 </p>
               ),
             },
@@ -391,7 +388,7 @@ export default function Demo() {
           <p>适用场景：社区生活</p>
           <p>适用商户：{f.merchants[0].name}</p>
           <p>消费满 {money(f.benefit.minSpend)} 可用</p>
-          <p>领取后 7 天有效；回放有效期至 {f.replay.expiresAt}</p>
+          <p>领取后 7 天有效；本案例有效期至 {f.replay.expiresAt}</p>
           <Button
             type="primary"
             disabled={!state.published || state.claimStatus === "已领取"}
@@ -401,8 +398,9 @@ export default function Demo() {
           </Button>
         </Card>
         {notices}
+        <h3>预占预算</h3>
         <p className="muted">
-          预算变化说明：Reserve = 已经承诺给客户、但还没有实际核销的预算。
+          客户领取权益后，这部分预算先被占用，但还没有形成实际成本。
         </p>
         {state.claimStatus === "已领取" && (
           <Button onClick={() => go("redemption")}>
@@ -431,7 +429,7 @@ export default function Demo() {
             ].map(([label, children]) => ({ key: label, label, children }))}
           />
           <Space className="actions" wrap>
-            <Tooltip title="幂等：重复操作不产生第二次成本">
+            <Tooltip title="重复核销不会重复扣减成本。">
               <Button
                 type="primary"
                 disabled={state.claimStatus !== "已领取"}
@@ -453,7 +451,7 @@ export default function Demo() {
           </Space>
           {notices}
           <p>
-            单笔回放：银行预算 {money(f.benefit.bankCost)}{" "}
+            本次核销：银行预算 {money(f.benefit.bankCost)}{" "}
             从预占转为实际成本。目标行为需要独立观察，核销不会自动推定客户活跃。
           </p>
         </Card>
@@ -475,13 +473,13 @@ export default function Demo() {
           }
         />
         {state.redemptionStatus !== "已核销" ? (
-          requireAction("请先走完单笔核销回放。", "redemption")
+          requireAction("请先完成客户领取与商户核销。", "redemption")
         ) : (
           <Card title="投放与履约状态">
             <Space>
               <Tag>停止投放</Tag>
               <Tag color={settled ? "green" : "gold"}>
-                {settled ? "履约完成 · SETTLED" : "履约进行中 · ONGOING"}
+                {settled ? "履约完成" : "履约进行中"}
               </Tag>
             </Space>
             <p>
@@ -496,8 +494,8 @@ export default function Demo() {
               <Card title="未使用到期">释放预占预算，归还可用额度。</Card>
             </div>
             <p>
-              下一步回放其余客户的固定结果：275 人核销、225
-              份权益未使用到期。不等待真实时间，也不新增交易。
+              推进至案例最终履约结果：275 人完成核销；225
+              份权益未使用到期并释放预占预算。
             </p>
             <Button
               type="primary"
@@ -525,9 +523,9 @@ export default function Demo() {
         {!settled && (
           <Alert
             showIcon
-            message="正在查看固定完整案例；当前操作回放尚未结束。"
-            description="以下是既有案例的最终结果，不是你刚才单次点击累计出的数据。完成履约回放后可记录决策。"
-            action={<Button onClick={() => go("fulfillment")}>继续回放</Button>}
+            message="以下展示本次完整合成经营案例的最终复盘结果。"
+            description="完成履约步骤后，可以记录下一轮经营决策。"
+            action={<Button onClick={() => go("fulfillment")}>继续体验</Button>}
           />
         )}
         <Alert
@@ -697,7 +695,7 @@ export default function Demo() {
           当前阶段：
           {settled
             ? "完整案例履约完成"
-            : "单客户操作回放（不包含其余客户的历史汇总）"}
+            : "当前客户的领取与核销（完整案例结果见最终复盘）"}
         </p>
         <BudgetCards data={stageBudget} />
         <Card title="预算流水 · 演示规则示意">
@@ -708,21 +706,21 @@ export default function Demo() {
             scroll={{ x: 550 }}
             dataSource={[
               {
-                type: "预占 · RESERVE",
+                type: "预占预算",
                 when: "领取成功",
                 reserve: "+12",
                 cost: "0",
                 explain: "承诺给客户，尚未花掉",
               },
               {
-                type: "实扣 · COMMIT",
+                type: "实际成本",
                 when: "实际核销",
                 reserve: "−12",
                 cost: "+12",
                 explain: "同一份权益转为实际成本",
               },
               {
-                type: "释放 · RELEASE",
+                type: "释放预算",
                 when: "另一份未使用权益到期 / 取消",
                 reserve: "−12",
                 cost: "0",
@@ -823,8 +821,42 @@ export default function Demo() {
         >
           <h1>{titles[section] || "演示"}</h1>
           {content}
+          <Collapse
+            items={[
+              {
+                key: "implementation",
+                label: "查看实现细节",
+                children: (
+                  <Descriptions
+                    column={1}
+                    items={[
+                      [
+                        "预占预算",
+                        "RESERVE：领取后占用预算，尚未形成实际成本。",
+                      ],
+                      ["实际成本", "COMMIT：核销成功后，预占转为实际成本。"],
+                      [
+                        "释放预算",
+                        "RELEASE：权益到期或取消后，未使用的预算重新可用。",
+                      ],
+                      ["履约进行中", "ONGOING"],
+                      ["履约完成", "SETTLED"],
+                      [
+                        "重复核销保护",
+                        "Idempotency：幂等控制，重复核销不重复扣减。",
+                      ],
+                    ].map(([label, children]) => ({
+                      key: label,
+                      label,
+                      children,
+                    }))}
+                  />
+                ),
+              },
+            ]}
+          />
         </main>
-        <footer>渝惠｜零售客户经营与场景权益平台 · 固定合成数据静态回放</footer>
+        <footer>渝惠｜零售客户经营与场景权益平台 · 固定合成数据演示</footer>
       </div>
     </div>
   );

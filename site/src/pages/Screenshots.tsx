@@ -9,7 +9,7 @@ export default function Screenshots() {
       <main className="screenshots">
         <h1>真实系统截图</h1>
         <p>
-          以下截图来自完整本地系统；交互演示使用相同业务流程和固定合成数据在浏览器中静态回放。
+          以下截图来自完整本地系统；交互演示使用相同业务流程和固定合成数据进行交互体验。
         </p>
         <p className="muted">
           履约进行中的截图来自独立验收活动，最终复盘来自固定案例；截图保留原始内容。

@@ -176,7 +176,7 @@ Dubbo/Nacos 调用链、Canal/Elasticsearch 同步、XXL-JOB 调度中心不主�
 ### Prerequisites
 
 - Java 17（POM）；Maven 3.x（本地 Maven 3.9.14）。
-- Node.js 20（本地 20.20.2）、pnpm（现有本地 11.25.0）；CI 使用 Node 22 / pnpm 10 读取 v9 lockfile，Runner 兼容性以首次执行为准。
+- Node.js 20（本地 20.20.2）、pnpm（现有本地 11.25.0）；CI 使用 Node 22 / pnpm 10，已在 GitHub Actions 验证依赖安装、类型检查与前端构建通过。
 - Docker Desktop / Docker Engine 与 Compose v2；Python 3；Bash。
 - Compose 镜像：MySQL 8.0、Redis 7、RabbitMQ 3.13-management、ZooKeeper 3.8。完整本地主线需要这些服务。
 

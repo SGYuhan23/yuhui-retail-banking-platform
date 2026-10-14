@@ -565,3 +565,7 @@ footer {
     animation: none !important;
   }
 }
+
+.flow-heading {
+  margin-top: 28px;
+}
