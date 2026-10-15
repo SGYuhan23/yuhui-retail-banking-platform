@@ -145,7 +145,7 @@ export default function Demo() {
     content = (
       <>
         <Card>
-          <Tag color="green">已完成 · 固定完整案例</Tag>
+          <Tag color="green">案例结果概览</Tag>
           <h2>沉默客户社区生活权益经营案例</h2>
           <p>{f.campaign.name}</p>
           <div className="metrics">
@@ -699,7 +699,7 @@ export default function Demo() {
         </p>
         <BudgetCards data={stageBudget} />
         <Card title="预算流水 · 演示规则示意">
-          <p>这里展示三类规则，不伪装成逐笔历史交易。金额单位：元。</p>
+          <p>以下展示三类预算动作及其记账规则，非逐笔历史交易明细。</p>
           <Table
             rowKey="type"
             pagination={false}

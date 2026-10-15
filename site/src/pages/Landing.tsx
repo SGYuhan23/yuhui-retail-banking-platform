@@ -121,7 +121,7 @@ export default function Landing() {
             <p className="eyebrow">从经营端，到客户，再到商户</p>
             <h2>亲手走完这次活动</h2>
             <p>
-              七个步骤，预设好全部重要字段。领取一张券、核销一次，再看预算和经营复盘如何变化。
+              七个步骤，体验一份权益从领取、核销到最终复盘的完整过程。
             </p>
           </div>
           <Link to="/demo/overview">
