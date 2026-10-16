@@ -1,7 +1,22 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { initialState, reducer, budget } from "./reducer";
+import { initialState, reducer, budget, stageState } from "./reducer";
 import review from "./review.json";
+test("independent stages start at valid actionable states without changing the complete flow", () => {
+  const wallet = stageState('wallet');
+  assert.equal(wallet.published, true);
+  assert.equal(wallet.claimStatus, '可领取');
+  assert.equal(budget(reducer(wallet,{type:'claim'})).reserved,1200);
+  const redemption = stageState('redemption');
+  assert.equal(redemption.redemptionStatus,'未核销');
+  assert.equal(budget(reducer(redemption,{type:'redeem'})).committed,1200);
+  const settlement = stageState('fulfillment');
+  assert.equal(settlement.campaignStatus,'停止投放');
+  assert.equal(settlement.fulfillmentStatus,'进行中');
+  assert.equal(reducer(settlement,{type:'settle'}).fulfillmentStatus,'履约完成');
+  assert.equal(stageState('final-review').fulfillmentStatus,'履约完成');
+  assert.equal(initialState.published,false);
+});
 test("governance blocks publication after reviewed configuration change", () => {
   let s = reducer(initialState, { type: "publish" });
   assert.equal(s.published, false);

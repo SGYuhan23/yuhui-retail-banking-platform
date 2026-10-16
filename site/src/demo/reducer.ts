@@ -34,6 +34,7 @@ export const initialState: DemoState = {
 };
 export type Action = {
   type:
+    | "load-step"
     | "navigate"
     | "submit"
     | "approve"
@@ -52,6 +53,8 @@ export type Action = {
 };
 export function reducer(s: DemoState, a: Action): DemoState {
   switch (a.type) {
+    case "load-step":
+      return stageState(a.value ?? "segments");
     case "reset":
       return { ...initialState };
     case "navigate":
@@ -75,7 +78,7 @@ export function reducer(s: DemoState, a: Action): DemoState {
             reviewStatus: "待复核",
             campaignStatus: "待复核",
             changed: false,
-            notice: "已提交固定配置，等待复核。",
+            notice: "方案已提交，等待审核。",
           };
     case "approve":
       return s.reviewStatus === "待复核"
@@ -83,7 +86,7 @@ export function reducer(s: DemoState, a: Action): DemoState {
             ...s,
             reviewStatus: "已通过",
             campaignStatus: "已通过",
-            notice: "复核通过。发布前仍会校验关键配置。",
+            notice: "审核通过，可以发布。",
           }
         : s;
     case "change":
@@ -91,7 +94,7 @@ export function reducer(s: DemoState, a: Action): DemoState {
         ? {
             ...s,
             changed: true,
-            notice: "已模拟关联规则发生变化；原审核不能继续用于发布。",
+            notice: "客群条件已修改，发布时需重新审核。",
           }
         : s;
     case "restore":
@@ -101,7 +104,7 @@ export function reducer(s: DemoState, a: Action): DemoState {
         changed: false,
         reviewStatus: "待复核",
         campaignStatus: "待复核",
-        notice: "已恢复固定方案并重新提交，请再次复核。",
+        notice: "已恢复原方案，请重新审核。",
       };
     case "publish":
       if (s.published) return s;
@@ -118,7 +121,7 @@ export function reducer(s: DemoState, a: Action): DemoState {
             published: true,
             campaignStatus: "已发布",
             fulfillmentStatus: "进行中",
-            notice: "关键配置已冻结，本次投放将使用该发布版本。",
+            notice: "活动已发布，名单与方案已锁定。",
           }
         : s;
     case "claim":
@@ -128,7 +131,7 @@ export function reducer(s: DemoState, a: Action): DemoState {
         ? {
             ...s,
             claimStatus: "已领取",
-            notice: "领取成功。对应银行预算先进入预占，还没有形成实际成本。",
+            notice: "领取成功，银行预算已预留。",
           }
         : s;
     case "redeem":
@@ -138,8 +141,7 @@ export function reducer(s: DemoState, a: Action): DemoState {
         ? {
             ...s,
             redemptionStatus: "已核销",
-            notice:
-              "核销成功：只有真正核销后，这部分预算才从预占变成实际成本。",
+            notice: "核销成功，预留预算已计入成本。",
           }
         : s;
     case "end":
@@ -158,7 +160,7 @@ export function reducer(s: DemoState, a: Action): DemoState {
             ...s,
             fulfillmentStatus: "履约完成",
             notice:
-              "案例履约已完成：已核销权益计入实际成本，未使用到期权益释放预占预算。",
+              "结算完成：已用券计入成本，到期未用券已释放预算。",
           }
         : s;
     case "decision":
@@ -175,9 +177,9 @@ export function reducer(s: DemoState, a: Action): DemoState {
         : s;
   }
 }
-export function loadState(): DemoState {
+export function loadState(key = storageKey): DemoState {
   try {
-    const s = JSON.parse(localStorage.getItem(storageKey) || "null");
+    const s = JSON.parse(localStorage.getItem(key) || "null");
     if (
       s &&
       Object.keys(initialState).every(
@@ -200,4 +202,12 @@ export function budget(s: DemoState) {
     released: 0,
     available: f.campaign.budget - (claimed ? f.benefit.bankCost : 0),
   };
+}
+
+// Independent previews enter through the same valid transitions as the full flow.
+export function stageState(section: string): DemoState {
+  const actions: Action['type'][] = ['submit','approve','publish','claim','redeem','end','settle'];
+  const through: Record<string, number> = { segments: 0, campaign: 0, review: 1, wallet: 3, redemption: 4, fulfillment: 6, 'final-review': 7 };
+  const state = actions.slice(0,through[section] ?? 0).reduce((s,type)=>reducer(s,{type}),{...initialState});
+  return {...state, selectedSection: section, notice: ''};
 }
