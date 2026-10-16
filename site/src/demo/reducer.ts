@@ -1,4 +1,5 @@
-export const storageKey = "yuhui-pages-demo-v1";
+import { fixtures as f } from './fixtures';
+export const storageKey = "yuhui-pages-demo-v2";
 export type DemoState = {
   guideStep: number;
   viewMode: string;
@@ -9,6 +10,8 @@ export type DemoState = {
   redemptionStatus: string;
   fulfillmentStatus: string;
   decision: string;
+  decisionReason: string;
+  decisionMetrics: { claimed: number; redeemed: number; bankCost: number; target: number } | null;
   selectedSection: string;
   changed: boolean;
   notice: string;
@@ -23,6 +26,8 @@ export const initialState: DemoState = {
   redemptionStatus: "未核销",
   fulfillmentStatus: "未开始",
   decision: "",
+  decisionReason: "",
+  decisionMetrics: null,
   selectedSection: "overview",
   changed: false,
   notice: "",
@@ -43,6 +48,7 @@ export type Action = {
     | "reset";
   value?: string;
   step?: number;
+  reason?: string;
 };
 export function reducer(s: DemoState, a: Action): DemoState {
   switch (a.type) {
@@ -89,6 +95,7 @@ export function reducer(s: DemoState, a: Action): DemoState {
           }
         : s;
     case "restore":
+      if (s.published) return s;
       return {
         ...s,
         changed: false,
@@ -136,6 +143,7 @@ export function reducer(s: DemoState, a: Action): DemoState {
           }
         : s;
     case "end":
+      if (s.fulfillmentStatus === "履约完成") return s;
       return s.redemptionStatus === "已核销"
         ? {
             ...s,
@@ -155,10 +163,13 @@ export function reducer(s: DemoState, a: Action): DemoState {
         : s;
     case "decision":
       return s.fulfillmentStatus === "履约完成" &&
-        ["扩大", "保持", "缩减", "停止"].includes(a.value ?? "")
+        ["扩大", "保持", "缩减", "停止"].includes(a.value ?? "") &&
+        !!a.reason?.trim() && a.reason.trim().length <= 3000
         ? {
             ...s,
             decision: a.value!,
+            decisionReason: a.reason!.trim(),
+            decisionMetrics: { claimed: f.review.funnel.CLAIMED, redeemed: f.review.funnel.REDEEMED, bankCost: f.review.budget.committed, target: f.review.target_actual },
             notice: "已记录本次复盘时的指标快照。仅保存在当前浏览器。",
           }
         : s;
@@ -179,20 +190,14 @@ export function loadState(): DemoState {
 }
 export function budget(s: DemoState) {
   if (s.fulfillmentStatus === "履约完成")
-    return {
-      total: 600000,
-      reserved: 0,
-      committed: 330000,
-      released: 270000,
-      available: 270000,
-    };
+    { const {total,reserved,committed,released,available} = f.review.budget; return {total,reserved,committed,released,available}; }
   const claimed = s.claimStatus === "已领取",
     redeemed = s.redemptionStatus === "已核销";
   return {
-    total: 600000,
-    reserved: claimed && !redeemed ? 1200 : 0,
-    committed: redeemed ? 1200 : 0,
+    total: f.campaign.budget,
+    reserved: claimed && !redeemed ? f.benefit.bankCost : 0,
+    committed: redeemed ? f.benefit.bankCost : 0,
     released: 0,
-    available: 600000 - (claimed ? 1200 : 0),
+    available: f.campaign.budget - (claimed ? f.benefit.bankCost : 0),
   };
 }

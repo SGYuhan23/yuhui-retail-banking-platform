@@ -10,7 +10,7 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --host 127.0.0.1",
     "typecheck": "tsc --noEmit",
-    "test": "tsx --test src/demo/reducer.test.ts"
+    "test": "node --import tsx --test src/demo/*.test.ts"
   },
   "dependencies": {
     "@ant-design/icons": "^5.6.1",

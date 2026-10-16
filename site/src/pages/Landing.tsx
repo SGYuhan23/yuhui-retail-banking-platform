@@ -1,166 +1,28 @@
-import { Button, Card, Tag } from "antd";
-import {
-  TeamOutlined,
-  GiftOutlined,
-  WalletOutlined,
-  ShopOutlined,
-  BarChartOutlined,
-  ArrowRightOutlined,
-} from "@ant-design/icons";
-import { Link } from "react-router-dom";
-import { asset, source } from "../demo/fixtures";
-import { cards, flow, shots, boundary } from "../demo/copy";
-const icons = [
-  TeamOutlined,
-  GiftOutlined,
-  WalletOutlined,
-  ShopOutlined,
-  BarChartOutlined,
-];
+import { Link } from 'react-router-dom';
+import { ArrowRightOutlined, CheckOutlined } from '@ant-design/icons';
+import { fixtures as f, money, asset, source } from '../demo/fixtures';
+import { storySteps, r, unused, fmt } from '../demo/story';
+
 export function PublicHeader() {
-  return (
-    <header className="public-header">
-      <Link className="brand" to="/">
-        <img src={asset("bank-mark.svg")} alt="渝惠项目标识" />
-        渝惠
-      </Link>
-      <nav>
-        <Link to="/demo/overview">交互演示</Link>
-        <Link to="/screenshots">真实系统截图</Link>
-        <a href={source} target="_blank" rel="noreferrer">
-          源码 ↗
-        </a>
-      </nav>
-    </header>
-  );
+  return <header className="public-header">
+    <Link className="brand" to="/"><img src={asset('bank-mark.svg')} alt="" /><span>渝惠<small>零售客户经营与场景权益平台</small></span></Link>
+    <nav aria-label="主导航"><Link to="/">了解案例</Link><Link to="/demo/segments">进入活动</Link></nav>
+  </header>;
+}
+export function PublicFooter() {
+  return <footer className="public-footer"><div><strong>渝惠 · 个人产品实践</strong><p>展示采用完整系统的固定合成案例；交互在当前浏览器运行，不连接真实银行，也不产生真实交易。</p></div><a href={source} target="_blank" rel="noreferrer">项目仓库 ↗</a></footer>;
+}
+export function Offer() {
+  return <div className="offer"><span className="eyebrow">社区生活券 · 领取后 {f.benefit.days} 天有效</span><div className="offer-face"><span>满 {f.benefit.minSpend / 100} 元</span><strong>减 {f.benefit.face / 100} 元</strong></div><div className="offer-split"><div><small>银行承担</small><strong>{money(f.benefit.bankCost)}</strong></div><div><small>商户承担</small><strong>{money(f.benefit.merchantCost)}</strong></div></div><p>客户在适用商户使用优惠。领取不扣积分，费用按使用结果计算。</p></div>;
 }
 export default function Landing() {
-  return (
-    <>
-      <PublicHeader />
-      <main className="landing">
-        <section className="hero">
-          <div>
-            <Tag color="red">交互式合成数据演示 · 无需登录</Tag>
-            <h1>渝惠</h1>
-            <h2>零售客户经营与场景权益平台</h2>
-            <p className="lead">
-              把一次客户经营活动，从选人、配置权益和预算，到领取、核销和经营复盘，完整跑一遍。
-            </p>
-            <p className="muted">
-              所有客户、商户、交易和经营结果均为合成演示数据，不连接任何真实银行系统。
-            </p>
-            <div className="actions">
-              <Link to="/demo/overview">
-                <Button
-                  size="large"
-                  type="primary"
-                  icon={<ArrowRightOutlined />}
-                >
-                  开始交互演示
-                </Button>
-              </Link>
-              <a href={source}>查看源码 ↗</a>
-            </div>
-          </div>
-          <div className="hero-aside">
-            <span className="eyebrow">一次经营活动，三个关键判断</span>
-            <h3>
-              一笔权益预算，
-              <br />
-              什么时候才算真正花掉？
-            </h3>
-            <ol>
-              <li>
-                <strong>领取</strong>
-                <span>先预占，承诺给客户</span>
-              </li>
-              <li>
-                <strong>核销</strong>
-                <span>转实扣，成为实际成本</span>
-              </li>
-              <li>
-                <strong>到期</strong>
-                <span>未使用，释放预占预算</span>
-              </li>
-            </ol>
-            <div className="aside-note">停止投放 ≠ 权益履约完成</div>
-          </div>
-        </section>
-        <section id="understand">
-          <p className="eyebrow">从一次经营活动说起</p>
-          <h2>快速看懂渝惠</h2>
-          <div className="five-cards">
-            {cards.map(([title, text], i) => {
-              const Icon = icons[i];
-              return (
-                <Card key={title}>
-                  <Icon className="card-icon" />
-                  <h3>{title}</h3>
-                  <p>{text}</p>
-                </Card>
-              );
-            })}
-          </div>
-          <h3 className="flow-heading">一次活动怎么跑完</h3>
-          <div className="flow">
-            {flow.map((x, i) => (
-              <div key={x}>
-                <small>{String(i + 1).padStart(2, "0")}</small>
-                {x}
-                {i < flow.length - 1 && <span>→</span>}
-              </div>
-            ))}
-          </div>
-          <p className="muted">
-            发布时冻结实际经营名单；核销形成实际成本，未使用权益到期释放预算；复盘后记录下一轮扩大、保持、缩减或停止。
-          </p>
-        </section>
-        <section className="demo-entry">
-          <div>
-            <p className="eyebrow">从经营端，到客户，再到商户</p>
-            <h2>亲手走完这次活动</h2>
-            <p>
-              七个步骤，体验一份权益从领取、核销到最终复盘的完整过程。
-            </p>
-          </div>
-          <Link to="/demo/overview">
-            <Button type="primary" size="large">
-              进入交互演示
-            </Button>
-          </Link>
-        </section>
-        <section>
-          <div className="section-heading">
-            <h2>真实系统截图预览</h2>
-            <Link to="/screenshots">查看全部 7 张 →</Link>
-          </div>
-          <div className="preview-grid">
-            {[shots[0], shots[6]].map(([file, title, caption]) => (
-              <Link to="/screenshots" key={file}>
-                <img src={asset("screenshots/" + file)} alt={title} />
-                <h3>{title}</h3>
-                <p>{caption}</p>
-              </Link>
-            ))}
-          </div>
-        </section>
-        <section className="boundary">
-          <h2>演示说明</h2>
-          <p>
-            {boundary}
-            页面中的客户、商户、交易和经营结果仅用于展示系统如何执行与复盘，不代表真实经营业绩或营销因果效果。
-          </p>
-        </section>
-        <section className="source">
-          <h2>查看完整项目实现</h2>
-          <p>完整前后端源码、数据库初始化、运行说明和工程验收记录均可查看。</p>
-          <a href={source} target="_blank" rel="noreferrer">
-            <Button>查看源码 ↗</Button>
-          </a>
-        </section>
-      </main>
-      <footer>渝惠 · 零售客户经营与场景权益平台</footer>
-    </>
-  );
+  return <><PublicHeader /><main className="landing">
+    <section className="hero">
+      <div><span className="pill"><span className="status-dot" /> 固定合成案例 · 无需登录</span><p className="eyebrow hero-label">从一次具体的银行权益活动说起</p><h1>给客户一份优惠，<br />把每一笔预算<br /><em>管到最后。</em></h1><p className="lead">渝惠帮助经营人员选客户、定优惠、审核发放，并跟踪优惠券使用和活动成本，最后决定下一轮如何调整。</p><div className="actions"><Link className="button primary" to="/demo/segments">开始这次活动 <ArrowRightOutlined /></Link><Link className="button" to="/demo/final-review">先看案例结果</Link></div><p className="quiet">不需要安装项目。下面先看背景，再亲手走一遍。</p></div>
+      <div className="hero-case"><div className="case-ribbon"><span>本次任务</span><span>涪陵 · 社区生活</span></div><h2>拿出 {money(f.campaign.budget)}，<br />邀请沉默客户使用社区优惠。</h2><p>面向较长时间未活跃、偏好社区生活且具有营销许可的客户，安排一次权益活动。</p><Offer /><div className="case-note"><CheckOutlined /> 选谁、给什么、花多少、结果怎样，都在同一条流程里。</div></div>
+    </section>
+    <section className="brief-section"><div className="section-heading"><div><span className="eyebrow">先理解问题，再开始操作</span><h2>这次活动有三个需要作出的判断。</h2></div></div><div className="questions"><article><span>01 / 发给谁</span><h3>有预算，也不能人人都发。</h3><p>从 {fmt(f.customerCount)} 名合成客户中，按地区、活跃间隔、积分、场景偏好和营销许可确定范围。</p></article><article><span>02 / 怎么管钱</span><h3>领了券，不等于已经花钱。</h3><p>领取先预留银行承担的 {money(f.benefit.bankCost)}；使用后计入成本，未使用到期则释放预算。</p></article><article><span>03 / 下一轮怎么办</span><h3>同样的券，各商户表现不同。</h3><p>看客户是否真正使用、银行承担了多少成本，再决定下一轮保持、扩大、缩减或停止。</p></article></div></section>
+    <section className="story-section"><div className="section-heading"><div><span className="eyebrow">你来扮演活动经营人员</span><h2>从选人，到留下下一轮决定。</h2><p>每一步都有明确的任务、操作和结果；客户与商户视角会在需要时切换。</p></div></div><div className="story-map">{storySteps.map((s,i)=><Link to={'/demo/'+s.key} key={s.key}><span className="step-number">{String(i+1).padStart(2,'0')}</span><div><h3>{s.label}</h3><p>{s.title}</p></div><ArrowRightOutlined /></Link>)}</div></section>
+    <section className="result-teaser"><div><span className="eyebrow">固定案例最终结果</span><h2>{fmt(r.funnel.CLAIMED)} 人领券，<br />{fmt(r.funnel.REDEEMED)} 人实际使用。</h2><p>另外 {unused} 份券未使用到期。银行最终承担 {money(r.budget.committed)}，释放 {money(r.budget.released)} 预占预算。</p><p>这些数字用于展示规则如何执行，不是实际营销业绩，也不能证明客户已恢复长期活跃。</p><Link className="button primary" to="/demo/final-review">看看钱花在哪里 <ArrowRightOutlined /></Link></div><div className="money-summary"><div className="money-bar" aria-label="预算结果：55%形成成本，45%释放"><span style={{width:`${r.budget.committed/r.budget.total*100}%`}} /><span /></div><div><span><i className="dot red" /> 银行实际成本</span><strong>{money(r.budget.committed)}</strong></div><div><span><i className="dot sand" /> 到期释放预算</span><strong>{money(r.budget.released)}</strong></div><div className="sum-line"><span>最初预算</span><strong>{money(r.budget.total)}</strong></div><p>释放的预算不计成本；商户承担的 {money(r.merchant_contribution)} 单独统计。</p></div></section>
+  </main><PublicFooter /></>;
 }

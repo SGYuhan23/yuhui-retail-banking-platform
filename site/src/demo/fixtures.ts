@@ -1,6 +1,7 @@
 import review from "./review.json";
 // Names, costs and rules: V3Demo.java. Aggregates: targeted-acceptance.json.
 export const fixtures = {
+  customerCount: 30000,
   seed: 202610,
   review,
   campaign: {
@@ -76,4 +77,4 @@ export const money = (n: number) =>
   `¥${(n / 100).toLocaleString("zh-CN", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 export const source =
   "https://github.com/SGYuhan23/yuhui-retail-banking-platform";
-export const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+export const asset = (path: string) => `${(import.meta.env?.BASE_URL ?? '/')}${path}`;

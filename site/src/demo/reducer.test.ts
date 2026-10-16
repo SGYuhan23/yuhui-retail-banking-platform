@@ -60,3 +60,36 @@ test("fixture is the current accepted complete case", () => {
     330000,
   );
 });
+
+test("decision requires completed fulfillment and a reason, and saves a metric snapshot", () => {
+  const decision = { type: "decision", value: "保持", reason: "先核实低使用率商户的使用门槛" } as const;
+  assert.equal(reducer(initialState, decision).decision, "");
+  let s = { ...initialState };
+  for (const type of ["submit", "approve", "publish", "claim", "redeem", "end", "settle"] as const) s = reducer(s, { type });
+  assert.equal(reducer(s, { ...decision, reason: "  " }).decision, "");
+  s = reducer(s, decision);
+  assert.equal(s.decisionReason, decision.reason);
+  assert.deepEqual(s.decisionMetrics, { claimed: 500, redeemed: 275, bankCost: 330000, target: 224 });
+  assert.deepEqual(reducer(s, { type: "end" }), s);
+  assert.deepEqual(reducer(s, { type: "restore" }), s);
+  assert.deepEqual(reducer(s, { type: "reset" }), initialState);
+});
+
+import { readFileSync } from "node:fs";
+import { fixtures as f } from "./fixtures";
+test("every published case aggregate matches full-system acceptance evidence", () => {
+  const evidence = JSON.parse(readFileSync(new URL("../../../verification/final-patch/targeted-acceptance.json", import.meta.url), "utf8")).demo;
+  for (const key of Object.keys(review) as (keyof typeof review)[]) assert.deepEqual(review[key], evidence[key], key);
+  const config = JSON.parse(evidence.run.config_json);
+  assert.equal(f.campaign.budget, config.bank_budget_total);
+  assert.equal(f.campaign.goal, config.target_value);
+  assert.equal(f.campaign.start, config.start_time);
+  assert.equal(f.campaign.end, config.end_time);
+  assert.equal(f.segment.count, evidence.funnel.SNAPSHOT);
+  assert.deepEqual(f.benefit, { name: config.benefit.name, face: config.benefit.face_value, minSpend: config.benefit.minimum_spend, bankCost: config.benefit.bank_cost, merchantCost: config.benefit.merchant_cost, days: config.benefit.valid_days });
+  assert.deepEqual(f.merchants.slice(0,8).map(m=>m.name), config.merchants.map((m:{name:string})=>m.name));
+  assert.deepEqual(config.segment_rule_json, {logic:'AND', conditions:[{op:'=',field:'district',value:'涪陵'},{op:'>=',field:'last_active_days',value:60},{op:'<=',field:'last_active_days',value:180},{op:'>=',field:'points_balance',value:2000},{op:'=',field:'preferred_scene',value:'COMMUNITY'},{op:'=',field:'marketing_consent',value:true}]});
+  assert.equal(review.breakdown.merchant.reduce((sum,m)=>sum+m.claimed,0), review.funnel.CLAIMED);
+  assert.equal(review.breakdown.merchant.reduce((sum,m)=>sum+m.redeemed,0), review.funnel.REDEEMED);
+  assert.equal((review.funnel.CLAIMED-review.funnel.REDEEMED)*f.benefit.bankCost, review.budget.released);
+});
