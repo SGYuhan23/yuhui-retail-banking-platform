@@ -1,9 +1,9 @@
 import React from 'react';
 import { sitePath } from '@/utils/sitePath';
 import { Link, useLocation } from '@umijs/max';
-import { EnvironmentOutlined } from '@ant-design/icons';
+import { EnvironmentOutlined, AppstoreOutlined, ArrowRightOutlined, MenuOutlined } from '@ant-design/icons';
 import styles from './index.less';
-export function RewardsHeader({ compact = false }: { compact?: boolean }) {
+export function RewardsHeader({ compact = false, onMenuToggle, menuExpanded }: { compact?: boolean; onMenuToggle?: () => void; menuExpanded?: boolean }) {
   const { pathname } = useLocation();
   return (
     <header className={`${styles.header} ${compact ? styles.compactHeader : ''}`}>
@@ -15,26 +15,28 @@ export function RewardsHeader({ compact = false }: { compact?: boolean }) {
           </span>
         </Link>
         <nav aria-label="平台导航">
+          {onMenuToggle && <button type="button" className={styles.menuToggle} onClick={onMenuToggle} aria-label="打开运营功能菜单" aria-expanded={menuExpanded}><MenuOutlined /> 菜单</button>}
           {[
             ['/experience', '积分首页'],
-            ['/experience#benefits', '精选权益'],
             ['/wallet', '我的权益'],
+            ['/credit/credit_account', '积分管理'],
+            ['/rebate/behavior_rebate', '返利管理'],
+            ['/strategy/strategy', '策略管理'],
           ].map(([path, label]) => (
             <Link
               key={path}
               to={path}
-              className={pathname === path ? styles.active : ''}
-              aria-current={pathname === path ? 'page' : undefined}
+              className={pathname.split('/')[1] === path.split('/')[1] ? styles.active : ''}
+              aria-current={pathname.split('/')[1] === path.split('/')[1] ? 'page' : undefined}
             >
               {label}
             </Link>
           ))}
         </nav>
         <div className={styles.tools}>
-          <Link to="/admin/activity">运营工作台 ↗</Link>
-          <span className={styles.avatar} aria-label="体验客户">
-            渝
-          </span>
+          <Link to="/admin/activity" className={styles.workbench} aria-label="进入运营工作台">
+            <AppstoreOutlined /> 运营工作台 <ArrowRightOutlined />
+          </Link>
         </div>
       </div>
     </header>

@@ -1,3 +1,4 @@
+import { RewardsHeader } from '@/components/RewardsShell';
 import { AvatarDropdown, AvatarName, Footer } from '@/components';
 import { user_me } from '@/services/api';
 import { LinkOutlined } from '@ant-design/icons';
@@ -127,7 +128,9 @@ export const layout: RunTimeLayoutConfig = ({ initialState }) => {
       return <App>{children}</App>;
     },
     ...initialState?.settings,
-    headerRender: undefined,
+    layout: 'mix',
+    token: { ...defaultSettings.token, header: { ...defaultSettings.token?.header, heightLayoutHeader: 117 } },
+    headerRender: (props) => <RewardsHeader compact onMenuToggle={props.isMobile ? () => props.onCollapse?.(!props.collapsed) : undefined} menuExpanded={!props.collapsed} />,
   };
 };
 

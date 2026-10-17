@@ -16,8 +16,8 @@
   },
   "yuhui-web/src/components/RewardsShell/index.tsx": {
     "before": "21707d6c2d9527b000317495e4ce5f25fe2f72aef1815455edf606cbebc0cb1b",
-    "after": "67e6d5a875007cfa8c5f350f0d68c4228cd2df3e43c1d4ba13f3b2ba3f5bc672",
-    "reason": "Pages subdirectory portability or explicit online-demo README section; layout and local API behavior retained"
+    "after": "5e9e7a6108a8ff687b0920423c467eb64e4ed7ce3fa9720efcc460aacd9c59f7",
+    "reason": "2026-10-18 user requested prominent operations entry, unified customer/operations navigation, and removal of redundant benefits cards"
   },
   "yuhui-web/src/pages/Experience/index.less": {
     "before": "fce251ccc82a08dfe6e762fcdc05c890dfef6b0900430508bc85ef22a7ebbd49",
@@ -26,8 +26,8 @@
   },
   "yuhui-web/src/pages/Experience/index.tsx": {
     "before": "0ee8cf1af57cb20b6d6ee650c492a7d187ad9b2f7cb60aae8042be840543c802",
-    "after": "19b311b74b4da5961160fb1d13230c1b447042fcc085055ce8dbb0d5870de645",
-    "reason": "Pages subdirectory portability or explicit online-demo README section; layout and local API behavior retained"
+    "after": "b16dee110fcf60192c7f0960cfd31ffe5ffa4466f48732f10795ef8ad3beb91b",
+    "reason": "2026-10-18 user requested prominent operations entry, unified customer/operations navigation, and removal of redundant benefits cards"
   },
   "yuhui-web/src/pages/Wallet/index.tsx": {
     "before": "c42bfce20f7aa8b1920a3777d296f7ff46ffc126f7c5855e6aa73dd07fdef5a2",
@@ -63,5 +63,15 @@
     "before": "d427d5c9e62d92f18f2e945bf4ba3b9cb8d10f64ddda11518fec65eb0de75405",
     "after": "c2d1b04f8a93f428367e62da3043318d470621a4a8736da12729614aab705ba5",
     "reason": "2026-10-18 user requested left-to-right automatic participation-record scrolling; pause and reduced-motion behavior retained"
+  },
+  "yuhui-web/src/components/RewardsShell/index.less": {
+    "before": "fbb40bb42324ac646c2b375acea8ee5fdd372927b95f0c5c7b3729e2b7e3333b",
+    "after": "8ba25c96a1f07c83bfce5cf4e51f2eeca5ed9eefaf534a9caa19865561972539",
+    "reason": "2026-10-18 user requested prominent operations entry, unified customer/operations navigation, and removal of redundant benefits cards"
+  },
+  "yuhui-web/src/app.tsx": {
+    "before": "46238c767d9e112748aaafcae3c93be8434f59d1b79018e8d9a7d6d44dee69d4",
+    "after": "bcf1e2da70cab7c39878108af04ed08c9b87fd378c26454295aa5354ecfb6a44",
+    "reason": "2026-10-18 user requested prominent operations entry, unified customer/operations navigation, and removal of redundant benefits cards"
   }
 }
