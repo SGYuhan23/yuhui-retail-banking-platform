@@ -1,19 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Popover } from 'antd';
 import { sitePath } from '@/utils/sitePath';
 import { Link, useLocation } from '@umijs/max';
 import { EnvironmentOutlined, AppstoreOutlined, ArrowRightOutlined, MenuOutlined } from '@ant-design/icons';
 import styles from './index.less';
 export function RewardsHeader({ compact = false, onMenuToggle, menuExpanded }: { compact?: boolean; onMenuToggle?: () => void; menuExpanded?: boolean }) {
   const { pathname } = useLocation();
+  const [demoInfoOpen, setDemoInfoOpen] = useState(false);
   return (
     <header className={`${styles.header} ${compact ? styles.compactHeader : ''}`}>
       <div className={styles.headerInner}>
-        <Link to="/experience" className={styles.brand}>
+        <div className={`${styles.brandGroup} ${process.env.PAGES_DEMO ? styles.demoBrand : ''}`}>
+          <Link to="/experience" className={styles.brand}>
           <img src={sitePath("/assets/bank-mark.svg")} alt="" />
           <span>
             渝惠积分<small>YUHUI REWARDS</small>
           </span>
-        </Link>
+          </Link>
+          {process.env.PAGES_DEMO && (
+            <Popover
+              trigger="click"
+              placement="bottomLeft"
+              open={demoInfoOpen}
+              onOpenChange={setDemoInfoOpen}
+              content={
+                <div className={styles.demoInfo}>
+                  <p>当前页面用于体验客户流程与运营配置。完整前后端源码及本地运行说明见 GitHub 仓库。</p>
+                  <a href="https://github.com/SGYuhan23/yuhui-retail-banking-platform" target="_blank" rel="noopener noreferrer">查看完整项目 ↗</a>
+                </div>
+              }
+            >
+              <button type="button" className={styles.demoBadge} aria-expanded={demoInfoOpen}>在线演示版</button>
+            </Popover>
+          )}
+        </div>
         <nav aria-label="平台导航">
           {onMenuToggle && <button type="button" className={styles.menuToggle} onClick={onMenuToggle} aria-label="打开运营功能菜单" aria-expanded={menuExpanded}><MenuOutlined /> 菜单</button>}
           {[

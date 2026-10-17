@@ -284,3 +284,26 @@
   font-weight: 600;
   cursor: pointer;
 }
+
+.brandGroup { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
+.demoBadge {
+  border: 1px solid #e5d5c4;
+  border-radius: 6px;
+  background: #f7efe5;
+  color: #806045;
+  padding: 4px 9px;
+  font: 12px/1.5 -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.demoBadge:hover { background: #efe2d2; }
+.demoBadge:focus-visible { outline: 2px solid #a74330; outline-offset: 3px; }
+.demoInfo { width: 280px; max-width: calc(100vw - 56px); line-height: 1.7; }
+.demoInfo p { margin: 0 0 10px; color: #63594f; }
+.demoInfo a { color: #a74330; font-weight: 600; }
+@media (max-width: 600px) {
+  .demoBrand { position: relative; }
+  .demoBrand .brand span { padding-bottom: 21px; }
+  .demoBrand .brand small { display: none; }
+  .demoBrand .demoBadge { position: absolute; bottom: 0; left: 44px; padding: 1px 5px; font-size: 10px; }
+}
