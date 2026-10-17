@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "checks": [
+    "wallet scoped to fixed principal; long IDs serialized as strings",
+    "foreign ownership rejected even with forged userId",
+    "invalid identifier rejected",
+    "16 concurrent attempts: exactly one redemption persisted",
+    "redeemed state visible after reload"
+  ]
+}

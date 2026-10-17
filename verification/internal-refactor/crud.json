@@ -1,0 +1,79 @@
+[
+  {
+    "module": "strategy",
+    "create": true,
+    "update": true,
+    "read": true,
+    "delete": true
+  },
+  {
+    "module": "activity",
+    "create": true,
+    "update": true,
+    "read": true,
+    "delete": true
+  },
+  {
+    "module": "activity_count",
+    "create": true,
+    "update": true,
+    "read": true,
+    "delete": true
+  },
+  {
+    "module": "award",
+    "create": true,
+    "update": true,
+    "read": true,
+    "delete": true
+  },
+  {
+    "module": "rule",
+    "create": true,
+    "update": true,
+    "read": true,
+    "delete": true
+  },
+  {
+    "module": "rule_tree",
+    "create": true,
+    "update": true,
+    "read": true,
+    "delete": true
+  },
+  {
+    "module": "activity_sku",
+    "create": true,
+    "update": true,
+    "read": true,
+    "delete": true
+  },
+  {
+    "module": "behavior",
+    "create": true,
+    "update": true,
+    "read": true,
+    "delete": true
+  },
+  {
+    "module": "rule_tree_node",
+    "create": true,
+    "update": true,
+    "read": true,
+    "delete": true
+  },
+  {
+    "module": "rule_tree_node_line",
+    "create": true,
+    "update": true,
+    "read": true,
+    "delete": true
+  },
+  {
+    "module": "strategy_award",
+    "create": true,
+    "update": true,
+    "read": true,
+    "delete": true
+  }
+]

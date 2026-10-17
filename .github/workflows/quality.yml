@@ -34,6 +34,8 @@ jobs:
           cache-dependency-path: yuhui-web/pnpm-lock.yaml
       - run: pnpm install --frozen-lockfile
       - run: pnpm run postinstall
+      - run: pnpm run test:contracts
+      - run: python3 ../scripts/check-ui-invariants.py
       - run: pnpm run tsc
       - run: pnpm run build
         env:

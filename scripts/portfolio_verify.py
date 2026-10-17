@@ -29,7 +29,7 @@ if args.strict:
         if reason or p.is_symlink():
             scan['forbidden_artifact_matches'].append({'path':str(r),'reason':reason or 'symbolic link'})
             if p.suffix == '.log': scan['runtime_log_matches'].append(str(r))
-private_paths = re.compile(r'/' + r'(?:Users|home)/[^\s/]+|[A-Za-z]:\\(?:Users|Documents and Settings)\\|user' + r'\.home\s*=')
+private_paths = re.compile(r'(?<![A-Za-z0-9_./-])/' + r'(?:Users|home)/[^\s/]+|[A-Za-z]:\\(?:Users|Documents and Settings)\\|user' + r'\.home\s*=')
 private_ips = re.compile(r'(?<![\d.])(?:\d{1,3}\.){3}\d{1,3}(?![\d.])')
 secret_patterns = [r'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----', r'\bgh[pousr]_[A-Za-z0-9]{30,}\b',r'\bAKIA[0-9A-Z]{16}\b',r'\bsk-[A-Za-z0-9]{32,}\b']
 keywords = re.compile(r'password|passwd|secret|token|api_?key|access_?key|private_?key|authorization|cookie|jdbc:|redis:|rabbitmq:|mysql:',re.I)
@@ -47,7 +47,9 @@ for p in files:
     try: text = p.read_text()
     except UnicodeError: continue
     if any(v in text for v in ['wan'+'yj', 'xy'+'bjz', 'maintainer="'+'yong"']) or re.search(r'(?:setUserId\(|"userId"\s*:\s*)"'+'yong"', text): issues['old_author_identity'].append(r)
-    if any(v in text for v in ['lottery-'+'replica', 'lottery-backend-'+'master']): issues['old_repo_identity'].append(r)
+    # Historical filenames in the explicit provenance report are evidence, not stale runtime identity.
+    reference_evidence = r == 'verification/reference-overlap-2026-10-17.json'
+    if not reference_evidence and any(v in text for v in ['lottery-'+'replica', 'lottery-backend-'+'master']): issues['old_repo_identity'].append(r)
     if ('115.190.'+'198.152') in text: issues['forbidden_public_ip'].append(r)
     # Generic endpoint configuration is allowed; concrete regional OSS URLs need review.
     asset_text = text.replace('https://oss-'+'cn-beijing.aliyuncs.com', '') if r == 'yuhui-server/runtime/.env.example' else text

@@ -36,6 +36,7 @@ import {
 } from 'antd';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import styles from './index.less';
+import { layoutGraph, NODE_WIDTH as W, NODE_HEIGHT as H } from './graph-model';
 
 type Pos = { x: number; y: number };
 type PickState = { type: 'tree' | 'node' | 'line'; id: string } | null;
@@ -48,15 +49,6 @@ type ConnectState = {
   x: number;
   y: number;
 } | null;
-type EditorNode = API.RuleTreeNodeItem & { x: number; y: number; isEntry: boolean };
-type EditorEdge = API.RuleTreeNodeLineItem & {
-  fromX: number;
-  fromY: number;
-  toX: number;
-  toY: number;
-  labelX: number;
-  labelY: number;
-};
 type NodeFormValues = {
   id?: string;
   ruleTreeId?: string;
@@ -73,12 +65,6 @@ type LineFormValues = {
   ruleLimitValue?: string;
 };
 
-const W = 196;
-const H = 152;
-const PX = 48;
-const PY = 48;
-const CG = 240;
-const RG = 210;
 const STORE = 'rule-tree-editor-layout';
 const NODE_OPTS = [
   { label: 'rule_lock(次数锁)', value: 'rule_lock' },
@@ -148,83 +134,6 @@ const getDuplicateRuleNames = (nodes: API.RuleTreeNodeItem[]) => {
     .map(([name]) => name);
 };
 
-const separateNodesForBypassEdges = (
-  items: EditorNode[],
-  levels: Record<string, number>,
-  graphLines: API.RuleTreeNodeLineItem[],
-  savedPos: Record<string, Pos>,
-) => {
-  const next = items.map((item) => ({ ...item }));
-  const byRule = next.reduce<Record<string, EditorNode>>((acc, item) => {
-    const key = String(item.ruleName || '');
-    if (key) acc[key] = item;
-    return acc;
-  }, {});
-
-  graphLines.forEach((line) => {
-    const fromRule = String(line.ruleNodeFrom || '');
-    const toRule = String(line.ruleNodeTo || '');
-    const from = byRule[fromRule];
-    const to = byRule[toRule];
-    const fromLevel = levels[fromRule];
-    const toLevel = levels[toRule];
-    if (!from || !to || fromLevel === undefined || toLevel === undefined) return;
-    if (Math.abs(toLevel - fromLevel) <= 1) return;
-
-    const left = Math.min(from.x + W, to.x);
-    const right = Math.max(from.x + W, to.x);
-    const lineY = (from.y + H / 2 + to.y + H / 2) / 2;
-
-    next.forEach((node) => {
-      if (!node.id || savedPos[String(node.id)]) return;
-      if (node.ruleName === fromRule || node.ruleName === toRule) return;
-      const nodeLevel = levels[String(node.ruleName || '')];
-      if (nodeLevel === undefined) return;
-      if (nodeLevel <= Math.min(fromLevel, toLevel) || nodeLevel >= Math.max(fromLevel, toLevel)) return;
-
-      const nodeCenterX = node.x + W / 2;
-      const nodeCenterY = node.y + H / 2;
-      const isInsideBypassLane = nodeCenterX > left && nodeCenterX < right && Math.abs(nodeCenterY - lineY) < H * 0.75;
-      if (!isInsideBypassLane) return;
-
-      node.y += RG;
-    });
-  });
-
-  return next;
-};
-
-const spreadEdgeLabels = (items: EditorEdge[]) => {
-  const sorted = [...items].sort((a, b) => (a.labelY - b.labelY) || (a.labelX - b.labelX));
-  const groups: EditorEdge[][] = [];
-
-  sorted.forEach((item) => {
-    const group = groups.find((candidate) =>
-      candidate.some(
-        (edge) => Math.abs(edge.labelX - item.labelX) < 180 && Math.abs(edge.labelY - item.labelY) < 42,
-      ),
-    );
-    if (group) {
-      group.push(item);
-      return;
-    }
-    groups.push([item]);
-  });
-
-  groups.forEach((group) => {
-    if (group.length <= 1) return;
-    group
-      .sort((a, b) => a.labelX - b.labelX)
-      .forEach((edge, index) => {
-        const step = Math.floor(index / 2) + 1;
-        const direction = index % 2 === 0 ? -1 : 1;
-        edge.labelY += direction * step * 28;
-      });
-  });
-
-  return items;
-};
-
 const RuleTreeEditor: React.FC = () => {
   const { message } = App.useApp();
   const canvasRef = useRef<HTMLDivElement>(null);
@@ -287,87 +196,10 @@ const RuleTreeEditor: React.FC = () => {
 
   const tree = useMemo(() => trees.find((t) => t.id === treeId), [trees, treeId]);
 
-  const graph = useMemo(() => {
-    const levels: Record<string, number> = {};
-    const entry = String(tree?.treeNodeRuleKey || '');
-    if (entry) {
-      levels[entry] = 0;
-      const q = [entry];
-      while (q.length) {
-        const cur = q.shift() as string;
-        lines.filter((l) => l.ruleNodeFrom === cur).forEach((l) => {
-          const next = String(l.ruleNodeTo || '');
-          const lv = levels[cur] + 1;
-          if (next && (levels[next] === undefined || levels[next] < lv)) {
-            levels[next] = lv;
-            q.push(next);
-          }
-        });
-      }
-    }
-    let fallback = Object.values(levels).length ? Math.max(...Object.values(levels)) + 1 : 0;
-    nodes.forEach((n) => {
-      const name = String(n.ruleName || '');
-      if (name && levels[name] === undefined) levels[name] = fallback++;
-    });
-
-    const grouped = nodes.reduce<Record<number, API.RuleTreeNodeItem[]>>((acc, n) => {
-      const lv = levels[String(n.ruleName || '')] || 0;
-      (acc[lv] ||= []).push(n);
-      return acc;
-    }, {});
-
-    const drawNodes = separateNodesForBypassEdges(
-      Object.entries(grouped).flatMap(([lv, list]) =>
-      list
-        .sort((a, b) => String(a.ruleName || '').localeCompare(String(b.ruleName || '')))
-        .map((n, i) => {
-          const saved = n.id ? positions[String(n.id)] : undefined;
-          return {
-            ...n,
-            x: saved?.x ?? PX + Number(lv) * CG,
-            y: saved?.y ?? PY + i * RG,
-            isEntry: n.ruleName === tree?.treeNodeRuleKey,
-          };
-        }),
-      ),
-      levels,
-      lines,
-      positions,
-    );
-
-    const map = drawNodes.reduce<Record<string, EditorNode>>((acc, n) => {
-      const key = String(n.ruleName || '');
-      if (key) acc[key] = n;
-      return acc;
-    }, {});
-
-    const drawLines = spreadEdgeLabels(
-      lines
-      .map((l) => {
-        const from = map[String(l.ruleNodeFrom || '')];
-        const to = map[String(l.ruleNodeTo || '')];
-        if (!from || !to) return undefined;
-        return {
-          ...l,
-          fromX: from.x + W,
-          fromY: from.y + H / 2,
-          toX: to.x,
-          toY: to.y + H / 2,
-          labelX: (from.x + W + to.x) / 2,
-          labelY: (from.y + H / 2 + to.y + H / 2) / 2 - 18,
-        };
-      })
-      .filter(Boolean) as EditorEdge[],
-    );
-
-    return {
-      nodes: drawNodes,
-      lines: drawLines,
-      width: drawNodes.length > 0 ? Math.max(...drawNodes.map((n) => n.x + W + PX), 880) : 880,
-      height: drawNodes.length > 0 ? Math.max(...drawNodes.map((n) => n.y + H + PY), 640) : 640,
-    };
-  }, [tree, nodes, lines, positions]);
+  const graph = useMemo(
+    () => layoutGraph(tree, nodes, lines, positions),
+    [tree, nodes, lines, positions],
+  );
 
   const selectedNode = pick?.type === 'node' ? nodes.find((n) => n.id === pick.id) : undefined;
   const selectedLine = pick?.type === 'line' ? lines.find((l) => l.id === pick.id) : undefined;

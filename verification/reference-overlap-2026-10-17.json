@@ -1,0 +1,2559 @@
+{
+  "method": "Best match across all reference files of the same extension; Dice of 5-token shingles.",
+  "limitations": [
+    "Only files with at least 100 tokens are scored.",
+    "Comments, whitespace and Java package/import declarations are excluded.",
+    "Shared syntax and boilerplate can produce high scores.",
+    "Low scores do not establish independent authorship or permission to publish.",
+    "License filename inventory is not a complete rights investigation."
+  ],
+  "references": [
+    {
+      "name": "lottery-backend-master.zip",
+      "sha256": "9047e3ad6489c319db373a5ddd2c251b0d1d92dd9b435e20e4b07b9cf9e4309c",
+      "license_named_files": []
+    },
+    {
+      "name": "lottery-erp-master.zip",
+      "sha256": "a3c499e9ebbf94d449869c87f30e04262de4369ed86c1709eca3a687125d6069",
+      "license_named_files": []
+    }
+  ],
+  "summary": {
+    "scored": 281,
+    "high_overlap": 192,
+    "byte_identical": 25,
+    "normalized_identical": 70
+  },
+  "files": [
+    {
+      "path": "yuhui-web/src/services/api.ts",
+      "reference": "lottery-erp-master/src/services/api.ts",
+      "tokens": 4992,
+      "shingle_dice": 1.0,
+      "byte_identical": true,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/global.less",
+      "reference": "lottery-erp-master/src/global.less",
+      "tokens": 1322,
+      "shingle_dice": 1.0,
+      "byte_identical": true,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/components/GuideAssistant/index.tsx",
+      "reference": "lottery-erp-master/src/components/GuideAssistant/index.tsx",
+      "tokens": 1277,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/Auth/LoginMethods/index.tsx",
+      "reference": "lottery-erp-master/src/pages/Auth/LoginMethods/index.tsx",
+      "tokens": 1252,
+      "shingle_dice": 1.0,
+      "byte_identical": true,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/Activity/index.less",
+      "reference": "lottery-erp-master/src/pages/Activity/index.less",
+      "tokens": 1230,
+      "shingle_dice": 1.0,
+      "byte_identical": true,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/RuleTreeEditor/index.less",
+      "reference": "lottery-erp-master/src/pages/RuleTreeEditor/index.less",
+      "tokens": 1178,
+      "shingle_dice": 1.0,
+      "byte_identical": true,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/http/UserController.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/http/UserController.java",
+      "tokens": 1034,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/Auth/Permissions/index.tsx",
+      "reference": "lottery-erp-master/src/pages/Auth/Permissions/index.tsx",
+      "tokens": 964,
+      "shingle_dice": 1.0,
+      "byte_identical": true,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/utils/auth.ts",
+      "reference": "lottery-erp-master/src/utils/auth.ts",
+      "tokens": 930,
+      "shingle_dice": 1.0,
+      "byte_identical": true,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/Award/index.less",
+      "reference": "lottery-erp-master/src/pages/Award/index.less",
+      "tokens": 775,
+      "shingle_dice": 1.0,
+      "byte_identical": true,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/BehaviorRebate/index.less",
+      "reference": "lottery-erp-master/src/pages/BehaviorRebate/index.less",
+      "tokens": 754,
+      "shingle_dice": 1.0,
+      "byte_identical": true,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/logback-spring.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/logback-spring.xml",
+      "tokens": 747,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/ActivityRecord/index.tsx",
+      "reference": "lottery-erp-master/src/pages/ActivityRecord/index.tsx",
+      "tokens": 732,
+      "shingle_dice": 1.0,
+      "byte_identical": true,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/StrategyAward/index.less",
+      "reference": "lottery-erp-master/src/pages/StrategyAward/index.less",
+      "tokens": 720,
+      "shingle_dice": 1.0,
+      "byte_identical": true,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/UserAwardRecord/index.tsx",
+      "reference": "lottery-erp-master/src/pages/UserAwardRecord/index.tsx",
+      "tokens": 716,
+      "shingle_dice": 1.0,
+      "byte_identical": true,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/http/LotteryStrategyController.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/http/LotteryStrategyController.java",
+      "tokens": 709,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/ActivityAccount/index.tsx",
+      "reference": "lottery-erp-master/src/pages/ActivityAccount/index.tsx",
+      "tokens": 639,
+      "shingle_dice": 1.0,
+      "byte_identical": true,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/DCC/index.tsx",
+      "reference": "lottery-erp-master/src/pages/DCC/index.tsx",
+      "tokens": 618,
+      "shingle_dice": 1.0,
+      "byte_identical": true,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/CreditRecord/index.tsx",
+      "reference": "lottery-erp-master/src/pages/CreditRecord/index.tsx",
+      "tokens": 610,
+      "shingle_dice": 1.0,
+      "byte_identical": true,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/UserOrder/index.tsx",
+      "reference": "lottery-erp-master/src/pages/UserOrder/index.tsx",
+      "tokens": 599,
+      "shingle_dice": 1.0,
+      "byte_identical": true,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/CreditAccount/index.tsx",
+      "reference": "lottery-erp-master/src/pages/CreditAccount/index.tsx",
+      "tokens": 596,
+      "shingle_dice": 1.0,
+      "byte_identical": true,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/ActivityCount/index.less",
+      "reference": "lottery-erp-master/src/pages/ActivityCount/index.less",
+      "tokens": 593,
+      "shingle_dice": 1.0,
+      "byte_identical": true,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/shared/src/main/java/com/yuhui/types/util/MinIOUtils.java",
+      "reference": "lottery-backend-master/lottery-types/src/main/java/com/lottery/types/util/MinIOUtils.java",
+      "tokens": 574,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/UserBehaviorRebateOrder/index.tsx",
+      "reference": "lottery-erp-master/src/pages/UserBehaviorRebateOrder/index.tsx",
+      "tokens": 538,
+      "shingle_dice": 1.0,
+      "byte_identical": true,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/shared/src/main/java/com/yuhui/types/exception/GlobalExceptionHandler.java",
+      "reference": "lottery-backend-master/lottery-types/src/main/java/com/lottery/types/exception/GlobalExceptionHandler.java",
+      "tokens": 494,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/identity/service/impl/IUserServiceImpl.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/user/service/impl/IUserServiceImpl.java",
+      "tokens": 489,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/listener/RebateMessageCustomer.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/listener/RebateMessageCustomer.java",
+      "tokens": 486,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/shared/src/main/java/com/yuhui/types/common/Constants.java",
+      "reference": "lottery-backend-master/lottery-types/src/main/java/com/lottery/types/common/Constants.java",
+      "tokens": 433,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/http/DCCController.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/http/DCCController.java",
+      "tokens": 414,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/requestErrorConfig.ts",
+      "reference": "lottery-erp-master/src/requestErrorConfig.ts",
+      "tokens": 392,
+      "shingle_dice": 1.0,
+      "byte_identical": true,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/RuleTree/index.less",
+      "reference": "lottery-erp-master/src/pages/RuleTree/index.less",
+      "tokens": 364,
+      "shingle_dice": 1.0,
+      "byte_identical": true,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/readmodel/src/main/java/com/yuhui/querys/adapter/repository/ErpRepository.java",
+      "reference": "lottery-backend-master/lottery-querys/src/main/java/com/lottery/querys/adapter/repository/ErpRepository.java",
+      "tokens": 363,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/ActivitySku/index.less",
+      "reference": "lottery-erp-master/src/pages/ActivitySku/index.less",
+      "tokens": 356,
+      "shingle_dice": 1.0,
+      "byte_identical": true,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/raffle/service/rule/tree/factory/engine/impl/DecisionTreeEngineImpl.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/service/rule/tree/factory/engine/impl/DecisionTreeEngineImpl.java",
+      "tokens": 352,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/tests/setupTests.jsx",
+      "reference": "lottery-erp-master/tests/setupTests.jsx",
+      "tokens": 341,
+      "shingle_dice": 1.0,
+      "byte_identical": true,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/types/index.d.ts",
+      "reference": "lottery-erp-master/types/index.d.ts",
+      "tokens": 336,
+      "shingle_dice": 1.0,
+      "byte_identical": true,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/java/com/yuhui/config/JsonConfig.java",
+      "reference": "lottery-backend-master/lottery-app/src/main/java/com/lottery/config/JsonConfig.java",
+      "tokens": 315,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/test/java/com/yuhui/test/domain/strategy/LotteryTest.java",
+      "reference": "lottery-backend-master/lottery-app/src/test/java/com/lottery/test/domain/strategy/LotteryTest.java",
+      "tokens": 276,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/shared/src/main/java/com/yuhui/types/enums/ResponseCode.java",
+      "reference": "lottery-backend-master/lottery-types/src/main/java/com/lottery/types/enums/ResponseCode.java",
+      "tokens": 250,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/job/UpdateAwardStockJob.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/job/UpdateAwardStockJob.java",
+      "tokens": 236,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/listener/CreditAdjustSuccessCustomer.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/listener/CreditAdjustSuccessCustomer.java",
+      "tokens": 235,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/job/UpdateActivitySkuStockJob.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/job/UpdateActivitySkuStockJob.java",
+      "tokens": 230,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/points/model/aggregate/TradeAggregate.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/credit/model/aggregate/TradeAggregate.java",
+      "tokens": 225,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/raffle/model/entity/RuleEntity.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/model/entity/RuleEntity.java",
+      "tokens": 220,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/listener/SendAwardCustomer.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/listener/SendAwardCustomer.java",
+      "tokens": 211,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/config/proxy.ts",
+      "reference": "lottery-erp-master/config/proxy.ts",
+      "tokens": 204,
+      "shingle_dice": 1.0,
+      "byte_identical": true,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/contracts/src/main/java/com/yuhui/trigger/api/deserialize/MultiFormatDateDeserializer.java",
+      "reference": "lottery-backend-master/lottery-api/src/main/java/com/lottery/trigger/api/deserialize/MultiFormatDateDeserializer.java",
+      "tokens": 186,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/raffle/service/rule/tree/impl/RuleLockTreeNode.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/service/rule/tree/impl/RuleLockTreeNode.java",
+      "tokens": 182,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/java/com/yuhui/config/ThreadPoolConfig.java",
+      "reference": "lottery-backend-master/lottery-app/src/main/java/com/lottery/config/ThreadPoolConfig.java",
+      "tokens": 171,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/components/HeaderDropdown/index.tsx",
+      "reference": "lottery-erp-master/src/components/HeaderDropdown/index.tsx",
+      "tokens": 166,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/shared/src/main/java/com/yuhui/types/exception/AppException.java",
+      "reference": "lottery-backend-master/lottery-types/src/main/java/com/lottery/types/exception/AppException.java",
+      "tokens": 154,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/java/com/yuhui/aop/PermissionCheckAOP.java",
+      "reference": "lottery-backend-master/lottery-app/src/main/java/com/lottery/aop/PermissionCheckAOP.java",
+      "tokens": 148,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/listener/ErrorMessageCustomer.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/listener/ErrorMessageCustomer.java",
+      "tokens": 145,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/reward/fulfillment/model/aggregate/CountPrizesAggregate.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/award/model/aggregate/CountPrizesAggregate.java",
+      "tokens": 145,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/reward/fulfillment/model/aggregate/GiveOutPrizesAggregate.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/award/model/aggregate/GiveOutPrizesAggregate.java",
+      "tokens": 145,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/listener/ActivitySkuStockZeroCustomer.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/listener/ActivitySkuStockZeroCustomer.java",
+      "tokens": 138,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/listener/AwardStockZeroCustomer.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/listener/AwardStockZeroCustomer.java",
+      "tokens": 138,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/test/java/com/yuhui/test/domain/award/IdGeneratorTest.java",
+      "reference": "lottery-backend-master/lottery-app/src/test/java/com/lottery/test/domain/award/IdGeneratorTest.java",
+      "tokens": 132,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/contracts/src/main/java/com/yuhui/trigger/api/LotteryActivityService.java",
+      "reference": "lottery-backend-master/lottery-api/src/main/java/com/lottery/trigger/api/LotteryActivityService.java",
+      "tokens": 130,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/raffle/event/SendLotteryMessageEvent.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/event/SendLotteryMessageEvent.java",
+      "tokens": 128,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/test/java/com/yuhui/test/trigger/ActivityControllerTest.java",
+      "reference": "lottery-backend-master/lottery-app/src/test/java/com/lottery/test/trigger/ActivityControllerTest.java",
+      "tokens": 127,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/reward/behavior/event/SendRebateMessageEvent.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/rebate/event/SendRebateMessageEvent.java",
+      "tokens": 126,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/reward/fulfillment/event/SendAwardMessageEvent.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/award/event/SendAwardMessageEvent.java",
+      "tokens": 126,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/points/event/CreditAdjustSuccessMessageEvent.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/credit/event/CreditAdjustSuccessMessageEvent.java",
+      "tokens": 122,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/http/FileController.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/http/FileController.java",
+      "tokens": 118,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/listener/DeleteRedisKeyCustomer.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/listener/DeleteRedisKeyCustomer.java",
+      "tokens": 114,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/raffle/model/entity/StrategyEntity.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/model/entity/StrategyEntity.java",
+      "tokens": 112,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/java/com/yuhui/config/ErrorMessageConfig.java",
+      "reference": "lottery-backend-master/lottery-app/src/main/java/com/lottery/config/ErrorMessageConfig.java",
+      "tokens": 106,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/raffle/service/rule/tree/impl/RuleLuckAwardTreeNode.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/service/rule/tree/impl/RuleLuckAwardTreeNode.java",
+      "tokens": 104,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/java/com/yuhui/config/ZooKeeperClientConfig.java",
+      "reference": "lottery-backend-master/lottery-app/src/main/java/com/lottery/config/ZooKeeperClientConfig.java",
+      "tokens": 103,
+      "shingle_dice": 1.0,
+      "byte_identical": false,
+      "normalized_identical": true,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/RuleTreeEditor/index.tsx",
+      "reference": "lottery-erp-master/src/pages/RuleTreeEditor/index.tsx",
+      "tokens": 7759,
+      "shingle_dice": 0.9983,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/User/Login/index.tsx",
+      "reference": "lottery-erp-master/src/pages/User/Login/index.tsx",
+      "tokens": 3270,
+      "shingle_dice": 0.9981,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/services/typings.d.ts",
+      "reference": "lottery-erp-master/src/services/typings.d.ts",
+      "tokens": 2137,
+      "shingle_dice": 0.998,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/Auth/Users/index.tsx",
+      "reference": "lottery-erp-master/src/pages/Auth/Users/index.tsx",
+      "tokens": 2281,
+      "shingle_dice": 0.9977,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/Account/Center/index.tsx",
+      "reference": "lottery-erp-master/src/pages/Account/Center/index.tsx",
+      "tokens": 3821,
+      "shingle_dice": 0.9963,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/Award/index.tsx",
+      "reference": "lottery-erp-master/src/pages/Award/index.tsx",
+      "tokens": 1536,
+      "shingle_dice": 0.9962,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/RuleTree/index.tsx",
+      "reference": "lottery-erp-master/src/pages/RuleTree/index.tsx",
+      "tokens": 1478,
+      "shingle_dice": 0.9961,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/ActivityCount/index.tsx",
+      "reference": "lottery-erp-master/src/pages/ActivityCount/index.tsx",
+      "tokens": 1419,
+      "shingle_dice": 0.9959,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/StrategyAward/index.tsx",
+      "reference": "lottery-erp-master/src/pages/StrategyAward/index.tsx",
+      "tokens": 2505,
+      "shingle_dice": 0.9955,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/StrategyAward/compoents/AddForm.tsx",
+      "reference": "lottery-erp-master/src/pages/StrategyAward/compoents/AddForm.tsx",
+      "tokens": 1236,
+      "shingle_dice": 0.9953,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/StrategyAward/compoents/UpdateForm.tsx",
+      "reference": "lottery-erp-master/src/pages/StrategyAward/compoents/UpdateForm.tsx",
+      "tokens": 1145,
+      "shingle_dice": 0.9949,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/BehaviorRebate/index.tsx",
+      "reference": "lottery-erp-master/src/pages/BehaviorRebate/index.tsx",
+      "tokens": 2113,
+      "shingle_dice": 0.9946,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/ActivitySku/index.tsx",
+      "reference": "lottery-erp-master/src/pages/ActivitySku/index.tsx",
+      "tokens": 2051,
+      "shingle_dice": 0.9943,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/Award/compoents/AddForm.tsx",
+      "reference": "lottery-erp-master/src/pages/Award/compoents/AddForm.tsx",
+      "tokens": 755,
+      "shingle_dice": 0.9943,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/Strategy/compoents/UpdateForm.tsx",
+      "reference": "lottery-erp-master/src/pages/Strategy/compoents/UpdateForm.tsx",
+      "tokens": 681,
+      "shingle_dice": 0.9939,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/RuleTreeNodeLine/compoents/UpdateForm.tsx",
+      "reference": "lottery-erp-master/src/pages/RuleTreeNodeLine/compoents/UpdateForm.tsx",
+      "tokens": 1066,
+      "shingle_dice": 0.9936,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/RuleTreeNodeLine/compoents/AddForm.tsx",
+      "reference": "lottery-erp-master/src/pages/RuleTreeNodeLine/compoents/AddForm.tsx",
+      "tokens": 1026,
+      "shingle_dice": 0.9932,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/Strategy/compoents/AddForm.tsx",
+      "reference": "lottery-erp-master/src/pages/Strategy/compoents/AddForm.tsx",
+      "tokens": 597,
+      "shingle_dice": 0.9931,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/Activity/compoents/UpdateForm.tsx",
+      "reference": "lottery-erp-master/src/pages/Activity/compoents/UpdateForm.tsx",
+      "tokens": 856,
+      "shingle_dice": 0.9925,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/ActivitySku/compoents/UpdateForm.tsx",
+      "reference": "lottery-erp-master/src/pages/ActivitySku/compoents/UpdateForm.tsx",
+      "tokens": 837,
+      "shingle_dice": 0.9924,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/java/com/yuhui/aop/RateLimiterAOP.java",
+      "reference": "lottery-backend-master/lottery-app/src/main/java/com/lottery/aop/RateLimiterAOP.java",
+      "tokens": 737,
+      "shingle_dice": 0.9922,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/RuleTreeNode/compoents/UpdateForm.tsx",
+      "reference": "lottery-erp-master/src/pages/RuleTreeNode/compoents/UpdateForm.tsx",
+      "tokens": 613,
+      "shingle_dice": 0.9914,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/RuleTreeNode/compoents/AddForm.tsx",
+      "reference": "lottery-erp-master/src/pages/RuleTreeNode/compoents/AddForm.tsx",
+      "tokens": 581,
+      "shingle_dice": 0.9909,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/Award/compoents/UpdateForm.tsx",
+      "reference": "lottery-erp-master/src/pages/Award/compoents/UpdateForm.tsx",
+      "tokens": 786,
+      "shingle_dice": 0.9904,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/Activity/index.tsx",
+      "reference": "lottery-erp-master/src/pages/Activity/index.tsx",
+      "tokens": 2452,
+      "shingle_dice": 0.9896,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/BehaviorRebate/compoents/AddForm.tsx",
+      "reference": "lottery-erp-master/src/pages/BehaviorRebate/compoents/AddForm.tsx",
+      "tokens": 1115,
+      "shingle_dice": 0.9895,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/Rule/compoents/UpdateForm.tsx",
+      "reference": "lottery-erp-master/src/pages/Rule/compoents/UpdateForm.tsx",
+      "tokens": 410,
+      "shingle_dice": 0.9895,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/storage/src/main/java/com/yuhui/infrastructure/redis/RedisService.java",
+      "reference": "lottery-backend-master/lottery-infrastructure/src/main/java/com/lottery/infrastructure/redis/RedisService.java",
+      "tokens": 362,
+      "shingle_dice": 0.9894,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/Rule/compoents/AddForm.tsx",
+      "reference": "lottery-erp-master/src/pages/Rule/compoents/AddForm.tsx",
+      "tokens": 379,
+      "shingle_dice": 0.9886,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "infra/init/01-marketing_01.sql",
+      "reference": "lottery-backend-master/docs/dev-ops/mysql/sql/marketing_01.sql",
+      "tokens": 4709,
+      "shingle_dice": 0.9885,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "infra/init/02-marketing_02.sql",
+      "reference": "lottery-backend-master/docs/dev-ops/mysql/sql/marketing_02.sql",
+      "tokens": 4709,
+      "shingle_dice": 0.9885,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/Auth/Roles/index.tsx",
+      "reference": "lottery-erp-master/src/pages/Auth/Roles/index.tsx",
+      "tokens": 1866,
+      "shingle_dice": 0.9884,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/BehaviorRebate/compoents/UpdateForm.tsx",
+      "reference": "lottery-erp-master/src/pages/BehaviorRebate/compoents/UpdateForm.tsx",
+      "tokens": 1116,
+      "shingle_dice": 0.9882,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/ActivityCount/compoents/UpdateForm.tsx",
+      "reference": "lottery-erp-master/src/pages/ActivityCount/compoents/UpdateForm.tsx",
+      "tokens": 343,
+      "shingle_dice": 0.984,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/RuleTreeNodeLine/index.tsx",
+      "reference": "lottery-erp-master/src/pages/RuleTreeNodeLine/index.tsx",
+      "tokens": 1045,
+      "shingle_dice": 0.9829,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/storage/src/main/java/com/yuhui/infrastructure/adapter/repository/EsErpRepositoryImpl.java",
+      "reference": "lottery-backend-master/lottery-infrastructure/src/main/java/com/lottery/infrastructure/adapter/repository/EsErpRepositoryImpl.java",
+      "tokens": 726,
+      "shingle_dice": 0.9828,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/RuleTreeNode/index.tsx",
+      "reference": "lottery-erp-master/src/pages/RuleTreeNode/index.tsx",
+      "tokens": 1023,
+      "shingle_dice": 0.9824,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/ActivityCount/compoents/AddForm.tsx",
+      "reference": "lottery-erp-master/src/pages/ActivityCount/compoents/AddForm.tsx",
+      "tokens": 312,
+      "shingle_dice": 0.9824,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/Rule/index.tsx",
+      "reference": "lottery-erp-master/src/pages/Rule/index.tsx",
+      "tokens": 1000,
+      "shingle_dice": 0.9821,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/Strategy/index.tsx",
+      "reference": "lottery-erp-master/src/pages/Strategy/index.tsx",
+      "tokens": 970,
+      "shingle_dice": 0.9819,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/Activity/compoents/AddForm.tsx",
+      "reference": "lottery-erp-master/src/pages/Activity/compoents/AddForm.tsx",
+      "tokens": 960,
+      "shingle_dice": 0.9815,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/components/RightContent/AvatarDropdown.tsx",
+      "reference": "lottery-erp-master/src/components/RightContent/AvatarDropdown.tsx",
+      "tokens": 719,
+      "shingle_dice": 0.9808,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/java/com/yuhui/aop/DeleteOldCacheWithPrefixSyncAOP.java",
+      "reference": "lottery-backend-master/lottery-app/src/main/java/com/lottery/aop/DeleteOldCacheWithPrefixSyncAOP.java",
+      "tokens": 232,
+      "shingle_dice": 0.9781,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/RuleTree/compoents/UpdateForm.tsx",
+      "reference": "lottery-erp-master/src/pages/RuleTree/compoents/UpdateForm.tsx",
+      "tokens": 378,
+      "shingle_dice": 0.9759,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/java/com/yuhui/config/DCCValueBeanFactory.java",
+      "reference": "lottery-backend-master/lottery-app/src/main/java/com/lottery/config/DCCValueBeanFactory.java",
+      "tokens": 703,
+      "shingle_dice": 0.973,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "infra/init/00-marketing.sql",
+      "reference": "lottery-backend-master/docs/dev-ops/mysql/sql/marketing.sql",
+      "tokens": 2889,
+      "shingle_dice": 0.9703,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/test/java/com/yuhui/test/domain/activity/ActivityQuotaServiceTest.java",
+      "reference": "lottery-backend-master/lottery-app/src/test/java/com/lottery/test/domain/activity/ActivityQuotaServiceTest.java",
+      "tokens": 214,
+      "shingle_dice": 0.9695,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/test/java/com/yuhui/test/domain/credit/CreditServiceTest.java",
+      "reference": "lottery-backend-master/lottery-app/src/test/java/com/lottery/test/domain/credit/CreditServiceTest.java",
+      "tokens": 235,
+      "shingle_dice": 0.9653,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/test/java/com/yuhui/test/domain/award/UserAwardServiceTest.java",
+      "reference": "lottery-backend-master/lottery-app/src/test/java/com/lottery/test/domain/award/UserAwardServiceTest.java",
+      "tokens": 136,
+      "shingle_dice": 0.9621,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/storage/src/main/java/com/yuhui/infrastructure/redis/RedisServiceImpl.java",
+      "reference": "lottery-backend-master/lottery-infrastructure/src/main/java/com/lottery/infrastructure/redis/RedisServiceImpl.java",
+      "tokens": 1054,
+      "shingle_dice": 0.9598,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/raffle/service/armory/algorithm/impl/OLogNAlgorithm.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/service/armory/algorithm/impl/OLogNAlgorithm.java",
+      "tokens": 875,
+      "shingle_dice": 0.9574,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/shared/src/main/java/com/yuhui/types/exception/PermissionException.java",
+      "reference": "lottery-backend-master/lottery-types/src/main/java/com/lottery/types/exception/PermissionException.java",
+      "tokens": 152,
+      "shingle_dice": 0.955,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/RuleTree/compoents/AddForm.tsx",
+      "reference": "lottery-erp-master/src/pages/RuleTree/compoents/AddForm.tsx",
+      "tokens": 347,
+      "shingle_dice": 0.9541,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/es/EsActivityRecordMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/es/EsActivityRecordMapper.xml",
+      "tokens": 254,
+      "shingle_dice": 0.9512,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/test/java/com/yuhui/test/domain/rebate/BehaviorRebateServiceTest.java",
+      "reference": "lottery-backend-master/lottery-app/src/test/java/com/lottery/test/domain/rebate/BehaviorRebateServiceTest.java",
+      "tokens": 104,
+      "shingle_dice": 0.95,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/test/java/com/yuhui/test/trigger/DubboTest.java",
+      "reference": "lottery-backend-master/lottery-app/src/test/java/com/lottery/test/trigger/DubboTest.java",
+      "tokens": 105,
+      "shingle_dice": 0.949,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/java/com/yuhui/aop/DeleteOldCacheWithPrefixAsyncAOP.java",
+      "reference": "lottery-backend-master/lottery-app/src/main/java/com/lottery/aop/DeleteOldCacheWithPrefixAsyncAOP.java",
+      "tokens": 104,
+      "shingle_dice": 0.9485,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/es/EsActivityAccountMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/es/EsActivityAccountMapper.xml",
+      "tokens": 224,
+      "shingle_dice": 0.9451,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/storage/src/main/java/com/yuhui/infrastructure/adapter/repository/ErpRepositoryImpl.java",
+      "reference": "lottery-backend-master/lottery-infrastructure/src/main/java/com/lottery/infrastructure/adapter/repository/ErpRepositoryImpl.java",
+      "tokens": 2830,
+      "shingle_dice": 0.9447,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/es/EsUserBehaviorRebateOrderMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/es/EsUserBehaviorRebateOrderMapper.xml",
+      "tokens": 224,
+      "shingle_dice": 0.9441,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/mysql/ActivityAccountDayMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/mysql/ActivityAccountDayMapper.xml",
+      "tokens": 203,
+      "shingle_dice": 0.9432,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/mysql/ActivityAccountMonthMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/mysql/ActivityAccountMonthMapper.xml",
+      "tokens": 203,
+      "shingle_dice": 0.9432,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/mysql/ActivityRecordMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/mysql/ActivityRecordMapper.xml",
+      "tokens": 211,
+      "shingle_dice": 0.9383,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/es/EsCreditRecordMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/es/EsCreditRecordMapper.xml",
+      "tokens": 194,
+      "shingle_dice": 0.9383,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/java/com/yuhui/config/DataSourceConfig.java",
+      "reference": "lottery-backend-master/lottery-app/src/main/java/com/lottery/config/DataSourceConfig.java",
+      "tokens": 326,
+      "shingle_dice": 0.9365,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/pages/ActivitySku/compoents/AddForm.tsx",
+      "reference": "lottery-erp-master/src/pages/ActivitySku/compoents/AddForm.tsx",
+      "tokens": 839,
+      "shingle_dice": 0.9362,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/es/EsUserAwardRecordMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/es/EsUserAwardRecordMapper.xml",
+      "tokens": 366,
+      "shingle_dice": 0.9356,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/mysql/ActivityAccountMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/mysql/ActivityAccountMapper.xml",
+      "tokens": 274,
+      "shingle_dice": 0.9353,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/mysql/StrategyAwardMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/mysql/StrategyAwardMapper.xml",
+      "tokens": 198,
+      "shingle_dice": 0.9351,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/es/EsCreditAccountMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/es/EsCreditAccountMapper.xml",
+      "tokens": 179,
+      "shingle_dice": 0.9342,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/es/EsUserOrderMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/es/EsUserOrderMapper.xml",
+      "tokens": 179,
+      "shingle_dice": 0.9329,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/mysql/UserAwardRecordMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/mysql/UserAwardRecordMapper.xml",
+      "tokens": 185,
+      "shingle_dice": 0.9301,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/mysql/AwardMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/mysql/AwardMapper.xml",
+      "tokens": 166,
+      "shingle_dice": 0.9291,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/mysql/UserBehaviorRebateOrderMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/mysql/UserBehaviorRebateOrderMapper.xml",
+      "tokens": 185,
+      "shingle_dice": 0.9286,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/mysql/TaskMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/mysql/TaskMapper.xml",
+      "tokens": 153,
+      "shingle_dice": 0.9225,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/pom.xml",
+      "reference": "lottery-backend-master/lottery-app/pom.xml",
+      "tokens": 1217,
+      "shingle_dice": 0.9223,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/es/EsTaskMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/es/EsTaskMapper.xml",
+      "tokens": 159,
+      "shingle_dice": 0.9213,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/mysql/CreditRecordMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/mysql/CreditRecordMapper.xml",
+      "tokens": 159,
+      "shingle_dice": 0.9213,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/mysql/ActivityMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/mysql/ActivityMapper.xml",
+      "tokens": 159,
+      "shingle_dice": 0.9194,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/mysql/BehaviorRebateMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/mysql/BehaviorRebateMapper.xml",
+      "tokens": 159,
+      "shingle_dice": 0.9194,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/raffle/service/rule/chain/impl/RuleBackListLogicChain.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/service/rule/chain/impl/RuleBackListLogicChain.java",
+      "tokens": 217,
+      "shingle_dice": 0.9182,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/es/EsActivityAccountDayMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/es/EsActivityAccountDayMapper.xml",
+      "tokens": 146,
+      "shingle_dice": 0.916,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/es/EsActivityAccountMonthMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/es/EsActivityAccountMonthMapper.xml",
+      "tokens": 146,
+      "shingle_dice": 0.916,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/mysql/ActivitySkuMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/mysql/ActivitySkuMapper.xml",
+      "tokens": 146,
+      "shingle_dice": 0.916,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/mysql/RuleTreeNodeLineMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/mysql/RuleTreeNodeLineMapper.xml",
+      "tokens": 146,
+      "shingle_dice": 0.9138,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/mysql/UserOrderMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/mysql/UserOrderMapper.xml",
+      "tokens": 146,
+      "shingle_dice": 0.9138,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/participation/service/quota/rule/impl/ActivityBaseChain.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/activity/service/quota/rule/impl/ActivityBaseChain.java",
+      "tokens": 193,
+      "shingle_dice": 0.9096,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/pom.xml",
+      "reference": "lottery-backend-master/pom.xml",
+      "tokens": 1920,
+      "shingle_dice": 0.9075,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/mysql/RuleTreeNodeMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/mysql/RuleTreeNodeMapper.xml",
+      "tokens": 133,
+      "shingle_dice": 0.9074,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/config/config.ts",
+      "reference": "lottery-erp-master/config/config.ts",
+      "tokens": 184,
+      "shingle_dice": 0.907,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/java/com/yuhui/config/XxlJobAutoConfig.java",
+      "reference": "lottery-backend-master/lottery-app/src/main/java/com/lottery/config/XxlJobAutoConfig.java",
+      "tokens": 189,
+      "shingle_dice": 0.9043,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/http/StrategyAwardController.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/http/StrategyAwardController.java",
+      "tokens": 688,
+      "shingle_dice": 0.902,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/raffle/service/rule/tree/impl/RuleStockTreeNode.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/service/rule/tree/impl/RuleStockTreeNode.java",
+      "tokens": 221,
+      "shingle_dice": 0.9006,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/mysql/ActivityCountMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/mysql/ActivityCountMapper.xml",
+      "tokens": 120,
+      "shingle_dice": 0.9,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/mysql/RuleMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/mysql/RuleMapper.xml",
+      "tokens": 120,
+      "shingle_dice": 0.9,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/mysql/RuleTreeMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/mysql/RuleTreeMapper.xml",
+      "tokens": 120,
+      "shingle_dice": 0.9,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/http/StrategyController.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/http/StrategyController.java",
+      "tokens": 561,
+      "shingle_dice": 0.8988,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/http/RuleTreeNodeController.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/http/RuleTreeNodeController.java",
+      "tokens": 644,
+      "shingle_dice": 0.8953,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/config/routes.ts",
+      "reference": "lottery-erp-master/config/routes.ts",
+      "tokens": 798,
+      "shingle_dice": 0.8941,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/readmodel/pom.xml",
+      "reference": "lottery-backend-master/lottery-querys/pom.xml",
+      "tokens": 356,
+      "shingle_dice": 0.8934,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/storage/src/main/java/com/yuhui/infrastructure/adapter/repository/TaskRepositoryImpl.java",
+      "reference": "lottery-backend-master/lottery-infrastructure/src/main/java/com/lottery/infrastructure/adapter/repository/TaskRepositoryImpl.java",
+      "tokens": 238,
+      "shingle_dice": 0.8925,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/http/ActivityController.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/http/ActivityController.java",
+      "tokens": 592,
+      "shingle_dice": 0.8919,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/http/RuleTreeController.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/http/RuleTreeController.java",
+      "tokens": 552,
+      "shingle_dice": 0.8899,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/http/RuleTreeNodeLineController.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/http/RuleTreeNodeLineController.java",
+      "tokens": 548,
+      "shingle_dice": 0.8896,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/http/ActivityCountController.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/http/ActivityCountController.java",
+      "tokens": 524,
+      "shingle_dice": 0.8896,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/http/RuleController.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/http/RuleController.java",
+      "tokens": 546,
+      "shingle_dice": 0.8885,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/contracts/pom.xml",
+      "reference": "lottery-backend-master/lottery-api/pom.xml",
+      "tokens": 330,
+      "shingle_dice": 0.884,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/raffle/service/armory/algorithm/impl/O1Algorithm.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/service/armory/algorithm/impl/O1Algorithm.java",
+      "tokens": 262,
+      "shingle_dice": 0.8803,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-web/src/app.tsx",
+      "reference": "lottery-erp-master/src/app.tsx",
+      "tokens": 798,
+      "shingle_dice": 0.8782,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/http/AwardController.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/http/AwardController.java",
+      "tokens": 476,
+      "shingle_dice": 0.873,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/http/ActivitySkuController.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/http/ActivitySkuController.java",
+      "tokens": 440,
+      "shingle_dice": 0.8685,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/http/BehaviorRebateController.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/http/BehaviorRebateController.java",
+      "tokens": 491,
+      "shingle_dice": 0.8684,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/http/LotteryActivityController.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/http/LotteryActivityController.java",
+      "tokens": 2055,
+      "shingle_dice": 0.8678,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/participation/service/quota/rule/impl/ActivitySkuStockChain.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/activity/service/quota/rule/impl/ActivitySkuStockChain.java",
+      "tokens": 184,
+      "shingle_dice": 0.8625,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/participation/service/armory/ActivityImpl.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/activity/service/armory/ActivityImpl.java",
+      "tokens": 181,
+      "shingle_dice": 0.8544,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/storage/src/main/java/com/yuhui/infrastructure/adapter/repository/CreditRepositoryImpl.java",
+      "reference": "lottery-backend-master/lottery-infrastructure/src/main/java/com/lottery/infrastructure/adapter/repository/CreditRepositoryImpl.java",
+      "tokens": 836,
+      "shingle_dice": 0.843,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/java/com/yuhui/config/RedisClientConfig.java",
+      "reference": "lottery-backend-master/lottery-app/src/main/java/com/lottery/config/RedisClientConfig.java",
+      "tokens": 221,
+      "shingle_dice": 0.8355,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/storage/src/main/java/com/yuhui/infrastructure/adapter/repository/RebateRepositoryImpl.java",
+      "reference": "lottery-backend-master/lottery-infrastructure/src/main/java/com/lottery/infrastructure/adapter/repository/RebateRepositoryImpl.java",
+      "tokens": 1213,
+      "shingle_dice": 0.8318,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/marketing/pom.xml",
+      "reference": "lottery-backend-master/lottery-querys/pom.xml",
+      "tokens": 385,
+      "shingle_dice": 0.8297,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/resources/mapper/mysql/CreditAccountMapper.xml",
+      "reference": "lottery-backend-master/lottery-app/src/main/resources/mapper/mysql/CreditAccountMapper.xml",
+      "tokens": 260,
+      "shingle_dice": 0.8221,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/storage/src/main/java/com/yuhui/infrastructure/adapter/repository/ParticipationLedgerStore.java",
+      "reference": "lottery-backend-master/lottery-infrastructure/src/main/java/com/lottery/infrastructure/adapter/repository/ActivityRepositoryImpl.java",
+      "tokens": 4933,
+      "shingle_dice": 0.8127,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/raffle/service/rule/chain/impl/RuleWeightLogicChain.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/service/rule/chain/impl/RuleWeightLogicChain.java",
+      "tokens": 356,
+      "shingle_dice": 0.8112,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "HIGH_OVERLAP"
+    },
+    {
+      "path": "yuhui-server/shared/pom.xml",
+      "reference": "lottery-backend-master/lottery-types/pom.xml",
+      "tokens": 399,
+      "shingle_dice": 0.7964,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/points/service/PointsPostingPlan.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/credit/service/CreditServiceImpl.java",
+      "tokens": 266,
+      "shingle_dice": 0.7923,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/channel/service/ChannelServiceImpl.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/channel/service/ChannelServiceImpl.java",
+      "tokens": 379,
+      "shingle_dice": 0.7887,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/entrypoints/pom.xml",
+      "reference": "lottery-backend-master/lottery-trigger/pom.xml",
+      "tokens": 731,
+      "shingle_dice": 0.7675,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/raffle/service/armory/RafflePreparation.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/service/armory/AbstractStrategy.java",
+      "tokens": 609,
+      "shingle_dice": 0.7581,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/participation/service/partake/ParticipationAccounts.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/activity/service/partake/DefaultActivityPartake.java",
+      "tokens": 443,
+      "shingle_dice": 0.7398,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/raffle/service/RaffleExecution.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/service/AbstractLottery.java",
+      "tokens": 484,
+      "shingle_dice": 0.7359,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/storage/src/main/java/com/yuhui/infrastructure/adapter/repository/StrategyRepositoryImpl.java",
+      "reference": "lottery-backend-master/lottery-infrastructure/src/main/java/com/lottery/infrastructure/adapter/repository/StrategyRepositoryImpl.java",
+      "tokens": 1948,
+      "shingle_dice": 0.7283,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/participation/service/quota/QuotaOrderPlans.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/activity/service/quota/DefaultActivityQuota.java",
+      "tokens": 330,
+      "shingle_dice": 0.7111,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/participation/service/quota/QuotaOrdering.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/activity/service/quota/AbstractActivityQuota.java",
+      "tokens": 646,
+      "shingle_dice": 0.7012,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/storage/pom.xml",
+      "reference": "lottery-backend-master/lottery-infrastructure/pom.xml",
+      "tokens": 386,
+      "shingle_dice": 0.6969,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/participation/service/partake/ParticipationOrdering.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/activity/service/partake/AbstractActivityPartake.java",
+      "tokens": 405,
+      "shingle_dice": 0.6761,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/reward/fulfillment/service/AwardIssuancePlan.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/award/service/UserAwardServiceImpl.java",
+      "tokens": 223,
+      "shingle_dice": 0.6585,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/http/ErpOperateController.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/http/ErpOperateController.java",
+      "tokens": 806,
+      "shingle_dice": 0.6347,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/raffle/repository/StrategyRepository.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/repository/StrategyRepository.java",
+      "tokens": 154,
+      "shingle_dice": 0.6333,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/shared/src/main/java/com/yuhui/types/util/AliOSSUtils.java",
+      "reference": "lottery-backend-master/lottery-types/src/main/java/com/lottery/types/util/AliOSSUtils.java",
+      "tokens": 346,
+      "shingle_dice": 0.6287,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/reward/behavior/service/BehaviorRewardPlanFactory.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/rebate/service/RebateServiceImpl.java",
+      "tokens": 366,
+      "shingle_dice": 0.6218,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/storage/src/main/java/com/yuhui/infrastructure/adapter/repository/RewardSettlementStore.java",
+      "reference": "lottery-backend-master/lottery-infrastructure/src/main/java/com/lottery/infrastructure/adapter/repository/UserAwardRepositoryImpl.java",
+      "tokens": 1639,
+      "shingle_dice": 0.5788,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/participation/repository/ParticipationLedger.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/activity/repository/ActivityRepository.java",
+      "tokens": 130,
+      "shingle_dice": 0.5605,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/storage/src/main/java/com/yuhui/infrastructure/adapter/repository/UserAwardRepositoryImpl.java",
+      "reference": "lottery-backend-master/lottery-infrastructure/src/main/java/com/lottery/infrastructure/adapter/repository/UserAwardRepositoryImpl.java",
+      "tokens": 460,
+      "shingle_dice": 0.465,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/raffle/service/RaffleRuleSelection.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/service/DefaultLottery.java",
+      "tokens": 218,
+      "shingle_dice": 0.4409,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/raffle/service/RaffleInventoryQueries.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/service/DefaultLottery.java",
+      "tokens": 195,
+      "shingle_dice": 0.4188,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/storage/src/main/java/com/yuhui/infrastructure/adapter/repository/RaffleStockStore.java",
+      "reference": "lottery-backend-master/lottery-infrastructure/src/main/java/com/lottery/infrastructure/adapter/repository/StrategyRepositoryImpl.java",
+      "tokens": 837,
+      "shingle_dice": 0.4155,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/job/SendMessageTaskJob.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/job/SendMessageTaskJob.java",
+      "tokens": 177,
+      "shingle_dice": 0.3624,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/raffle/repository/RaffleProbabilityIndex.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/repository/StrategyRepository.java",
+      "tokens": 111,
+      "shingle_dice": 0.3325,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/storage/src/main/java/com/yuhui/infrastructure/adapter/repository/RaffleRuleTreeStore.java",
+      "reference": "lottery-backend-master/lottery-infrastructure/src/main/java/com/lottery/infrastructure/adapter/repository/StrategyRepositoryImpl.java",
+      "tokens": 587,
+      "shingle_dice": 0.323,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/storage/src/main/java/com/yuhui/infrastructure/adapter/repository/ParticipationInventoryStore.java",
+      "reference": "lottery-backend-master/lottery-infrastructure/src/main/java/com/lottery/infrastructure/adapter/repository/ActivityRepositoryImpl.java",
+      "tokens": 762,
+      "shingle_dice": 0.3168,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/raffle/service/armory/RaffleAlgorithms.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/service/armory/StrategyImpl.java",
+      "tokens": 151,
+      "shingle_dice": 0.3147,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/storage/src/main/java/com/yuhui/infrastructure/adapter/repository/UserRepositoryImpl.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/user/service/impl/IUserService.java",
+      "tokens": 137,
+      "shingle_dice": 0.2839,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/storage/src/main/java/com/yuhui/infrastructure/adapter/repository/ActivityRepositoryImpl.java",
+      "reference": "lottery-backend-master/lottery-infrastructure/src/main/java/com/lottery/infrastructure/adapter/repository/ActivityRepositoryImpl.java",
+      "tokens": 683,
+      "shingle_dice": 0.2785,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/storage/src/main/java/com/yuhui/infrastructure/event/EventPublisher.java",
+      "reference": "lottery-backend-master/lottery-infrastructure/src/main/java/com/lottery/infrastructure/event/EventPublisher.java",
+      "tokens": 196,
+      "shingle_dice": 0.2441,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/raffle/service/rule/chain/factory/DefaultLogicChainFactory.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/service/rule/chain/factory/DefaultLogicChainFactory.java",
+      "tokens": 236,
+      "shingle_dice": 0.2427,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/raffle/service/armory/RaffleSampling.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/service/armory/AbstractStrategy.java",
+      "tokens": 167,
+      "shingle_dice": 0.2139,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/application/PointsQuotaExchange.java",
+      "reference": "lottery-backend-master/lottery-app/src/test/java/com/lottery/test/domain/activity/ActivityQuotaServiceTest.java",
+      "tokens": 243,
+      "shingle_dice": 0.2105,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/reward/behavior/service/RebateServiceImpl.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/rebate/service/RebateServiceImpl.java",
+      "tokens": 316,
+      "shingle_dice": 0.2046,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/participation/service/quota/QuotaInventory.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/activity/service/ActivitySkuStockService.java",
+      "tokens": 121,
+      "shingle_dice": 0.189,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/raffle/service/armory/algorithm/impl/AliasAlgorithm.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/service/armory/algorithm/impl/O1Algorithm.java",
+      "tokens": 281,
+      "shingle_dice": 0.1677,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/points/service/CreditServiceImpl.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/credit/service/CreditServiceImpl.java",
+      "tokens": 105,
+      "shingle_dice": 0.1662,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/storage/src/main/java/com/yuhui/infrastructure/adapter/repository/RaffleProbabilityStore.java",
+      "reference": "lottery-backend-master/lottery-infrastructure/src/main/java/com/lottery/infrastructure/adapter/repository/StrategyRepositoryImpl.java",
+      "tokens": 476,
+      "shingle_dice": 0.1518,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/java/com/yuhui/interceptor/UserInterceptor.java",
+      "reference": "lottery-backend-master/lottery-app/src/main/java/com/lottery/interceptor/UserInterceptor.java",
+      "tokens": 179,
+      "shingle_dice": 0.1483,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/reward/fulfillment/service/distribute/RewardFulfillmentHandlers.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/award/service/distribute/impl/UserCreditRandomAward.java",
+      "tokens": 518,
+      "shingle_dice": 0.1365,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/application/DrawParticipation.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/http/LotteryActivityController.java",
+      "tokens": 225,
+      "shingle_dice": 0.1354,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-web/src/pages/Wallet/index.less",
+      "reference": "lottery-erp-master/src/pages/ActivitySku/index.less",
+      "tokens": 892,
+      "shingle_dice": 0.1346,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/storage/src/main/java/com/yuhui/infrastructure/adapter/repository/LocalErpRepository.java",
+      "reference": "lottery-backend-master/lottery-querys/src/main/java/com/lottery/querys/adapter/repository/EsErpRepository.java",
+      "tokens": 508,
+      "shingle_dice": 0.1253,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/reward/fulfillment/service/UserAwardServiceImpl.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/award/service/UserAwardServiceImpl.java",
+      "tokens": 147,
+      "shingle_dice": 0.1106,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-web/src/pages/Wallet/index.tsx",
+      "reference": "lottery-erp-master/src/pages/ActivityCount/index.tsx",
+      "tokens": 1319,
+      "shingle_dice": 0.0996,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-web/src/components/RewardsShell/index.less",
+      "reference": "lottery-erp-master/src/pages/RuleTree/index.less",
+      "tokens": 1174,
+      "shingle_dice": 0.0949,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-web/src/pages/Operating/Segments.tsx",
+      "reference": "lottery-erp-master/src/pages/Auth/Permissions/index.tsx",
+      "tokens": 1922,
+      "shingle_dice": 0.0905,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-web/src/pages/Operating/Merchants.tsx",
+      "reference": "lottery-erp-master/src/pages/Auth/Permissions/index.tsx",
+      "tokens": 1532,
+      "shingle_dice": 0.0899,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-web/src/pages/Experience/index.less",
+      "reference": "lottery-erp-master/src/pages/Experience/index.less",
+      "tokens": 5089,
+      "shingle_dice": 0.0882,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-web/src/pages/Operating/Campaigns.tsx",
+      "reference": "lottery-erp-master/src/pages/Auth/Permissions/index.tsx",
+      "tokens": 3341,
+      "shingle_dice": 0.0844,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/test/java/com/yuhui/marketing/RaffleBoundaryTest.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/service/rule/chain/impl/DefaultLogicChain.java",
+      "tokens": 487,
+      "shingle_dice": 0.0821,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-web/src/components/RecordCarousel/index.less",
+      "reference": "lottery-erp-master/src/pages/RuleTree/index.less",
+      "tokens": 311,
+      "shingle_dice": 0.0773,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-web/src/pages/Experience/index.tsx",
+      "reference": "lottery-erp-master/src/pages/Experience/index.tsx",
+      "tokens": 5876,
+      "shingle_dice": 0.075,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-web/src/pages/Operating/operating.less",
+      "reference": "lottery-erp-master/src/pages/StrategyAward/index.less",
+      "tokens": 328,
+      "shingle_dice": 0.0725,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-web/src/pages/Operating/Overview.tsx",
+      "reference": "lottery-erp-master/src/pages/DCC/index.tsx",
+      "tokens": 723,
+      "shingle_dice": 0.0708,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/runtime/src/main/java/com/yuhui/config/LocalExternalAwards.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/listener/SendAwardCustomer.java",
+      "tokens": 435,
+      "shingle_dice": 0.0679,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/storage/src/main/java/com/yuhui/infrastructure/event/CommittedOutboxDelivery.java",
+      "reference": "lottery-backend-master/lottery-infrastructure/src/main/java/com/lottery/infrastructure/event/EventPublisher.java",
+      "tokens": 110,
+      "shingle_dice": 0.0657,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-web/src/pages/Operating/Budget.tsx",
+      "reference": "lottery-erp-master/src/pages/Auth/Permissions/index.tsx",
+      "tokens": 681,
+      "shingle_dice": 0.0631,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/task/service/TaskServiceImpl.java",
+      "reference": "lottery-backend-master/lottery-infrastructure/src/main/java/com/lottery/infrastructure/adapter/repository/TaskRepositoryImpl.java",
+      "tokens": 132,
+      "shingle_dice": 0.0627,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-web/src/pages/Operating/Review.tsx",
+      "reference": "lottery-erp-master/src/pages/Auth/Users/index.tsx",
+      "tokens": 2203,
+      "shingle_dice": 0.0611,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-web/src/components/RecordCarousel/index.tsx",
+      "reference": "lottery-erp-master/src/pages/ActivityCount/index.tsx",
+      "tokens": 898,
+      "shingle_dice": 0.0546,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-web/src/pages/Operating/Consumer.tsx",
+      "reference": "lottery-erp-master/src/pages/Auth/LoginMethods/index.tsx",
+      "tokens": 1110,
+      "shingle_dice": 0.0497,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/shared/src/main/java/com/yuhui/types/model/BeanProjection.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/http/ActivitySkuController.java",
+      "tokens": 112,
+      "shingle_dice": 0.0464,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-web/src/pages/Operating/Settings.tsx",
+      "reference": "lottery-erp-master/src/pages/UserOrder/index.tsx",
+      "tokens": 296,
+      "shingle_dice": 0.0461,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-web/src/components/RewardsShell/index.tsx",
+      "reference": "lottery-erp-master/src/components/Footer/index.tsx",
+      "tokens": 419,
+      "shingle_dice": 0.046,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/operating/V3Store.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/service/armory/algorithm/impl/O1Algorithm.java",
+      "tokens": 813,
+      "shingle_dice": 0.0437,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/test/java/com/yuhui/marketing/PolicyCompositionTest.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/service/rule/chain/impl/DefaultLogicChain.java",
+      "tokens": 378,
+      "shingle_dice": 0.0416,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/operating/V3ReviewConfig.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/job/UpdateAwardStockJob.java",
+      "tokens": 372,
+      "shingle_dice": 0.0406,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/marketing/src/main/java/com/yuhui/marketing/raffle/service/armory/algorithm/AliasTable.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/service/armory/algorithm/impl/O1Algorithm.java",
+      "tokens": 596,
+      "shingle_dice": 0.0362,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/test/java/com/yuhui/marketing/CacheMigrationTest.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/award/service/distribute/impl/UserThanksAward.java",
+      "tokens": 157,
+      "shingle_dice": 0.0316,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-web/src/pages/Operating/shared.tsx",
+      "reference": "lottery-erp-master/src/pages/BehaviorRebate/compoents/AddForm.tsx",
+      "tokens": 711,
+      "shingle_dice": 0.0301,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/operating/V3Demo.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/service/armory/algorithm/impl/O1Algorithm.java",
+      "tokens": 1488,
+      "shingle_dice": 0.0276,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/test/java/com/yuhui/marketing/RewardFulfillmentTest.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/award/service/distribute/impl/UserThanksAward.java",
+      "tokens": 320,
+      "shingle_dice": 0.0241,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/operating/V3Rules.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/rebate/service/RebateServiceImpl.java",
+      "tokens": 363,
+      "shingle_dice": 0.0229,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/http/LocalWalletController.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/model/entity/RuleEntity.java",
+      "tokens": 423,
+      "shingle_dice": 0.0212,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/test/java/com/yuhui/operating/V3ReviewConfigTest.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/service/armory/algorithm/impl/O1Algorithm.java",
+      "tokens": 397,
+      "shingle_dice": 0.0201,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/trigger/http/LocalReplicaController.java",
+      "reference": "lottery-backend-master/lottery-app/src/main/java/com/lottery/config/GuavaConfig.java",
+      "tokens": 194,
+      "shingle_dice": 0.018,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/test/java/com/yuhui/operating/V3RulesTest.java",
+      "reference": "lottery-backend-master/lottery-app/src/test/java/com/lottery/test/domain/rebate/BehaviorRebateServiceTest.java",
+      "tokens": 276,
+      "shingle_dice": 0.0163,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/storage/src/main/java/com/yuhui/infrastructure/redis/LegacyCacheTypes.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/user/service/impl/IUserServiceImpl.java",
+      "tokens": 267,
+      "shingle_dice": 0.0159,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/operating/V3Review.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/model/entity/RuleEntity.java",
+      "tokens": 1391,
+      "shingle_dice": 0.0154,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/test/java/com/yuhui/marketing/FoundationRefactorTest.java",
+      "reference": "lottery-backend-master/lottery-infrastructure/src/main/java/com/lottery/infrastructure/adapter/repository/CreditRepositoryImpl.java",
+      "tokens": 740,
+      "shingle_dice": 0.0148,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/operating/V3Controller.java",
+      "reference": "lottery-backend-master/lottery-trigger/src/main/java/com/lottery/trigger/job/UpdateAwardStockJob.java",
+      "tokens": 2672,
+      "shingle_dice": 0.0127,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/operating/V3Campaigns.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/model/entity/RuleEntity.java",
+      "tokens": 2215,
+      "shingle_dice": 0.0116,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "infra/init/06-v3-operating.sql",
+      "reference": "lottery-backend-master/docs/dev-ops/mysql/sql/marketing_02.sql",
+      "tokens": 1697,
+      "shingle_dice": 0.008,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "yuhui-server/entrypoints/src/main/java/com/yuhui/operating/V3Execution.java",
+      "reference": "lottery-backend-master/lottery-domain/src/main/java/com/lottery/domain/strategy/service/armory/algorithm/impl/OLogNAlgorithm.java",
+      "tokens": 2332,
+      "shingle_dice": 0.0043,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "infra/init/04-bank-theme.sql",
+      "reference": "lottery-backend-master/docs/dev-ops/mysql/sql/xxl_job.sql",
+      "tokens": 388,
+      "shingle_dice": 0.0014,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "infra/migration/08-rewards-label-encoding.sql",
+      "reference": "lottery-backend-master/docs/dev-ops/mysql/sql/xxl_job.sql",
+      "tokens": 685,
+      "shingle_dice": 0.0,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    },
+    {
+      "path": "infra/migration/07-v3-final-patch.sql",
+      "reference": "lottery-backend-master/docs/dev-ops/mysql/sql/xxl_job.sql",
+      "tokens": 232,
+      "shingle_dice": 0.0,
+      "byte_identical": false,
+      "normalized_identical": false,
+      "review": "REVIEW_CONTEXT"
+    }
+  ]
+}

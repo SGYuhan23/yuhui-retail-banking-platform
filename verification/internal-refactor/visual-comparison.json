@@ -1,0 +1,16 @@
+{
+  "homeFreshBuild": {
+    "pixelEqual": true,
+    "differenceBounds": null,
+    "size": [
+      1265,
+      1811
+    ],
+    "changedPixels": 0
+  },
+  "editor": {
+    "pixelEqual": true
+  },
+  "freshDomAndGeometryEqual": true,
+  "initialCapturedHomeEqual": false
+}

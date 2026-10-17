@@ -1,0 +1,1845 @@
+{
+  "testUser": "replica-check-1792219886",
+  "checks": [
+    {
+      "check": "warmup",
+      "result": "PASS",
+      "response": {
+        "code": 1000,
+        "message": "success",
+        "data": true
+      }
+    },
+    {
+      "check": "gift grant",
+      "result": "PASS",
+      "response": {
+        "code": 1000,
+        "message": "success",
+        "data": true
+      }
+    },
+    {
+      "check": "duplicate gift prevented",
+      "result": "PASS",
+      "response": {
+        "code": 2010,
+        "message": "user already received gift",
+        "data": null
+      }
+    },
+    {
+      "check": "daily sign",
+      "result": "PASS",
+      "response": {
+        "code": 1000,
+        "message": "success",
+        "data": true
+      }
+    },
+    {
+      "check": "duplicate daily sign prevented",
+      "result": "PASS",
+      "response": {
+        "code": 1005,
+        "message": "duplicate index {replica-check-1792219886_1989345533881966594_sku_198934686798940} already exists",
+        "data": null
+      }
+    },
+    {
+      "check": "quota persisted",
+      "result": "PASS",
+      "response": {
+        "code": 1000,
+        "message": "success",
+        "data": {
+          "totalCount": 2,
+          "totalCountSurplus": 2,
+          "dayCount": 2,
+          "dayCountSurplus": 2,
+          "monthCount": 2,
+          "monthCountSurplus": 2
+        }
+      }
+    },
+    {
+      "check": "sign credit persisted",
+      "result": "PASS",
+      "response": {
+        "code": 1000,
+        "message": "success",
+        "data": 5.0
+      }
+    },
+    {
+      "check": "exchange catalogue",
+      "result": "PASS",
+      "response": {
+        "code": 1000,
+        "message": "success",
+        "data": [
+          {
+            "id": 1989346292388290562,
+            "activityId": 1989345533881966594,
+            "activityCountId": 1934610051247448065,
+            "stockCount": 1000000,
+            "stockCountSurplus": 999998,
+            "productAmount": 100.0,
+            "activityCount": {
+              "totalCount": 10,
+              "dayCount": 10,
+              "monthCount": 10
+            }
+          },
+          {
+            "id": 1989347216963887106,
+            "activityId": 1989345533881966594,
+            "activityCountId": 1947276092532346881,
+            "stockCount": 1000000,
+            "stockCountSurplus": 999999,
+            "productAmount": 175.0,
+            "activityCount": {
+              "totalCount": 20,
+              "dayCount": 20,
+              "monthCount": 20
+            }
+          },
+          {
+            "id": 1989347310463311874,
+            "activityId": 1989345533881966594,
+            "activityCountId": 1947297667382018050,
+            "stockCount": 1000000,
+            "stockCountSurplus": 1000000,
+            "productAmount": 666.66,
+            "activityCount": {
+              "totalCount": 100,
+              "dayCount": 100,
+              "monthCount": 100
+            }
+          },
+          {
+            "id": 1989346736015630338,
+            "activityId": 1989345533881966594,
+            "activityCountId": 1989346519992197121,
+            "stockCount": 1000000,
+            "stockCountSurplus": 999972,
+            "productAmount": 15.0,
+            "activityCount": {
+              "totalCount": 1,
+              "dayCount": 1,
+              "monthCount": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "check": "insufficient credit rejected",
+      "result": "PASS",
+      "response": {
+        "code": 1013,
+        "message": "credit is insufficient",
+        "data": null
+      }
+    },
+    {
+      "check": "draw 1",
+      "result": "PASS",
+      "response": {
+        "code": 1000,
+        "message": "success",
+        "data": {
+          "awardId": 1989336435136356353,
+          "awardTitle": "便民生活券 · 1张",
+          "awardIndex": 2
+        }
+      }
+    },
+    {
+      "check": "draw 2",
+      "result": "PASS",
+      "response": {
+        "code": 1000,
+        "message": "success",
+        "data": {
+          "awardId": 1989337068971188225,
+          "awardTitle": "谢谢参与",
+          "awardIndex": 1
+        }
+      }
+    },
+    {
+      "check": "personal award history",
+      "result": "PASS",
+      "response": {
+        "code": 1000,
+        "message": "success",
+        "data": {
+          "total": 2,
+          "items": [
+            {
+              "id": 2111349353871474689,
+              "userId": "replica-check-1792219886",
+              "activityId": 1989345533881966594,
+              "strategyId": 1989339401985679361,
+              "userOrderId": 2111349353758228481,
+              "awardId": 1989337068971188225,
+              "image": "/assets/bank-1989337068971188225.svg",
+              "awardTitle": "谢谢参与",
+              "awardTime": 1792219888000,
+              "awardState": "complete",
+              "createTime": 1792219887000,
+              "updateTime": 1792219887000
+            },
+            {
+              "id": 2111349350574751746,
+              "userId": "replica-check-1792219886",
+              "activityId": 1989345533881966594,
+              "strategyId": 1989339401985679361,
+              "userOrderId": 2111349350495059969,
+              "awardId": 1989336435136356353,
+              "image": "/assets/bank-1989336435136356353.svg",
+              "awardTitle": "便民生活券 · 1张",
+              "awardTime": 1792219887000,
+              "awardState": "complete",
+              "createTime": 1792219886000,
+              "updateTime": 1792219886000
+            }
+          ]
+        }
+      }
+    },
+    {
+      "check": "asynchronous award settlement",
+      "result": "PASS"
+    },
+    {
+      "check": "ERP query_user_order",
+      "result": "PASS",
+      "response": {
+        "code": 1000,
+        "message": "success",
+        "data": [
+          {
+            "userId": "replica-check-1792219886",
+            "activityId": 1989345533881966594,
+            "activityName": "渝惠生活 · 积分好礼季",
+            "strategyId": 1989339401985679361,
+            "orderState": "used",
+            "createTime": "2026-10-17 14:51:28",
+            "updateTime": "2026-10-17 14:51:27"
+          },
+          {
+            "userId": "replica-check-1792219886",
+            "activityId": 1989345533881966594,
+            "activityName": "渝惠生活 · 积分好礼季",
+            "strategyId": 1989339401985679361,
+            "orderState": "used",
+            "createTime": "2026-10-17 14:51:27",
+            "updateTime": "2026-10-17 14:51:26"
+          },
+          {
+            "userId": "10002",
+            "activityId": 1989345533881966594,
+            "activityName": "渝惠生活 · 积分好礼季",
+            "strategyId": 1989339401985679361,
+            "orderState": "used",
+            "createTime": "2026-10-17 13:59:27",
+            "updateTime": "2026-10-17 13:59:26"
+          },
+          {
+            "userId": "replica-check-1792216542",
+            "activityId": 1989345533881966594,
+            "activityName": "æ¸æƒ ç”Ÿæ´» Â· ç§¯åˆ†å¥½ç¤¼å­£",
+            "strategyId": 1989339401985679361,
+            "orderState": "used",
+            "createTime": "2026-10-17 13:55:44",
+            "updateTime": "2026-10-17 13:55:43"
+          },
+          {
+            "userId": "replica-check-1792216542",
+            "activityId": 1989345533881966594,
+            "activityName": "æ¸æƒ ç”Ÿæ´» Â· ç§¯åˆ†å¥½ç¤¼å­£",
+            "strategyId": 1989339401985679361,
+            "orderState": "used",
+            "createTime": "2026-10-17 13:55:43",
+            "updateTime": "2026-10-17 13:55:42"
+          },
+          {
+            "userId": "award-check-1791982297",
+            "activityId": 1989345533881966594,
+            "activityName": "æ¸æƒ ç”Ÿæ´» Â· ç§¯åˆ†å¥½ç¤¼å­£",
+            "strategyId": 1989339401985679361,
+            "orderState": "used",
+            "createTime": "2026-10-14 20:51:37",
+            "updateTime": "2026-10-14 20:51:37"
+          },
+          {
+            "userId": "replica-check-1791982279",
+            "activityId": 1989345533881966594,
+            "activityName": "æ¸æƒ ç”Ÿæ´» Â· ç§¯åˆ†å¥½ç¤¼å­£",
+            "strategyId": 1989339401985679361,
+            "orderState": "used",
+            "createTime": "2026-10-14 20:51:21",
+            "updateTime": "2026-10-14 20:51:21"
+          },
+          {
+            "userId": "replica-check-1791982279",
+            "activityId": 1989345533881966594,
+            "activityName": "æ¸æƒ ç”Ÿæ´» Â· ç§¯åˆ†å¥½ç¤¼å­£",
+            "strategyId": 1989339401985679361,
+            "orderState": "used",
+            "createTime": "2026-10-14 20:51:20",
+            "updateTime": "2026-10-14 20:51:20"
+          },
+          {
+            "userId": "award-check-1791979867",
+            "activityId": 1989345533881966594,
+            "activityName": "æ¸æƒ ç”Ÿæ´» Â· ç§¯åˆ†å¥½ç¤¼å­£",
+            "strategyId": 1989339401985679361,
+            "orderState": "used",
+            "createTime": "2026-10-14 20:11:08",
+            "updateTime": "2026-10-14 20:11:08"
+          },
+          {
+            "userId": "replica-check-1791979853",
+            "activityId": 1989345533881966594,
+            "activityName": "æ¸æƒ ç”Ÿæ´» Â· ç§¯åˆ†å¥½ç¤¼å­£",
+            "strategyId": 1989339401985679361,
+            "orderState": "used",
+            "createTime": "2026-10-14 20:10:54",
+            "updateTime": "2026-10-14 20:10:54"
+          },
+          {
+            "userId": "replica-check-1791979853",
+            "activityId": 1989345533881966594,
+            "activityName": "æ¸æƒ ç”Ÿæ´» Â· ç§¯åˆ†å¥½ç¤¼å­£",
+            "strategyId": 1989339401985679361,
+            "orderState": "used",
+            "createTime": "2026-10-14 20:10:54",
+            "updateTime": "2026-10-14 20:10:53"
+          },
+          {
+            "userId": "replica-check-1791979760",
+            "activityId": 1989345533881966594,
+            "activityName": "æ¸æƒ ç”Ÿæ´» Â· ç§¯åˆ†å¥½ç¤¼å­£",
+            "strategyId": 1989339401985679361,
+            "orderState": "used",
+            "createTime": "2026-10-14 20:09:22",
+            "updateTime": "2026-10-14 20:09:22"
+          },
+          {
+            "userId": "replica-check-1791979760",
+            "activityId": 1989345533881966594,
+            "activityName": "æ¸æƒ ç”Ÿæ´» Â· ç§¯åˆ†å¥½ç¤¼å­£",
+            "strategyId": 1989339401985679361,
+            "orderState": "used",
+            "createTime": "2026-10-14 20:09:21",
+            "updateTime": "2026-10-14 20:09:21"
+          }
+        ]
+      }
+    },
+    {
+      "check": "ERP query_user_award_record",
+      "result": "PASS",
+      "response": {
+        "code": 1000,
+        "message": "success",
+        "data": [
+          {
+            "id": 2111349353871474689,
+            "userId": "replica-check-1792219886",
+            "activityId": 1989345533881966594,
+            "strategyId": 1989339401985679361,
+            "userOrderId": 2111349353758228481,
+            "awardId": 1989337068971188225,
+            "image": null,
+            "awardTitle": "谢谢参与",
+            "awardTime": 1792219888000,
+            "awardState": "complete",
+            "createTime": "2026-10-17 14:51:27",
+            "updateTime": "2026-10-17 14:51:27"
+          },
+          {
+            "id": 2111349350574751746,
+            "userId": "replica-check-1792219886",
+            "activityId": 1989345533881966594,
+            "strategyId": 1989339401985679361,
+            "userOrderId": 2111349350495059969,
+            "awardId": 1989336435136356353,
+            "image": null,
+            "awardTitle": "便民生活券 · 1张",
+            "awardTime": 1792219887000,
+            "awardState": "complete",
+            "createTime": "2026-10-17 14:51:26",
+            "updateTime": "2026-10-17 14:51:26"
+          },
+          {
+            "id": 2111336264425963521,
+            "userId": "10002",
+            "activityId": 1989345533881966594,
+            "strategyId": 1989339401985679361,
+            "userOrderId": 2111336264258191361,
+            "awardId": 1989337068971188225,
+            "image": null,
+            "awardTitle": "谢谢参与",
+            "awardTime": 1792216767000,
+            "awardState": "complete",
+            "createTime": "2026-10-17 13:59:26",
+            "updateTime": "2026-10-17 13:59:26"
+          },
+          {
+            "id": 2111335328475414529,
+            "userId": "replica-check-1792216542",
+            "activityId": 1989345533881966594,
+            "strategyId": 1989339401985679361,
+            "userOrderId": 2111335328332808193,
+            "awardId": 1989337068971188225,
+            "image": null,
+            "awardTitle": "è°¢è°¢å‚ä¸Ž",
+            "awardTime": 1792216544000,
+            "awardState": "complete",
+            "createTime": "2026-10-17 13:55:43",
+            "updateTime": "2026-10-17 13:55:43"
+          },
+          {
+            "id": 2111335325170302978,
+            "userId": "replica-check-1792216542",
+            "activityId": 1989345533881966594,
+            "strategyId": 1989339401985679361,
+            "userOrderId": 2111335325069639681,
+            "awardId": 1989336991691137026,
+            "image": null,
+            "awardTitle": "å¹¸è¿æœºä¼š Â· 5æ¬¡",
+            "awardTime": 1792216543000,
+            "awardState": "complete",
+            "createTime": "2026-10-17 13:55:42",
+            "updateTime": "2026-10-17 13:55:42"
+          },
+          {
+            "id": 1791982298227930,
+            "userId": "award-check-1791982297",
+            "activityId": 1989345533881966594,
+            "strategyId": 1,
+            "userOrderId": 1791982298227930,
+            "awardId": 1989336928877240321,
+            "image": null,
+            "awardTitle": "audit fixture",
+            "awardTime": 1791982298000,
+            "awardState": "complete",
+            "createTime": "2026-10-14 20:51:38",
+            "updateTime": "2026-10-14 20:51:38"
+          },
+          {
+            "id": 1791982298227931,
+            "userId": "award-check-1791982297",
+            "activityId": 1989345533881966594,
+            "strategyId": 1,
+            "userOrderId": 1791982298227931,
+            "awardId": 1989336928877240321,
+            "image": null,
+            "awardTitle": "audit fixture",
+            "awardTime": 1791982298000,
+            "awardState": "complete",
+            "createTime": "2026-10-14 20:51:38",
+            "updateTime": "2026-10-14 20:51:38"
+          },
+          {
+            "id": 1791982298227929,
+            "userId": "award-check-1791982297",
+            "activityId": 1989345533881966594,
+            "strategyId": 1,
+            "userOrderId": 1791982298227929,
+            "awardId": 1989336702498070529,
+            "image": null,
+            "awardTitle": "audit fixture",
+            "awardTime": 1791982298000,
+            "awardState": "complete",
+            "createTime": "2026-10-14 20:51:38",
+            "updateTime": "2026-10-14 20:51:38"
+          },
+          {
+            "id": 1791982298227928,
+            "userId": "award-check-1791982297",
+            "activityId": 1989345533881966594,
+            "strategyId": 1,
+            "userOrderId": 1791982298227928,
+            "awardId": 1989336702498070529,
+            "image": null,
+            "awardTitle": "audit fixture",
+            "awardTime": 1791982298000,
+            "awardState": "complete",
+            "createTime": "2026-10-14 20:51:38",
+            "updateTime": "2026-10-14 20:51:38"
+          },
+          {
+            "id": 2110352828827598849,
+            "userId": "award-check-1791982297",
+            "activityId": 1989345533881966594,
+            "strategyId": 1989339401985679361,
+            "userOrderId": 2110352828739518465,
+            "awardId": 1989336928877240321,
+            "image": null,
+            "awardTitle": "å¹¸è¿æœºä¼š Â· 1æ¬¡",
+            "awardTime": 1791982298000,
+            "awardState": "complete",
+            "createTime": "2026-10-14 20:51:37",
+            "updateTime": "2026-10-14 20:51:37"
+          },
+          {
+            "id": 2110352760556912641,
+            "userId": "replica-check-1791982279",
+            "activityId": 1989345533881966594,
+            "strategyId": 1989339401985679361,
+            "userOrderId": 2110352760460443649,
+            "awardId": 1989336788581965826,
+            "image": null,
+            "awardTitle": "ä¾¿æ°‘ç”Ÿæ´»åˆ¸ Â· 5å¼ ",
+            "awardTime": 1791982281000,
+            "awardState": "complete",
+            "createTime": "2026-10-14 20:51:21",
+            "updateTime": "2026-10-14 20:51:21"
+          },
+          {
+            "id": 2110352757381824514,
+            "userId": "replica-check-1791982279",
+            "activityId": 1989345533881966594,
+            "strategyId": 1989339401985679361,
+            "userOrderId": 2110352757201469442,
+            "awardId": 1989337068971188225,
+            "image": null,
+            "awardTitle": "è°¢è°¢å‚ä¸Ž",
+            "awardTime": 1791982280000,
+            "awardState": "complete",
+            "createTime": "2026-10-14 20:51:20",
+            "updateTime": "2026-10-14 20:51:20"
+          },
+          {
+            "id": 1791979868790179,
+            "userId": "award-check-1791979867",
+            "activityId": 1989345533881966594,
+            "strategyId": 1,
+            "userOrderId": 1791979868790179,
+            "awardId": 1989336702498070529,
+            "image": null,
+            "awardTitle": "audit fixture",
+            "awardTime": 1791979868000,
+            "awardState": "complete",
+            "createTime": "2026-10-14 20:11:08",
+            "updateTime": "2026-10-14 20:11:09"
+          },
+          {
+            "id": 1791979868790182,
+            "userId": "award-check-1791979867",
+            "activityId": 1989345533881966594,
+            "strategyId": 1,
+            "userOrderId": 1791979868790182,
+            "awardId": 1989336928877240321,
+            "image": null,
+            "awardTitle": "audit fixture",
+            "awardTime": 1791979869000,
+            "awardState": "complete",
+            "createTime": "2026-10-14 20:11:09",
+            "updateTime": "2026-10-14 20:11:09"
+          },
+          {
+            "id": 1791979868790181,
+            "userId": "award-check-1791979867",
+            "activityId": 1989345533881966594,
+            "strategyId": 1,
+            "userOrderId": 1791979868790181,
+            "awardId": 1989336928877240321,
+            "image": null,
+            "awardTitle": "audit fixture",
+            "awardTime": 1791979869000,
+            "awardState": "complete",
+            "createTime": "2026-10-14 20:11:09",
+            "updateTime": "2026-10-14 20:11:09"
+          },
+          {
+            "id": 1791979868790180,
+            "userId": "award-check-1791979867",
+            "activityId": 1989345533881966594,
+            "strategyId": 1,
+            "userOrderId": 1791979868790180,
+            "awardId": 1989336702498070529,
+            "image": null,
+            "awardTitle": "audit fixture",
+            "awardTime": 1791979868000,
+            "awardState": "complete",
+            "createTime": "2026-10-14 20:11:08",
+            "updateTime": "2026-10-14 20:11:09"
+          },
+          {
+            "id": 2110342639818829825,
+            "userId": "award-check-1791979867",
+            "activityId": 1989345533881966594,
+            "strategyId": 1989339401985679361,
+            "userOrderId": 2110342639739138050,
+            "awardId": 1989336435136356353,
+            "image": null,
+            "awardTitle": "ä¾¿æ°‘ç”Ÿæ´»åˆ¸ Â· 1å¼ ",
+            "awardTime": 1791979868000,
+            "awardState": "complete",
+            "createTime": "2026-10-14 20:11:08",
+            "updateTime": "2026-10-14 20:11:08"
+          },
+          {
+            "id": 2110342581232791553,
+            "userId": "replica-check-1791979853",
+            "activityId": 1989345533881966594,
+            "strategyId": 1989339401985679361,
+            "userOrderId": 2110342581144711170,
+            "awardId": 1989336702498070529,
+            "image": null,
+            "awardTitle": "æƒŠå–œç§¯åˆ†",
+            "awardTime": 1791979854000,
+            "awardState": "complete",
+            "createTime": "2026-10-14 20:10:54",
+            "updateTime": "2026-10-14 20:10:54"
+          },
+          {
+            "id": 2110342578061897730,
+            "userId": "replica-check-1791979853",
+            "activityId": 1989345533881966594,
+            "strategyId": 1989339401985679361,
+            "userOrderId": 2110342578003177474,
+            "awardId": 1989337068971188225,
+            "image": null,
+            "awardTitle": "è°¢è°¢å‚ä¸Ž",
+            "awardTime": 1791979854000,
+            "awardState": "complete",
+            "createTime": "2026-10-14 20:10:53",
+            "updateTime": "2026-10-14 20:10:53"
+          },
+          {
+            "id": 2110342194773815298,
+            "userId": "replica-check-1791979760",
+            "activityId": 1989345533881966594,
+            "strategyId": 1989339401985679361,
+            "userOrderId": 2110342194702512130,
+            "awardId": 1989337068971188225,
+            "image": null,
+            "awardTitle": "è°¢è°¢å‚ä¸Ž",
+            "awardTime": 1791979762000,
+            "awardState": "complete",
+            "createTime": "2026-10-14 20:09:22",
+            "updateTime": "2026-10-14 20:09:22"
+          },
+          {
+            "id": 2110342191653253122,
+            "userId": "replica-check-1791979760",
+            "activityId": 1989345533881966594,
+            "strategyId": 1989339401985679361,
+            "userOrderId": 2110342191502258177,
+            "awardId": 1989337068971188225,
+            "image": null,
+            "awardTitle": "è°¢è°¢å‚ä¸Ž",
+            "awardTime": 1791979761000,
+            "awardState": "complete",
+            "createTime": "2026-10-14 20:09:21",
+            "updateTime": "2026-10-14 20:09:21"
+          }
+        ]
+      }
+    },
+    {
+      "check": "ERP query_activity_account",
+      "result": "PASS",
+      "response": {
+        "code": 1000,
+        "message": "success",
+        "data": [
+          {
+            "userId": "replica-check-1792219886",
+            "activityId": 1989345533881966594,
+            "totalCount": 2,
+            "totalCountSurplus": 0,
+            "dayCount": 2,
+            "dayCountSurplus": 0,
+            "monthCount": 2,
+            "monthCountSurplus": 0,
+            "createTime": "2026-10-17 14:51:26",
+            "updateTime": "2026-10-17 14:51:28"
+          },
+          {
+            "userId": "10002",
+            "activityId": 1989345533881966594,
+            "totalCount": 1,
+            "totalCountSurplus": 0,
+            "dayCount": 1,
+            "dayCountSurplus": 0,
+            "monthCount": 1,
+            "monthCountSurplus": 0,
+            "createTime": "2026-10-17 13:59:15",
+            "updateTime": "2026-10-17 13:59:27"
+          },
+          {
+            "userId": "replica-check-1792216542",
+            "activityId": 1989345533881966594,
+            "totalCount": 7,
+            "totalCountSurplus": 5,
+            "dayCount": 7,
+            "dayCountSurplus": 5,
+            "monthCount": 7,
+            "monthCountSurplus": 5,
+            "createTime": "2026-10-17 13:55:42",
+            "updateTime": "2026-10-17 13:55:44"
+          },
+          {
+            "userId": "award-check-1791982297",
+            "activityId": 1989345533881966594,
+            "totalCount": 4,
+            "totalCountSurplus": 3,
+            "dayCount": 4,
+            "dayCountSurplus": 3,
+            "monthCount": 4,
+            "monthCountSurplus": 3,
+            "createTime": "2026-10-14 20:51:37",
+            "updateTime": "2026-10-14 20:51:38"
+          },
+          {
+            "userId": "credit-check-1791982293",
+            "activityId": 1989345533881966594,
+            "totalCount": 2,
+            "totalCountSurplus": 2,
+            "dayCount": 2,
+            "dayCountSurplus": 2,
+            "monthCount": 2,
+            "monthCountSurplus": 2,
+            "createTime": "2026-10-14 20:51:33",
+            "updateTime": "2026-10-14 20:51:33"
+          },
+          {
+            "userId": "replica-check-1791982279",
+            "activityId": 1989345533881966594,
+            "totalCount": 2,
+            "totalCountSurplus": 0,
+            "dayCount": 2,
+            "dayCountSurplus": 0,
+            "monthCount": 2,
+            "monthCountSurplus": 0,
+            "createTime": "2026-10-14 20:51:20",
+            "updateTime": "2026-10-14 20:51:21"
+          },
+          {
+            "userId": "award-check-1791979867",
+            "activityId": 1989345533881966594,
+            "totalCount": 3,
+            "totalCountSurplus": 2,
+            "dayCount": 3,
+            "dayCountSurplus": 2,
+            "monthCount": 3,
+            "monthCountSurplus": 2,
+            "createTime": "2026-10-14 20:11:07",
+            "updateTime": "2026-10-14 20:11:09"
+          },
+          {
+            "userId": "credit-check-1791979863",
+            "activityId": 1989345533881966594,
+            "totalCount": 2,
+            "totalCountSurplus": 2,
+            "dayCount": 2,
+            "dayCountSurplus": 2,
+            "monthCount": 2,
+            "monthCountSurplus": 2,
+            "createTime": "2026-10-14 20:11:04",
+            "updateTime": "2026-10-14 20:11:04"
+          },
+          {
+            "userId": "replica-check-1791979853",
+            "activityId": 1989345533881966594,
+            "totalCount": 2,
+            "totalCountSurplus": 0,
+            "dayCount": 2,
+            "dayCountSurplus": 0,
+            "monthCount": 2,
+            "monthCountSurplus": 0,
+            "createTime": "2026-10-14 20:10:53",
+            "updateTime": "2026-10-14 20:10:54"
+          },
+          {
+            "userId": "10001",
+            "activityId": 1989345533881966594,
+            "totalCount": 1,
+            "totalCountSurplus": 1,
+            "dayCount": 1,
+            "dayCountSurplus": 1,
+            "monthCount": 1,
+            "monthCountSurplus": 1,
+            "createTime": "2026-10-14 20:10:52",
+            "updateTime": "2026-10-14 20:10:52"
+          },
+          {
+            "userId": "replica-check-1791979760",
+            "activityId": 1989345533881966594,
+            "totalCount": 2,
+            "totalCountSurplus": 0,
+            "dayCount": 2,
+            "dayCountSurplus": 0,
+            "monthCount": 2,
+            "monthCountSurplus": 0,
+            "createTime": "2026-10-14 20:09:21",
+            "updateTime": "2026-10-14 20:09:22"
+          }
+        ]
+      }
+    },
+    {
+      "check": "ERP query_activity_record",
+      "result": "PASS",
+      "response": {
+        "code": 1000,
+        "message": "success",
+        "data": [
+          {
+            "id": 2111349350205652993,
+            "userId": "replica-check-1792219886",
+            "activityId": 1989345533881966594,
+            "sku": 1989346736015630338,
+            "activityName": "渝惠生活 · 积分好礼季",
+            "totalCount": 1,
+            "dayCount": 1,
+            "monthCount": 1,
+            "payAmount": 0.0,
+            "state": "complete",
+            "outBusinessNo": "replica-check-1792219886_1989345533881966594_sku_1989346867989405698_20261017",
+            "createTime": "2026-10-17 14:51:26",
+            "updateTime": "2026-10-17 14:51:26"
+          },
+          {
+            "id": 2111349350008520705,
+            "userId": "replica-check-1792219886",
+            "activityId": 1989345533881966594,
+            "sku": null,
+            "activityName": null,
+            "totalCount": 1,
+            "dayCount": 1,
+            "monthCount": 1,
+            "payAmount": 0.0,
+            "state": "complete",
+            "outBusinessNo": "replica-check-1792219886_1989345533881966594_gift_1989346009608314882_2026",
+            "createTime": "2026-10-17 14:51:26",
+            "updateTime": "2026-10-17 14:51:26"
+          },
+          {
+            "id": 2111336215973363714,
+            "userId": "10002",
+            "activityId": 1989345533881966594,
+            "sku": 1989346736015630338,
+            "activityName": "渝惠生活 · 积分好礼季",
+            "totalCount": 1,
+            "dayCount": 1,
+            "monthCount": 1,
+            "payAmount": 0.0,
+            "state": "complete",
+            "outBusinessNo": "10002_1989345533881966594_sku_1989346867989405698_20261017",
+            "createTime": "2026-10-17 13:59:15",
+            "updateTime": "2026-10-17 13:59:15"
+          },
+          {
+            "id": 2111335325254189058,
+            "userId": "replica-check-1792216542",
+            "activityId": 1989345533881966594,
+            "sku": null,
+            "activityName": null,
+            "totalCount": 5,
+            "dayCount": 5,
+            "monthCount": 5,
+            "payAmount": 0.0,
+            "state": "complete",
+            "outBusinessNo": "lottery-count:2111335325069639681",
+            "createTime": "2026-10-17 13:55:42",
+            "updateTime": "2026-10-17 13:55:42"
+          },
+          {
+            "id": 2111335324650209282,
+            "userId": "replica-check-1792216542",
+            "activityId": 1989345533881966594,
+            "sku": 1989346736015630338,
+            "activityName": "æ¸æƒ ç”Ÿæ´» Â· ç§¯åˆ†å¥½ç¤¼å­£",
+            "totalCount": 1,
+            "dayCount": 1,
+            "monthCount": 1,
+            "payAmount": 0.0,
+            "state": "complete",
+            "outBusinessNo": "replica-check-1792216542_1989345533881966594_sku_1989346867989405698_20261017",
+            "createTime": "2026-10-17 13:55:42",
+            "updateTime": "2026-10-17 13:55:42"
+          },
+          {
+            "id": 2111335324474048514,
+            "userId": "replica-check-1792216542",
+            "activityId": 1989345533881966594,
+            "sku": null,
+            "activityName": null,
+            "totalCount": 1,
+            "dayCount": 1,
+            "monthCount": 1,
+            "payAmount": 0.0,
+            "state": "complete",
+            "outBusinessNo": "replica-check-1792216542_1989345533881966594_gift_1989346009608314882_2026",
+            "createTime": "2026-10-17 13:55:42",
+            "updateTime": "2026-10-17 13:55:42"
+          },
+          {
+            "id": 2110352833848180738,
+            "userId": "award-check-1791982297",
+            "activityId": 1989345533881966594,
+            "sku": null,
+            "activityName": null,
+            "totalCount": 1,
+            "dayCount": 1,
+            "monthCount": 1,
+            "payAmount": 0.0,
+            "state": "complete",
+            "outBusinessNo": "lottery-count:1791982298227930",
+            "createTime": "2026-10-14 20:51:38",
+            "updateTime": "2026-10-14 20:51:38"
+          },
+          {
+            "id": 2110352833898512385,
+            "userId": "award-check-1791982297",
+            "activityId": 1989345533881966594,
+            "sku": null,
+            "activityName": null,
+            "totalCount": 1,
+            "dayCount": 1,
+            "monthCount": 1,
+            "payAmount": 0.0,
+            "state": "complete",
+            "outBusinessNo": "lottery-count:1791982298227931",
+            "createTime": "2026-10-14 20:51:38",
+            "updateTime": "2026-10-14 20:51:38"
+          },
+          {
+            "id": 2110352826961133569,
+            "userId": "award-check-1791982297",
+            "activityId": 1989345533881966594,
+            "sku": 1989346736015630338,
+            "activityName": "æ¸æƒ ç”Ÿæ´» Â· ç§¯åˆ†å¥½ç¤¼å­£",
+            "totalCount": 1,
+            "dayCount": 1,
+            "monthCount": 1,
+            "payAmount": 0.0,
+            "state": "complete",
+            "outBusinessNo": "award-check-1791982297_1989345533881966594_sku_1989346867989405698_20261014",
+            "createTime": "2026-10-14 20:51:37",
+            "updateTime": "2026-10-14 20:51:37"
+          },
+          {
+            "id": 2110352828919873537,
+            "userId": "award-check-1791982297",
+            "activityId": 1989345533881966594,
+            "sku": null,
+            "activityName": null,
+            "totalCount": 1,
+            "dayCount": 1,
+            "monthCount": 1,
+            "payAmount": 0.0,
+            "state": "complete",
+            "outBusinessNo": "lottery-count:2110352828739518465",
+            "createTime": "2026-10-14 20:51:37",
+            "updateTime": "2026-10-14 20:51:37"
+          },
+          {
+            "id": 2110352815766536193,
+            "userId": "credit-check-1791982293",
+            "activityId": 1989345533881966594,
+            "sku": 1989346736015630338,
+            "activityName": "æ¸æƒ ç”Ÿæ´» Â· ç§¯åˆ†å¥½ç¤¼å­£",
+            "totalCount": 1,
+            "dayCount": 1,
+            "monthCount": 1,
+            "payAmount": 15.0,
+            "state": "wait_pay",
+            "outBusinessNo": "728269935566",
+            "createTime": "2026-10-14 20:51:34",
+            "updateTime": "2026-10-14 20:51:34"
+          },
+          {
+            "id": 2110352813124124674,
+            "userId": "credit-check-1791982293",
+            "activityId": 1989345533881966594,
+            "sku": 1989346736015630338,
+            "activityName": "æ¸æƒ ç”Ÿæ´» Â· ç§¯åˆ†å¥½ç¤¼å­£",
+            "totalCount": 1,
+            "dayCount": 1,
+            "monthCount": 1,
+            "payAmount": 15.0,
+            "state": "complete",
+            "outBusinessNo": "321594729004",
+            "createTime": "2026-10-14 20:51:33",
+            "updateTime": "2026-10-14 20:51:33"
+          },
+          {
+            "id": 2110352810540433409,
+            "userId": "credit-check-1791982293",
+            "activityId": 1989345533881966594,
+            "sku": 1989346736015630338,
+            "activityName": "æ¸æƒ ç”Ÿæ´» Â· ç§¯åˆ†å¥½ç¤¼å­£",
+            "totalCount": 1,
+            "dayCount": 1,
+            "monthCount": 1,
+            "payAmount": 0.0,
+            "state": "complete",
+            "outBusinessNo": "credit-check-1791982293_1989345533881966594_sku_1989346867989405698_20261014",
+            "createTime": "2026-10-14 20:51:33",
+            "updateTime": "2026-10-14 20:51:33"
+          },
+          {
+            "id": 2110352756341637122,
+            "userId": "replica-check-1791982279",
+            "activityId": 1989345533881966594,
+            "sku": null,
+            "activityName": null,
+            "totalCount": 1,
+            "dayCount": 1,
+            "monthCount": 1,
+            "payAmount": 0.0,
+            "state": "complete",
+            "outBusinessNo": "replica-check-1791982279_1989345533881966594_gift_1989346009608314882_2026",
+            "createTime": "2026-10-14 20:51:20",
+            "updateTime": "2026-10-14 20:51:20"
+          },
+          {
+            "id": 2110352756593295362,
+            "userId": "replica-check-1791982279",
+            "activityId": 1989345533881966594,
+            "sku": 1989346736015630338,
+            "activityName": "æ¸æƒ ç”Ÿæ´» Â· ç§¯åˆ†å¥½ç¤¼å­£",
+            "totalCount": 1,
+            "dayCount": 1,
+            "monthCount": 1,
+            "payAmount": 0.0,
+            "state": "complete",
+            "outBusinessNo": "replica-check-1791982279_1989345533881966594_sku_1989346867989405698_20261014",
+            "createTime": "2026-10-14 20:51:20",
+            "updateTime": "2026-10-14 20:51:20"
+          },
+          {
+            "id": 2110342644076048386,
+            "userId": "award-check-1791979867",
+            "activityId": 1989345533881966594,
+            "sku": null,
+            "activityName": null,
+            "totalCount": 1,
+            "dayCount": 1,
+            "monthCount": 1,
+            "payAmount": 0.0,
+            "state": "complete",
+            "outBusinessNo": "lottery-count:1791979868790181",
+            "createTime": "2026-10-14 20:11:09",
+            "updateTime": "2026-10-14 20:11:09"
+          },
+          {
+            "id": 2110342644126380034,
+            "userId": "award-check-1791979867",
+            "activityId": 1989345533881966594,
+            "sku": null,
+            "activityName": null,
+            "totalCount": 1,
+            "dayCount": 1,
+            "monthCount": 1,
+            "payAmount": 0.0,
+            "state": "complete",
+            "outBusinessNo": "lottery-count:1791979868790182",
+            "createTime": "2026-10-14 20:11:09",
+            "updateTime": "2026-10-14 20:11:09"
+          },
+          {
+            "id": 2110342637952364545,
+            "userId": "award-check-1791979867",
+            "activityId": 1989345533881966594,
+            "sku": 1989346736015630338,
+            "activityName": "æ¸æƒ ç”Ÿæ´» Â· ç§¯åˆ†å¥½ç¤¼å­£",
+            "totalCount": 1,
+            "dayCount": 1,
+            "monthCount": 1,
+            "payAmount": 0.0,
+            "state": "complete",
+            "outBusinessNo": "award-check-1791979867_1989345533881966594_sku_1989346867989405698_20261014",
+            "createTime": "2026-10-14 20:11:07",
+            "updateTime": "2026-10-14 20:11:07"
+          },
+          {
+            "id": 2110342626665492481,
+            "userId": "credit-check-1791979863",
+            "activityId": 1989345533881966594,
+            "sku": 1989346736015630338,
+            "activityName": "æ¸æƒ ç”Ÿæ´» Â· ç§¯åˆ†å¥½ç¤¼å­£",
+            "totalCount": 1,
+            "dayCount": 1,
+            "monthCount": 1,
+            "payAmount": 15.0,
+            "state": "wait_pay",
+            "outBusinessNo": "310452434030",
+            "createTime": "2026-10-14 20:11:05",
+            "updateTime": "2026-10-14 20:11:05"
+          },
+          {
+            "id": 2110342624123744258,
+            "userId": "credit-check-1791979863",
+            "activityId": 1989345533881966594,
+            "sku": 1989346736015630338,
+            "activityName": "æ¸æƒ ç”Ÿæ´» Â· ç§¯åˆ†å¥½ç¤¼å­£",
+            "totalCount": 1,
+            "dayCount": 1,
+            "monthCount": 1,
+            "payAmount": 15.0,
+            "state": "complete",
+            "outBusinessNo": "496804211666",
+            "createTime": "2026-10-14 20:11:04",
+            "updateTime": "2026-10-14 20:11:04"
+          },
+          {
+            "id": 2110342621644910593,
+            "userId": "credit-check-1791979863",
+            "activityId": 1989345533881966594,
+            "sku": 1989346736015630338,
+            "activityName": "æ¸æƒ ç”Ÿæ´» Â· ç§¯åˆ†å¥½ç¤¼å­£",
+            "totalCount": 1,
+            "dayCount": 1,
+            "monthCount": 1,
+            "payAmount": 0.0,
+            "state": "complete",
+            "outBusinessNo": "credit-check-1791979863_1989345533881966594_sku_1989346867989405698_20261014",
+            "createTime": "2026-10-14 20:11:03",
+            "updateTime": "2026-10-14 20:11:03"
+          },
+          {
+            "id": 2110342576564531202,
+            "userId": "replica-check-1791979853",
+            "activityId": 1989345533881966594,
+            "sku": null,
+            "activityName": null,
+            "totalCount": 1,
+            "dayCount": 1,
+            "monthCount": 1,
+            "payAmount": 0.0,
+            "state": "complete",
+            "outBusinessNo": "replica-check-1791979853_1989345533881966594_gift_1989346009608314882_2026",
+            "createTime": "2026-10-14 20:10:53",
+            "updateTime": "2026-10-14 20:10:53"
+          },
+          {
+            "id": 2110342576677777410,
+            "userId": "replica-check-1791979853",
+            "activityId": 1989345533881966594,
+            "sku": 1989346736015630338,
+            "activityName": "æ¸æƒ ç”Ÿæ´» Â· ç§¯åˆ†å¥½ç¤¼å­£",
+            "totalCount": 1,
+            "dayCount": 1,
+            "monthCount": 1,
+            "payAmount": 0.0,
+            "state": "complete",
+            "outBusinessNo": "replica-check-1791979853_1989345533881966594_sku_1989346867989405698_20261014",
+            "createTime": "2026-10-14 20:10:53",
+            "updateTime": "2026-10-14 20:10:53"
+          },
+          {
+            "id": 2110342572252786690,
+            "userId": "10001",
+            "activityId": 1989345533881966594,
+            "sku": null,
+            "activityName": null,
+            "totalCount": 1,
+            "dayCount": 1,
+            "monthCount": 1,
+            "payAmount": 0.0,
+            "state": "complete",
+            "outBusinessNo": "10001_1989345533881966594_gift_1989346009608314882_2026",
+            "createTime": "2026-10-14 20:10:52",
+            "updateTime": "2026-10-14 20:10:52"
+          },
+          {
+            "id": 2110342191066050562,
+            "userId": "replica-check-1791979760",
+            "activityId": 1989345533881966594,
+            "sku": 1989346736015630338,
+            "activityName": "æ¸æƒ ç”Ÿæ´» Â· ç§¯åˆ†å¥½ç¤¼å­£",
+            "totalCount": 1,
+            "dayCount": 1,
+            "monthCount": 1,
+            "payAmount": 0.0,
+            "state": "complete",
+            "outBusinessNo": "replica-check-1791979760_1989345533881966594_sku_1989346867989405698_20261014",
+            "createTime": "2026-10-14 20:09:21",
+            "updateTime": "2026-10-14 20:09:21"
+          },
+          {
+            "id": 2110342190818586625,
+            "userId": "replica-check-1791979760",
+            "activityId": 1989345533881966594,
+            "sku": null,
+            "activityName": null,
+            "totalCount": 1,
+            "dayCount": 1,
+            "monthCount": 1,
+            "payAmount": 0.0,
+            "state": "complete",
+            "outBusinessNo": "replica-check-1791979760_1989345533881966594_gift_1989346009608314882_2026",
+            "createTime": "2026-10-14 20:09:21",
+            "updateTime": "2026-10-14 20:09:21"
+          }
+        ]
+      }
+    },
+    {
+      "check": "ERP query_credit_account",
+      "result": "PASS",
+      "response": {
+        "code": 1000,
+        "message": "success",
+        "data": [
+          {
+            "id": 2111349350264373250,
+            "userId": "replica-check-1792219886",
+            "activityId": 1989345533881966594,
+            "totalAmount": 5.0,
+            "availableAmount": 5.0,
+            "accountStatus": "open",
+            "createTime": "2026-10-17 14:51:26",
+            "updateTime": "2026-10-17 14:51:26"
+          },
+          {
+            "id": 2111336216069832705,
+            "userId": "10002",
+            "activityId": 1989345533881966594,
+            "totalAmount": 5.0,
+            "availableAmount": 5.0,
+            "accountStatus": "open",
+            "createTime": "2026-10-17 13:59:15",
+            "updateTime": "2026-10-17 13:59:15"
+          },
+          {
+            "id": 2111335324717318145,
+            "userId": "replica-check-1792216542",
+            "activityId": 1989345533881966594,
+            "totalAmount": 5.0,
+            "availableAmount": 5.0,
+            "accountStatus": "open",
+            "createTime": "2026-10-17 13:55:42",
+            "updateTime": "2026-10-17 13:55:42"
+          },
+          {
+            "id": 2110352827015659521,
+            "userId": "award-check-1791982297",
+            "activityId": 1989345533881966594,
+            "totalAmount": 9.0,
+            "availableAmount": 9.0,
+            "accountStatus": "open",
+            "createTime": "2026-10-14 20:51:37",
+            "updateTime": "2026-10-14 20:51:38"
+          },
+          {
+            "id": 2110352810582376449,
+            "userId": "credit-check-1791982293",
+            "activityId": 1989345533881966594,
+            "totalAmount": 15.0,
+            "availableAmount": 15.0,
+            "accountStatus": "close",
+            "createTime": "2026-10-14 20:51:33",
+            "updateTime": "2026-10-14 20:51:34"
+          },
+          {
+            "id": 2110352756752678913,
+            "userId": "replica-check-1791982279",
+            "activityId": 1989345533881966594,
+            "totalAmount": 5.0,
+            "availableAmount": 5.0,
+            "accountStatus": "open",
+            "createTime": "2026-10-14 20:51:20",
+            "updateTime": "2026-10-14 20:51:20"
+          },
+          {
+            "id": 2110342637994307585,
+            "userId": "award-check-1791979867",
+            "activityId": 1989345533881966594,
+            "totalAmount": 9.0,
+            "availableAmount": 9.0,
+            "accountStatus": "open",
+            "createTime": "2026-10-14 20:11:07",
+            "updateTime": "2026-10-14 20:11:09"
+          },
+          {
+            "id": 2110342621686853634,
+            "userId": "credit-check-1791979863",
+            "activityId": 1989345533881966594,
+            "totalAmount": 15.0,
+            "availableAmount": 15.0,
+            "accountStatus": "close",
+            "createTime": "2026-10-14 20:11:03",
+            "updateTime": "2026-10-14 20:11:05"
+          },
+          {
+            "id": 2110342576732303361,
+            "userId": "replica-check-1791979853",
+            "activityId": 1989345533881966594,
+            "totalAmount": 17.9,
+            "availableAmount": 17.9,
+            "accountStatus": "open",
+            "createTime": "2026-10-14 20:10:53",
+            "updateTime": "2026-10-14 20:10:54"
+          },
+          {
+            "id": 2110342191170908162,
+            "userId": "replica-check-1791979760",
+            "activityId": 1989345533881966594,
+            "totalAmount": 5.0,
+            "availableAmount": 5.0,
+            "accountStatus": "open",
+            "createTime": "2026-10-14 20:09:21",
+            "updateTime": "2026-10-14 20:09:21"
+          }
+        ]
+      }
+    },
+    {
+      "check": "ERP query_credit_record",
+      "result": "PASS",
+      "response": {
+        "code": 1000,
+        "message": "success",
+        "data": [
+          {
+            "id": 2111349350268567554,
+            "userId": "replica-check-1792219886",
+            "activityId": 1989345533881966594,
+            "tradeName": "每日签到",
+            "tradeType": "forward",
+            "tradeAmount": 5.0,
+            "outBusinessNo": "replica-check-1792219886_1989345533881966594_integral_1989347020871786497_20261017",
+            "createTime": "2026-10-17 14:51:26",
+            "updateTime": "2026-10-17 14:51:26"
+          },
+          {
+            "id": 2111336216074027010,
+            "userId": "10002",
+            "activityId": 1989345533881966594,
+            "tradeName": "每日签到",
+            "tradeType": "forward",
+            "tradeAmount": 5.0,
+            "outBusinessNo": "10002_1989345533881966594_integral_1989347020871786497_20261017",
+            "createTime": "2026-10-17 13:59:15",
+            "updateTime": "2026-10-17 13:59:15"
+          },
+          {
+            "id": 2111335324721512449,
+            "userId": "replica-check-1792216542",
+            "activityId": 1989345533881966594,
+            "tradeName": "每日签到",
+            "tradeType": "forward",
+            "tradeAmount": 5.0,
+            "outBusinessNo": "replica-check-1792216542_1989345533881966594_integral_1989347020871786497_20261017",
+            "createTime": "2026-10-17 13:55:42",
+            "updateTime": "2026-10-17 13:55:42"
+          },
+          {
+            "id": 2110352833709768706,
+            "userId": "award-check-1791982297",
+            "activityId": 1989345533881966594,
+            "tradeName": "抽奖奖品",
+            "tradeType": "forward",
+            "tradeAmount": 2.0,
+            "outBusinessNo": "lottery-award:1791982298227928",
+            "createTime": "2026-10-14 20:51:38",
+            "updateTime": "2026-10-14 20:51:38"
+          },
+          {
+            "id": 2110352833781071873,
+            "userId": "award-check-1791982297",
+            "activityId": 1989345533881966594,
+            "tradeName": "抽奖奖品",
+            "tradeType": "forward",
+            "tradeAmount": 2.0,
+            "outBusinessNo": "lottery-award:1791982298227929",
+            "createTime": "2026-10-14 20:51:38",
+            "updateTime": "2026-10-14 20:51:38"
+          },
+          {
+            "id": 2110352827019853826,
+            "userId": "award-check-1791982297",
+            "activityId": 1989345533881966594,
+            "tradeName": "每日签到",
+            "tradeType": "forward",
+            "tradeAmount": 5.0,
+            "outBusinessNo": "award-check-1791982297_1989345533881966594_integral_1989347020871786497_20261014",
+            "createTime": "2026-10-14 20:51:37",
+            "updateTime": "2026-10-14 20:51:37"
+          },
+          {
+            "id": 2110352813161873410,
+            "userId": "credit-check-1791982293",
+            "activityId": 1989345533881966594,
+            "tradeName": "积分兑换",
+            "tradeType": "reverse",
+            "tradeAmount": 15.0,
+            "outBusinessNo": "321594729004",
+            "createTime": "2026-10-14 20:51:33",
+            "updateTime": "2026-10-14 20:51:33"
+          },
+          {
+            "id": 2110352810586570753,
+            "userId": "credit-check-1791982293",
+            "activityId": 1989345533881966594,
+            "tradeName": "每日签到",
+            "tradeType": "forward",
+            "tradeAmount": 5.0,
+            "outBusinessNo": "credit-check-1791982293_1989345533881966594_integral_1989347020871786497_20261014",
+            "createTime": "2026-10-14 20:51:33",
+            "updateTime": "2026-10-14 20:51:33"
+          },
+          {
+            "id": 2110352756765261825,
+            "userId": "replica-check-1791982279",
+            "activityId": 1989345533881966594,
+            "tradeName": "每日签到",
+            "tradeType": "forward",
+            "tradeAmount": 5.0,
+            "outBusinessNo": "replica-check-1791982279_1989345533881966594_integral_1989347020871786497_20261014",
+            "createTime": "2026-10-14 20:51:20",
+            "updateTime": "2026-10-14 20:51:20"
+          },
+          {
+            "id": 2110342643962802178,
+            "userId": "award-check-1791979867",
+            "activityId": 1989345533881966594,
+            "tradeName": "抽奖奖品",
+            "tradeType": "forward",
+            "tradeAmount": 2.0,
+            "outBusinessNo": "lottery-award:1791979868790179",
+            "createTime": "2026-10-14 20:11:09",
+            "updateTime": "2026-10-14 20:11:09"
+          },
+          {
+            "id": 2110342644017328129,
+            "userId": "award-check-1791979867",
+            "activityId": 1989345533881966594,
+            "tradeName": "抽奖奖品",
+            "tradeType": "forward",
+            "tradeAmount": 2.0,
+            "outBusinessNo": "lottery-award:1791979868790180",
+            "createTime": "2026-10-14 20:11:09",
+            "updateTime": "2026-10-14 20:11:09"
+          },
+          {
+            "id": 2110342637998501890,
+            "userId": "award-check-1791979867",
+            "activityId": 1989345533881966594,
+            "tradeName": "每日签到",
+            "tradeType": "forward",
+            "tradeAmount": 5.0,
+            "outBusinessNo": "award-check-1791979867_1989345533881966594_integral_1989347020871786497_20261014",
+            "createTime": "2026-10-14 20:11:07",
+            "updateTime": "2026-10-14 20:11:07"
+          },
+          {
+            "id": 2110342624165687298,
+            "userId": "credit-check-1791979863",
+            "activityId": 1989345533881966594,
+            "tradeName": "积分兑换",
+            "tradeType": "reverse",
+            "tradeAmount": 15.0,
+            "outBusinessNo": "496804211666",
+            "createTime": "2026-10-14 20:11:04",
+            "updateTime": "2026-10-14 20:11:04"
+          },
+          {
+            "id": 2110342621691047937,
+            "userId": "credit-check-1791979863",
+            "activityId": 1989345533881966594,
+            "tradeName": "每日签到",
+            "tradeType": "forward",
+            "tradeAmount": 5.0,
+            "outBusinessNo": "credit-check-1791979863_1989345533881966594_integral_1989347020871786497_20261014",
+            "createTime": "2026-10-14 20:11:03",
+            "updateTime": "2026-10-14 20:11:03"
+          },
+          {
+            "id": 2110342581291511810,
+            "userId": "replica-check-1791979853",
+            "activityId": 1989345533881966594,
+            "tradeName": "抽奖奖品",
+            "tradeType": "forward",
+            "tradeAmount": 12.9,
+            "outBusinessNo": "lottery-award:2110342581144711170",
+            "createTime": "2026-10-14 20:10:54",
+            "updateTime": "2026-10-14 20:10:54"
+          },
+          {
+            "id": 2110342576736497665,
+            "userId": "replica-check-1791979853",
+            "activityId": 1989345533881966594,
+            "tradeName": "每日签到",
+            "tradeType": "forward",
+            "tradeAmount": 5.0,
+            "outBusinessNo": "replica-check-1791979853_1989345533881966594_integral_1989347020871786497_20261014",
+            "createTime": "2026-10-14 20:10:53",
+            "updateTime": "2026-10-14 20:10:53"
+          },
+          {
+            "id": 2110342191179296769,
+            "userId": "replica-check-1791979760",
+            "activityId": 1989345533881966594,
+            "tradeName": "每日签到",
+            "tradeType": "forward",
+            "tradeAmount": 5.0,
+            "outBusinessNo": "replica-check-1791979760_1989345533881966594_integral_1989347020871786497_20261014",
+            "createTime": "2026-10-14 20:09:21",
+            "updateTime": "2026-10-14 20:09:21"
+          }
+        ]
+      }
+    },
+    {
+      "check": "ERP query_user_behavior_rebate_order",
+      "result": "PASS",
+      "response": {
+        "code": 1000,
+        "message": "success",
+        "data": [
+          {
+            "id": 2111349350130155522,
+            "userId": "replica-check-1792219886",
+            "activityId": 1989345533881966594,
+            "behaviorType": "sign",
+            "rebateDesc": "签到返积分",
+            "rebateType": "integral",
+            "rebateConfig": "5",
+            "outBusinessNo": "20261017",
+            "bizId": "replica-check-1792219886_1989345533881966594_integral_1989347020871786497_20261017",
+            "createTime": "2026-10-17 14:51:26",
+            "updateTime": "2026-10-17 14:51:26"
+          },
+          {
+            "id": 2111349350113378305,
+            "userId": "replica-check-1792219886",
+            "activityId": 1989345533881966594,
+            "behaviorType": "sign",
+            "rebateDesc": "签到返抽奖次数",
+            "rebateType": "sku",
+            "rebateConfig": "1989346736015630338",
+            "outBusinessNo": "20261017",
+            "bizId": "replica-check-1792219886_1989345533881966594_sku_1989346867989405698_20261017",
+            "createTime": "2026-10-17 14:51:26",
+            "updateTime": "2026-10-17 14:51:26"
+          },
+          {
+            "id": 2111349349933023234,
+            "userId": "replica-check-1792219886",
+            "activityId": 1989345533881966594,
+            "behaviorType": "activity_gift",
+            "rebateDesc": "活动赠送1次抽奖次数",
+            "rebateType": "gift",
+            "rebateConfig": "1",
+            "outBusinessNo": "2026",
+            "bizId": "replica-check-1792219886_1989345533881966594_gift_1989346009608314882_2026",
+            "createTime": "2026-10-17 14:51:26",
+            "updateTime": "2026-10-17 14:51:26"
+          },
+          {
+            "id": 2111336215813980162,
+            "userId": "10002",
+            "activityId": 1989345533881966594,
+            "behaviorType": "sign",
+            "rebateDesc": "签到返抽奖次数",
+            "rebateType": "sku",
+            "rebateConfig": "1989346736015630338",
+            "outBusinessNo": "20261017",
+            "bizId": "10002_1989345533881966594_sku_1989346867989405698_20261017",
+            "createTime": "2026-10-17 13:59:15",
+            "updateTime": "2026-10-17 13:59:15"
+          },
+          {
+            "id": 2111336215851728897,
+            "userId": "10002",
+            "activityId": 1989345533881966594,
+            "behaviorType": "sign",
+            "rebateDesc": "签到返积分",
+            "rebateType": "integral",
+            "rebateConfig": "5",
+            "outBusinessNo": "20261017",
+            "bizId": "10002_1989345533881966594_integral_1989347020871786497_20261017",
+            "createTime": "2026-10-17 13:59:15",
+            "updateTime": "2026-10-17 13:59:15"
+          },
+          {
+            "id": 2111335324595683329,
+            "userId": "replica-check-1792216542",
+            "activityId": 1989345533881966594,
+            "behaviorType": "sign",
+            "rebateDesc": "签到返积分",
+            "rebateType": "integral",
+            "rebateConfig": "5",
+            "outBusinessNo": "20261017",
+            "bizId": "replica-check-1792216542_1989345533881966594_integral_1989347020871786497_20261017",
+            "createTime": "2026-10-17 13:55:42",
+            "updateTime": "2026-10-17 13:55:42"
+          },
+          {
+            "id": 2111335324583100417,
+            "userId": "replica-check-1792216542",
+            "activityId": 1989345533881966594,
+            "behaviorType": "sign",
+            "rebateDesc": "签到返抽奖次数",
+            "rebateType": "sku",
+            "rebateConfig": "1989346736015630338",
+            "outBusinessNo": "20261017",
+            "bizId": "replica-check-1792216542_1989345533881966594_sku_1989346867989405698_20261017",
+            "createTime": "2026-10-17 13:55:42",
+            "updateTime": "2026-10-17 13:55:42"
+          },
+          {
+            "id": 2111335324423716865,
+            "userId": "replica-check-1792216542",
+            "activityId": 1989345533881966594,
+            "behaviorType": "activity_gift",
+            "rebateDesc": "活动赠送1次抽奖次数",
+            "rebateType": "gift",
+            "rebateConfig": "1",
+            "outBusinessNo": "2026",
+            "bizId": "replica-check-1792216542_1989345533881966594_gift_1989346009608314882_2026",
+            "createTime": "2026-10-17 13:55:42",
+            "updateTime": "2026-10-17 13:55:42"
+          },
+          {
+            "id": 2110352826889830401,
+            "userId": "award-check-1791982297",
+            "activityId": 1989345533881966594,
+            "behaviorType": "sign",
+            "rebateDesc": "签到返抽奖次数",
+            "rebateType": "sku",
+            "rebateConfig": "1989346736015630338",
+            "outBusinessNo": "20261014",
+            "bizId": "award-check-1791982297_1989345533881966594_sku_1989346867989405698_20261014",
+            "createTime": "2026-10-14 20:51:37",
+            "updateTime": "2026-10-14 20:51:37"
+          },
+          {
+            "id": 2110352826902413314,
+            "userId": "award-check-1791982297",
+            "activityId": 1989345533881966594,
+            "behaviorType": "sign",
+            "rebateDesc": "签到返积分",
+            "rebateType": "integral",
+            "rebateConfig": "5",
+            "outBusinessNo": "20261014",
+            "bizId": "award-check-1791982297_1989345533881966594_integral_1989347020871786497_20261014",
+            "createTime": "2026-10-14 20:51:37",
+            "updateTime": "2026-10-14 20:51:37"
+          },
+          {
+            "id": 2110352810490101762,
+            "userId": "credit-check-1791982293",
+            "activityId": 1989345533881966594,
+            "behaviorType": "sign",
+            "rebateDesc": "签到返积分",
+            "rebateType": "integral",
+            "rebateConfig": "5",
+            "outBusinessNo": "20261014",
+            "bizId": "credit-check-1791982293_1989345533881966594_integral_1989347020871786497_20261014",
+            "createTime": "2026-10-14 20:51:33",
+            "updateTime": "2026-10-14 20:51:33"
+          },
+          {
+            "id": 2110352810477518849,
+            "userId": "credit-check-1791982293",
+            "activityId": 1989345533881966594,
+            "behaviorType": "sign",
+            "rebateDesc": "签到返抽奖次数",
+            "rebateType": "sku",
+            "rebateConfig": "1989346736015630338",
+            "outBusinessNo": "20261014",
+            "bizId": "credit-check-1791982293_1989345533881966594_sku_1989346867989405698_20261014",
+            "createTime": "2026-10-14 20:51:33",
+            "updateTime": "2026-10-14 20:51:33"
+          },
+          {
+            "id": 2110352756375191554,
+            "userId": "replica-check-1791982279",
+            "activityId": 1989345533881966594,
+            "behaviorType": "sign",
+            "rebateDesc": "签到返抽奖次数",
+            "rebateType": "sku",
+            "rebateConfig": "1989346736015630338",
+            "outBusinessNo": "20261014",
+            "bizId": "replica-check-1791982279_1989345533881966594_sku_1989346867989405698_20261014",
+            "createTime": "2026-10-14 20:51:20",
+            "updateTime": "2026-10-14 20:51:20"
+          },
+          {
+            "id": 2110352756387774466,
+            "userId": "replica-check-1791982279",
+            "activityId": 1989345533881966594,
+            "behaviorType": "sign",
+            "rebateDesc": "签到返积分",
+            "rebateType": "integral",
+            "rebateConfig": "5",
+            "outBusinessNo": "20261014",
+            "bizId": "replica-check-1791982279_1989345533881966594_integral_1989347020871786497_20261014",
+            "createTime": "2026-10-14 20:51:20",
+            "updateTime": "2026-10-14 20:51:20"
+          },
+          {
+            "id": 2110352755813154817,
+            "userId": "replica-check-1791982279",
+            "activityId": 1989345533881966594,
+            "behaviorType": "activity_gift",
+            "rebateDesc": "活动赠送1次抽奖次数",
+            "rebateType": "gift",
+            "rebateConfig": "1",
+            "outBusinessNo": "2026",
+            "bizId": "replica-check-1791982279_1989345533881966594_gift_1989346009608314882_2026",
+            "createTime": "2026-10-14 20:51:20",
+            "updateTime": "2026-10-14 20:51:20"
+          },
+          {
+            "id": 2110342637893644290,
+            "userId": "award-check-1791979867",
+            "activityId": 1989345533881966594,
+            "behaviorType": "sign",
+            "rebateDesc": "签到返抽奖次数",
+            "rebateType": "sku",
+            "rebateConfig": "1989346736015630338",
+            "outBusinessNo": "20261014",
+            "bizId": "award-check-1791979867_1989345533881966594_sku_1989346867989405698_20261014",
+            "createTime": "2026-10-14 20:11:07",
+            "updateTime": "2026-10-14 20:11:07"
+          },
+          {
+            "id": 2110342637897838594,
+            "userId": "award-check-1791979867",
+            "activityId": 1989345533881966594,
+            "behaviorType": "sign",
+            "rebateDesc": "签到返积分",
+            "rebateType": "integral",
+            "rebateConfig": "5",
+            "outBusinessNo": "20261014",
+            "bizId": "award-check-1791979867_1989345533881966594_integral_1989347020871786497_20261014",
+            "createTime": "2026-10-14 20:11:07",
+            "updateTime": "2026-10-14 20:11:07"
+          },
+          {
+            "id": 2110342621573607426,
+            "userId": "credit-check-1791979863",
+            "activityId": 1989345533881966594,
+            "behaviorType": "sign",
+            "rebateDesc": "签到返积分",
+            "rebateType": "integral",
+            "rebateConfig": "5",
+            "outBusinessNo": "20261014",
+            "bizId": "credit-check-1791979863_1989345533881966594_integral_1989347020871786497_20261014",
+            "createTime": "2026-10-14 20:11:03",
+            "updateTime": "2026-10-14 20:11:03"
+          },
+          {
+            "id": 2110342621556830209,
+            "userId": "credit-check-1791979863",
+            "activityId": 1989345533881966594,
+            "behaviorType": "sign",
+            "rebateDesc": "签到返抽奖次数",
+            "rebateType": "sku",
+            "rebateConfig": "1989346736015630338",
+            "outBusinessNo": "20261014",
+            "bizId": "credit-check-1791979863_1989345533881966594_sku_1989346867989405698_20261014",
+            "createTime": "2026-10-14 20:11:03",
+            "updateTime": "2026-10-14 20:11:03"
+          },
+          {
+            "id": 2110342576526782466,
+            "userId": "replica-check-1791979853",
+            "activityId": 1989345533881966594,
+            "behaviorType": "activity_gift",
+            "rebateDesc": "活动赠送1次抽奖次数",
+            "rebateType": "gift",
+            "rebateConfig": "1",
+            "outBusinessNo": "2026",
+            "bizId": "replica-check-1791979853_1989345533881966594_gift_1989346009608314882_2026",
+            "createTime": "2026-10-14 20:10:53",
+            "updateTime": "2026-10-14 20:10:53"
+          },
+          {
+            "id": 2110342576619057154,
+            "userId": "replica-check-1791979853",
+            "activityId": 1989345533881966594,
+            "behaviorType": "sign",
+            "rebateDesc": "签到返抽奖次数",
+            "rebateType": "sku",
+            "rebateConfig": "1989346736015630338",
+            "outBusinessNo": "20261014",
+            "bizId": "replica-check-1791979853_1989345533881966594_sku_1989346867989405698_20261014",
+            "createTime": "2026-10-14 20:10:53",
+            "updateTime": "2026-10-14 20:10:53"
+          },
+          {
+            "id": 2110342576631640066,
+            "userId": "replica-check-1791979853",
+            "activityId": 1989345533881966594,
+            "behaviorType": "sign",
+            "rebateDesc": "签到返积分",
+            "rebateType": "integral",
+            "rebateConfig": "5",
+            "outBusinessNo": "20261014",
+            "bizId": "replica-check-1791979853_1989345533881966594_integral_1989347020871786497_20261014",
+            "createTime": "2026-10-14 20:10:53",
+            "updateTime": "2026-10-14 20:10:53"
+          },
+          {
+            "id": 2110342572215037954,
+            "userId": "10001",
+            "activityId": 1989345533881966594,
+            "behaviorType": "activity_gift",
+            "rebateDesc": "活动赠送1次抽奖次数",
+            "rebateType": "gift",
+            "rebateConfig": "1",
+            "outBusinessNo": "2026",
+            "bizId": "10001_1989345533881966594_gift_1989346009608314882_2026",
+            "createTime": "2026-10-14 20:10:52",
+            "updateTime": "2026-10-14 20:10:52"
+          },
+          {
+            "id": 2110342190847946753,
+            "userId": "replica-check-1791979760",
+            "activityId": 1989345533881966594,
+            "behaviorType": "sign",
+            "rebateDesc": "签到返积分",
+            "rebateType": "integral",
+            "rebateConfig": "5",
+            "outBusinessNo": "20261014",
+            "bizId": "replica-check-1791979760_1989345533881966594_integral_1989347020871786497_20261014",
+            "createTime": "2026-10-14 20:09:21",
+            "updateTime": "2026-10-14 20:09:21"
+          },
+          {
+            "id": 2110342190835363842,
+            "userId": "replica-check-1791979760",
+            "activityId": 1989345533881966594,
+            "behaviorType": "sign",
+            "rebateDesc": "签到返抽奖次数",
+            "rebateType": "sku",
+            "rebateConfig": "1989346736015630338",
+            "outBusinessNo": "20261014",
+            "bizId": "replica-check-1791979760_1989345533881966594_sku_1989346867989405698_20261014",
+            "createTime": "2026-10-14 20:09:21",
+            "updateTime": "2026-10-14 20:09:21"
+          },
+          {
+            "id": 2110342190256549889,
+            "userId": "replica-check-1791979760",
+            "activityId": 1989345533881966594,
+            "behaviorType": "activity_gift",
+            "rebateDesc": "活动赠送1次抽奖次数",
+            "rebateType": "gift",
+            "rebateConfig": "1",
+            "outBusinessNo": "2026",
+            "bizId": "replica-check-1791979760_1989345533881966594_gift_1989346009608314882_2026",
+            "createTime": "2026-10-14 20:09:21",
+            "updateTime": "2026-10-14 20:09:21"
+          }
+        ]
+      }
+    }
+  ]
+}
