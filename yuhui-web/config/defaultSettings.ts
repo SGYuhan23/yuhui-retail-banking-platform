@@ -11,7 +11,7 @@ const settings: ProLayoutProps & {
   fixedHeader: false,
   fixSiderbar: true,
   colorWeak: false,
-  title: '渝惠｜零售客户经营',
+  title: '渝惠积分',
   logo: '/assets/bank-mark.svg',
   iconfontUrl: '',
   token: {},

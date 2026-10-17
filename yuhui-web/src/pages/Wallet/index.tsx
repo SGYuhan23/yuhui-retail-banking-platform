@@ -1,4 +1,3 @@
-import Consumer from '../Operating/Consumer';
 import React, { useEffect, useRef, useState } from 'react';
 import { request } from '@umijs/max';
 import { Button, Alert, message, Skeleton, Modal } from 'antd';
@@ -79,7 +78,6 @@ export default function Wallet() {
   return (
     <RewardsShell active="wallet">
       {holder}
-      <Consumer wallet />
       <div className={styles.heading}>
         <span>MY EVERYDAY REWARDS</span>
         <h1>

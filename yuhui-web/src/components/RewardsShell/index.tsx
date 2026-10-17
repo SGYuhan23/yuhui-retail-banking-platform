@@ -10,26 +10,27 @@ export function RewardsHeader({ compact = false }: { compact?: boolean }) {
         <Link to="/experience" className={styles.brand}>
           <img src="/assets/bank-mark.svg" alt="" />
           <span>
-            渝惠<small>YUHUI REWARDS</small>
+            渝惠积分<small>YUHUI REWARDS</small>
           </span>
         </Link>
         <nav aria-label="平台导航">
           {[
-            ['/experience', '生活权益'],
-            ['/operating/overview', '经营工作台'],
+            ['/experience', '积分首页'],
+            ['/experience#benefits', '精选权益'],
             ['/wallet', '我的权益'],
           ].map(([path, label]) => (
             <Link
               key={path}
               to={path}
-              className={pathname.startsWith(path) ? styles.active : ''}
-              aria-current={pathname.startsWith(path) ? 'page' : undefined}
+              className={pathname === path ? styles.active : ''}
+              aria-current={pathname === path ? 'page' : undefined}
             >
               {label}
             </Link>
           ))}
         </nav>
         <div className={styles.tools}>
+          <Link to="/admin/activity">运营工作台 ↗</Link>
           <span className={styles.avatar} aria-label="体验客户">
             渝
           </span>

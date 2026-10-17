@@ -17,7 +17,7 @@ export default defineConfig({
   fastRefresh: true,
   model: {},
   initialState: {},
-  title: '渝惠｜银行零售客户经营与场景权益平台',
+  title: '渝惠积分｜城市生活权益',
   layout: {
     locale: false,
     ...defaultSettings,

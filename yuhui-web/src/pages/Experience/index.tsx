@@ -1,7 +1,6 @@
-import Consumer from '../Operating/Consumer';
 import RecordCarousel from '@/components/RecordCarousel';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { useModel } from '@umijs/max';
+import { Link, useModel } from '@umijs/max';
 import { Alert, Button, Empty, message, Modal, Pagination, Select, Skeleton } from 'antd';
 import {
   ArrowRightOutlined,
@@ -157,7 +156,7 @@ export default function Experience() {
     setHistoryError('');
     data<RecordPage>(query_my_award_record(String(page), '6', activityId, userId))
       .then((value) => {
-        if (!cancelled) setHistoryPage(value);
+        if (!cancelled) setHistoryPage({ items: value?.items || [], total: value?.total || 0 });
       })
       .catch(() => {
         if (!cancelled) setHistoryError('记录加载失败，请重试');
@@ -233,7 +232,7 @@ export default function Experience() {
         gifts: gifts || [],
         claimed: statuses.filter((x) => x.claimed).map((x) => x.id),
         skus: (skus || []).sort((a, b) => a.productAmount - b.productAmount),
-        records: records || { items: [], total: 0 },
+        records: { items: records?.items || [], total: records?.total || 0 },
         weights: weights || [],
       });
       setError('');
@@ -386,7 +385,6 @@ export default function Experience() {
           </button>
         </aside>
       </section>
-      <Consumer />
       {error && (
         <Alert
           className={styles.error}
@@ -602,6 +600,20 @@ export default function Experience() {
             <small>YUHUI · EVERYDAY MOMENTS</small>
           </div>
         </aside>
+      </section>
+      <section className={styles.benefits} id="benefits">
+        <div className={styles.sectionHead}>
+          <div className={styles.inlineTitle}><h2>精选权益</h2><span>连接城市日常，把积分变成小美好</span></div>
+          <Link to="/wallet">我的权益 <ArrowRightOutlined /></Link>
+        </div>
+        <div className={styles.benefitGrid}>
+          {[
+            {kind:'coffee',label:'生活礼遇',title:'便民生活券',description:'一杯咖啡，一份日常的小美好',action:'探索好礼',href:'#lottery'},
+            {kind:'cable',label:'周卡 / 月卡',title:'出行礼遇',description:'从山城出发，遇见新的风景',action:'查看解锁规则',href:'#lottery'},
+            {kind:'gift',label:'积分好礼',title:'惊喜积分',description:'积分每一点，兑换更多期待',action:'查看积分兑换',href:'#exchange'},
+          ].map(item=><a key={item.kind} className={styles.benefitCard} href={item.href}><Art kind={item.kind}/><div className={styles.benefitCopy}><span>{item.label}</span><h3>{item.title}</h3><p>{item.description}</p><b>{item.action}<ArrowRightOutlined/></b></div></a>)}
+          <Link className={styles.benefitCard} to="/wallet"><Art kind="travel"/><div className={styles.benefitCopy}><span>专属权益夹</span><h3>我的权益</h3><p>让已经到账的好礼，陪伴日常。</p><b>查看我的权益<ArrowRightOutlined/></b></div></Link>
+        </div>
       </section>
       <section className={styles.history}>
         <div className={styles.sectionHead}>

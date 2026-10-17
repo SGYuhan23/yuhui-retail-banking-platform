@@ -21,6 +21,7 @@ docker compose -f compose.local.yml exec -T -e MYSQL_PWD=yuhui_local_only mysql 
 docker compose -f compose.local.yml exec -T -e MYSQL_PWD=yuhui_local_only mysql mysql -uroot --default-character-set=utf8mb4 < infra/init/05-bank-rule-labels.sql
 docker compose -f compose.local.yml exec -T -e MYSQL_PWD=yuhui_local_only mysql mysql -uroot --default-character-set=utf8mb4 < infra/init/06-v3-operating.sql
 docker compose -f compose.local.yml exec -T -e MYSQL_PWD=yuhui_local_only mysql mysql -uroot --default-character-set=utf8mb4 < infra/migration/07-v3-final-patch.sql
+python3 scripts/repair-rewards-labels.py
 python3 scripts/processes.py stop
 if [ "${1:-}" != '--no-build' ]; then
   mvn -f yuhui-server/pom.xml -Dmaven.test.skip=true package > .runtime/backend-build.log 2>&1
