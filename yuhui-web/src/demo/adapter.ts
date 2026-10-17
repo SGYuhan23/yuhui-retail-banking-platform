@@ -1,4 +1,4 @@
-import { execute, initialState, DemoState, Reply } from './engine';
+import { execute, initialState, withDemoAllowance, DemoState, Reply } from './engine';
 
 // Isolate this schema from earlier Pages demos on the same GitHub origin.
 const key = 'yuhui-rewards-operations-v1';
@@ -28,7 +28,7 @@ export function demoRequest(method: string, path: string, data?: any): Promise<R
       });
       return { code: 1000, message: url, data: url };
     }
-    const { state, reply } = execute(read(), method, path, data);
+    const { state, reply } = execute(withDemoAllowance(read()), method, path, data);
     if (reply.code === 1000) localStorage.setItem(key, JSON.stringify(state));
     return assetPaths(reply);
   };

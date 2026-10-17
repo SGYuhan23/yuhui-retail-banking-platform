@@ -1,6 +1,6 @@
 {
   "result": "PASS",
-  "checks": 28,
+  "checks": 29,
   "names": [
     "fresh account has zero quota and credit",
     "signup grants quota and points once",
@@ -29,6 +29,7 @@
     "history pagination and all seven ledgers are connected",
     "closed and out-of-date activity rejects draw atomically",
     "unknown endpoints fail explicitly",
+    "50 demo chances are granted once to new and existing accounts without losing history",
     "adapter isolates legacy storage and retains new state across reload"
   ]
 }

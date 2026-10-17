@@ -48,7 +48,7 @@ export default function RecordCarousel<T>({ items, renderItem }: Props<T>) {
         ref={viewport}
         className={`${styles.viewport} ${scrolling ? '' : styles.staticViewport}`}
         tabIndex={scrolling || reduced ? 0 : undefined}
-        aria-label={scrolling ? '记录连续向左滚动，悬停或聚焦可暂停' : '参与记录列表'}
+        aria-label={scrolling ? '记录连续向右滚动，悬停或聚焦可暂停' : '参与记录列表'}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         onFocus={() => setFocused(true)}
@@ -85,7 +85,7 @@ export default function RecordCarousel<T>({ items, renderItem }: Props<T>) {
       {items.length > 1 && (
         <div className={styles.controls}>
           <span>
-            {reduced ? '已按系统设置关闭动画，可横向浏览记录' : '连续播报 · 悬停或聚焦暂停'}
+            {reduced ? '已按系统设置关闭动画，可横向浏览记录' : '向右滑动 · 悬停或聚焦暂停'}
           </span>
           {!reduced && (
             <button type="button"

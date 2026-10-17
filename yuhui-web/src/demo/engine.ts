@@ -23,6 +23,13 @@ export function initialState(): DemoState {
   return { version: 1, sequence: 0, tables, claims: [], wallet: [], lastDraw: {}, dcc: { degradeSwitch: 'close', rateLimiterSwitch: 'open' } };
 }
 
+/** One-time Pages allowance, including browsers with an existing demo account. */
+export function withDemoAllowance(previous: DemoState, clock = new Date()): DemoState {
+  return execute(previous, 'POST', '/demo/welcome_quota', {
+    activityId: seed.activity[0].id, userId: '10002',
+  }, clock).state;
+}
+
 /** Pure, atomic browser simulation. It never calls the Java services or a remote datastore. */
 export function execute(previous: DemoState, method: string, path: string, body: Row = {}, clock = new Date(), random = Math.random): { state: DemoState; reply: Reply } {
   const state = clone(previous);
@@ -149,6 +156,15 @@ export function execute(previous: DemoState, method: string, path: string, body:
     if (route === '/activity/is_calendar_sign_rebate') return ok(state.claims.includes(signKey));
     if (route === '/activity/is_add_lottery_quota') return ok(state.claims.includes(giftKey));
     const inactive = requireActive(); if (inactive) return inactive;
+    if (route === '/demo/welcome_quota') {
+      const claim = `${accountKey}:pages-allowance-50-v1`;
+      if (!state.claims.includes(claim)) {
+        grant({ totalCount: 50, dayCount: 50, monthCount: 50 });
+        tables.activity_record[0].remark = '网页演示体验赠送 50 次';
+        state.claims.push(claim);
+      }
+      return ok();
+    }
     if (route === '/activity/armory') {
       const awards = availableAwards();
       return awards.length && Math.abs(awards.reduce((n, a) => n + Number(a.awardRate), 0) - 1) < 0.000001 ? ok(true) : fail(1002, '奖品概率合计应为 1，请检查配置');

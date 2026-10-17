@@ -10,7 +10,7 @@ function load(filename, globals = {}) {
   vm.runInNewContext(js, { module, exports: module.exports, URL, Date, ...globals, require: name => load(path.resolve(path.dirname(filename), name.endsWith('.json') ? name : name + '.ts'), globals) });
   return module.exports;
 }
-const { initialState, execute, resources } = load(path.resolve(__dirname, '../yuhui-web/src/demo/engine.ts'));
+const { initialState, execute, resources, withDemoAllowance } = load(path.resolve(__dirname, '../yuhui-web/src/demo/engine.ts'));
 const checks = [];
 const test = (name, fn) => { fn(); checks.push(name); };
 let state = initialState(), now = new Date('2026-10-17T04:00:00Z');
@@ -112,6 +112,22 @@ test('closed and out-of-date activity rejects draw atomically', () => {
   assert.equal(execute(closed,'POST','/activity/draw',{activityId,userId},new Date('2030-01-01')).reply.code,1007);
 });
 test('unknown endpoints fail explicitly', () => assert.equal(invoke('/does-not-exist').code, 4040));
+test('50 demo chances are granted once to new and existing accounts without losing history', () => {
+  const fresh = withDemoAllowance(initialState(), now);
+  assert.equal(fresh.tables.activity_account[0].totalCountSurplus, 50);
+  const before = JSON.stringify(state);
+  const upgraded = withDemoAllowance(state, now);
+  const oldAccount = state.tables.activity_account.find(x => x.userId === userId && x.activityId === activityId);
+  const nextAccount = upgraded.tables.activity_account.find(x => x.userId === userId && x.activityId === activityId);
+  assert.equal(nextAccount.totalCountSurplus, oldAccount.totalCountSurplus + 50);
+  assert.equal(nextAccount.totalCount - nextAccount.totalCountSurplus, oldAccount.totalCount - oldAccount.totalCountSurplus);
+  assert.equal(JSON.stringify(upgraded.wallet), JSON.stringify(state.wallet));
+  assert.equal(JSON.stringify(upgraded.tables.user_award_record), JSON.stringify(state.tables.user_award_record));
+  assert.equal(JSON.stringify(state), before);
+  assert.equal(JSON.stringify(withDemoAllowance(upgraded, now)), JSON.stringify(upgraded));
+  const drawn = execute(fresh, 'POST', '/activity/draw', {activityId,userId}, now, () => 0).state;
+  assert.equal(withDemoAllowance(drawn, now).tables.activity_account[0].totalCountSurplus, 49);
+});
 (async () => {
   const oldKey = 'yuhui-pages-demo-v1';
   const oldValue = JSON.stringify({ version: 1, legacy: true });
@@ -126,6 +142,7 @@ test('unknown endpoints fail explicitly', () => assert.equal(invoke('/does-not-e
   const reloaded = load(adapterPath, globals);
   assert.equal(success(await reloaded.demoRequest('POST', '/activity/query_user_credit_account', { activityId, userId })), 5);
   assert.equal(stored.get(oldKey), oldValue, 'legacy demo state must remain untouched');
+  assert.equal(success(await reloaded.demoRequest('POST', '/activity/query_user_activity_account', {activityId,userId})).totalCountSurplus, 51);
   checks.push('adapter isolates legacy storage and retains new state across reload');
   console.log(JSON.stringify({ result: 'PASS', checks: checks.length, names: checks }, null, 2));
 })().catch(error => { console.error(error); process.exitCode = 1; });

@@ -53,5 +53,15 @@
     "before": "34cb65022710b2ee1c3fb479fea274807c3de42e7d269b2b93c7e0db705b9e7a",
     "after": "c9c9195ab24d7811928bc2c15de49a96a9208f0f505130b87b56efc255f9299c",
     "reason": "Git text=auto normalizes historical CRLF/mixed line endings to LF; content is byte-identical after line-ending normalization"
+  },
+  "yuhui-web/src/components/RecordCarousel/index.tsx": {
+    "before": "43a2937930a18895ee1b59786f154eb941c2b78cce0b7e321ea82c7edcbdad21",
+    "after": "990e9389dc5002b83c372b314ced9f51b01342706b0f192fb051c565553898b0",
+    "reason": "2026-10-18 user requested left-to-right automatic participation-record scrolling; pause and reduced-motion behavior retained"
+  },
+  "yuhui-web/src/components/RecordCarousel/index.less": {
+    "before": "d427d5c9e62d92f18f2e945bf4ba3b9cb8d10f64ddda11518fec65eb0de75405",
+    "after": "c2d1b04f8a93f428367e62da3043318d470621a4a8736da12729614aab705ba5",
+    "reason": "2026-10-18 user requested left-to-right automatic participation-record scrolling; pause and reduced-motion behavior retained"
   }
 }
