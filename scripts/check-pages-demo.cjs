@@ -3,11 +3,11 @@ const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
 const ts = require('../yuhui-web/node_modules/typescript');
-function load(filename) {
+function load(filename, globals = {}) {
   if (filename.endsWith('.json')) return JSON.parse(fs.readFileSync(filename, 'utf8'));
   const module = { exports: {} };
   const js = ts.transpileModule(fs.readFileSync(filename, 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020, esModuleInterop: true } }).outputText;
-  vm.runInNewContext(js, { module, exports: module.exports, URL, Date, require: name => load(path.resolve(path.dirname(filename), name.endsWith('.json') ? name : name + '.ts')) });
+  vm.runInNewContext(js, { module, exports: module.exports, URL, Date, ...globals, require: name => load(path.resolve(path.dirname(filename), name.endsWith('.json') ? name : name + '.ts'), globals) });
   return module.exports;
 }
 const { initialState, execute, resources } = load(path.resolve(__dirname, '../yuhui-web/src/demo/engine.ts'));
@@ -112,4 +112,20 @@ test('closed and out-of-date activity rejects draw atomically', () => {
   assert.equal(execute(closed,'POST','/activity/draw',{activityId,userId},new Date('2030-01-01')).reply.code,1007);
 });
 test('unknown endpoints fail explicitly', () => assert.equal(invoke('/does-not-exist').code, 4040));
-console.log(JSON.stringify({ result: 'PASS', checks: checks.length, names: checks }, null, 2));
+(async () => {
+  const oldKey = 'yuhui-pages-demo-v1';
+  const oldValue = JSON.stringify({ version: 1, legacy: true });
+  const stored = new Map([[oldKey, oldValue]]);
+  const globals = {
+    localStorage: { getItem: key => stored.get(key) ?? null, setItem: (key, value) => stored.set(key, value) },
+    navigator: {}, process: { env: { PAGES_BASE: '/yuhui-retail-banking-platform/' } },
+  };
+  const adapterPath = path.resolve(__dirname, '../yuhui-web/src/demo/adapter.ts');
+  const adapter = load(adapterPath, globals);
+  success(await adapter.demoRequest('POST', '/activity/calendar_sign_rebate', { activityId, userId }));
+  const reloaded = load(adapterPath, globals);
+  assert.equal(success(await reloaded.demoRequest('POST', '/activity/query_user_credit_account', { activityId, userId })), 5);
+  assert.equal(stored.get(oldKey), oldValue, 'legacy demo state must remain untouched');
+  checks.push('adapter isolates legacy storage and retains new state across reload');
+  console.log(JSON.stringify({ result: 'PASS', checks: checks.length, names: checks }, null, 2));
+})().catch(error => { console.error(error); process.exitCode = 1; });

@@ -33,5 +33,25 @@
     "before": "c42bfce20f7aa8b1920a3777d296f7ff46ffc126f7c5855e6aa73dd07fdef5a2",
     "after": "c2a922c7cc419fe561be911d8bb46274b80fc4819db378236af080e5036e3830",
     "reason": "Pages subdirectory portability or explicit online-demo README section; layout and local API behavior retained"
+  },
+  "yuhui-web/public/scripts/loading.js": {
+    "before": "ec6c8330e197e5a102266e12b77818493dfe93e7c13c9774f1001be8522cf8fa",
+    "after": "9eb1edc8fbeecf7f452a0ae4f92ad890d7176383673c8a5a1bdc6f8a99ef1772",
+    "reason": "Git text=auto normalizes historical CRLF/mixed line endings to LF; content is byte-identical after line-ending normalization"
+  },
+  "yuhui-web/src/access.ts": {
+    "before": "edbc3c4ef7150e12c03773fd648ea29352c65da6ed216b9bc939725e12147e60",
+    "after": "971d0a5a7a32f5a7d5dd11fa543118fb9446541ac1b8fba870add362c94cbeec",
+    "reason": "Git text=auto normalizes historical CRLF/mixed line endings to LF; content is byte-identical after line-ending normalization"
+  },
+  "yuhui-web/src/global.less": {
+    "before": "338ef7b17d3a70c9451780db8bc98a85be59e1ef90df3daca782832661a91297",
+    "after": "9b6de195db7190538482dbb6770a456b757c5e4d161825e967696f6956a2bde6",
+    "reason": "Git text=auto normalizes historical CRLF/mixed line endings to LF; content is byte-identical after line-ending normalization"
+  },
+  "yuhui-web/src/typings.d.ts": {
+    "before": "34cb65022710b2ee1c3fb479fea274807c3de42e7d269b2b93c7e0db705b9e7a",
+    "after": "c9c9195ab24d7811928bc2c15de49a96a9208f0f505130b87b56efc255f9299c",
+    "reason": "Git text=auto normalizes historical CRLF/mixed line endings to LF; content is byte-identical after line-ending normalization"
   }
 }

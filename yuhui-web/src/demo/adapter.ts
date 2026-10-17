@@ -1,6 +1,7 @@
 import { execute, initialState, DemoState, Reply } from './engine';
 
-const key = 'yuhui-pages-demo-v1';
+// Isolate this schema from earlier Pages demos on the same GitHub origin.
+const key = 'yuhui-rewards-operations-v1';
 let queue: Promise<unknown> = Promise.resolve();
 function read(): DemoState {
   const text = localStorage.getItem(key);

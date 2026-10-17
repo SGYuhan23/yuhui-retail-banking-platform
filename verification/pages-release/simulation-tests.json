@@ -1,6 +1,6 @@
 {
   "result": "PASS",
-  "checks": 27,
+  "checks": 28,
   "names": [
     "fresh account has zero quota and credit",
     "signup grants quota and points once",
@@ -28,6 +28,7 @@
     "CRUD strategy/award survives serialization",
     "history pagination and all seven ledgers are connected",
     "closed and out-of-date activity rejects draw atomically",
-    "unknown endpoints fail explicitly"
+    "unknown endpoints fail explicitly",
+    "adapter isolates legacy storage and retains new state across reload"
   ]
 }
