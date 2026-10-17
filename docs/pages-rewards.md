@@ -1,0 +1,35 @@
+# 积分版 GitHub Pages
+
+线上入口：https://sgyuhan23.github.io/yuhui-retail-banking-platform/
+
+Pages 部署 `yuhui-web` 的静态构建，复用重庆插画首页、抽奖、钱包以及活动/积分/返利/策略/规则树运营页面。旧 `site/` 七步展示站保留源码，发布流程不再使用它。
+
+## 运行边界
+
+- 浏览器端模拟签到、福利领取、积分兑换、抽奖、库存、流水与权益核销；运营配置会影响同一浏览器的模拟结果。
+- 数据保存在当前站点的 localStorage。初始客户无积分和抽奖次数，签到与新客福利可提供初始机会。刷新继续保留，清除此站点数据可重置；各访客互不共享。
+- 初始化仅使用既有演示配置，不导入本地数据库的客户和测试流水。奖品概率、价格和次数配置沿用现有值。
+- 模拟器使用浏览器随机数与本机时间，不等同于 Java 后端的随机数、数据库、分布式锁、限流基础设施、消息队列或异步补偿。这里不提供真实登录、支付或可消费权益。原有隐藏的认证管理页不属于当前本地演示主流程。
+- 本地完整后端启动方式及源码保持不变；`PAGES_DEMO` 为构建开关，普通构建仍请求 Java 服务。
+- Web Locks 可用时串行化跨标签页操作；单标签页始终排队提交。浏览器不支持 Web Locks 时不承诺跨标签页事务；存储被禁用或超过配额会报告失败。
+
+## 实现
+
+`src/demo/engine.ts` 为无网络的状态计算，失败不提交修改；`adapter.ts` 处理持久化、串行调用及演示图片上传。上传只在浏览器读取图片并保存 data URL，不上传服务器。已有服务契约仍保留。
+
+`scripts/build-pages.mjs` 以仓库子目录构建，并为现有路由生成目录首页，支持直接访问与刷新。页面布局和样式不重做，仅调整部署路径；README 新增线上说明。对应源码调整单独记录在 `verification/pages-release/portability-files.json`，原始内部重构基线不覆盖。
+
+```sh
+node scripts/check-pages-demo.cjs
+npm --prefix yuhui-web run test:contracts
+npm --prefix yuhui-web run tsc
+node scripts/build-pages.mjs
+```
+
+## 来源与署名
+
+本轮发布前扫描当前 `yuhui-web`、`yuhui-server`、`infra`，未检出 `@yong`、`@author` 或独立单词 `yong`。本轮没有删除作者签名或许可证，且保留 [来源核查](reference-overlap-audit.md)。该扫描结果只说明当前文件中是否存在文字，不构成独立创作或公开授权证明。
+
+## 验证范围
+
+静态模拟器覆盖签到/赠送幂等、配置变更、积分不足、奖品抽样、规则树回退、钱包归属及重复核销、DCC、流水、分页、序列化、11 类配置 CRUD 与失败回滚；静态服务预览检查子目录资源和页面直达。真实服务契约仍通过修改前的 630 组对照。上线的工作流及提交以 GitHub Actions 实际结果为准。

@@ -5,8 +5,13 @@ from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
 manifest = json.loads((root / 'verification/internal-refactor/ui-invariants.json').read_text())
+portability_path = root / 'verification/pages-release/portability-files.json'
+portability = json.loads(portability_path.read_text()) if portability_path.exists() else {}
 changed = []
 for relative, expected in manifest['files'].items():
+    if relative in portability:
+        assert portability[relative]['before'] == expected, 'Portability override must identify the original baseline'
+        expected = portability[relative]['after']
     path = root / relative
     if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != expected:
         changed.append(relative)

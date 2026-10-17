@@ -1,3 +1,4 @@
+import { sitePath } from '@/utils/sitePath';
 import RecordCarousel from '@/components/RecordCarousel';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Link, useModel } from '@umijs/max';
@@ -333,7 +334,7 @@ export default function Experience() {
       </div>
       <section className={styles.heroRow} aria-label="积分概览">
         <div className={styles.hero}>
-          <img src="/assets/chongqing-hero-v2.png" alt="山城楼宇、跨江大桥与红色索道" />
+          <img src={sitePath("/assets/chongqing-hero-v2.png")} alt="山城楼宇、跨江大桥与红色索道" />
           <div className={styles.heroCopy}>
             <span className={styles.eyebrow}>REWARDS FOR EVERYDAY JOY</span>
             <h1>
@@ -589,7 +590,7 @@ export default function Experience() {
             <div>
               <h3>好礼妥善收藏</h3>
               <p>生活权益到账后，在这里查看</p>
-              <a href="/wallet">
+              <a href={sitePath("/wallet")}>
                 打开我的权益 <ArrowRightOutlined />
               </a>
             </div>

@@ -3,9 +3,9 @@ on:
   push:
     branches: [main]
     paths:
-      - "site/**"
-      - "assets/screenshots/**"
-      - "yuhui-web/public/assets/bank-mark.svg"
+      - "yuhui-web/**"
+      - "scripts/build-pages.mjs"
+      - "scripts/check-pages-demo.cjs"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 permissions:
@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: site
+        working-directory: yuhui-web
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -30,15 +30,16 @@ jobs:
         with:
           node-version: "22"
           cache: pnpm
-          cache-dependency-path: site/pnpm-lock.yaml
+          cache-dependency-path: yuhui-web/pnpm-lock.yaml
       - run: pnpm install --frozen-lockfile
-      - run: pnpm typecheck
-      - run: pnpm test
-      - run: pnpm build
+      - run: pnpm run tsc
+      - run: pnpm run test:contracts
+      - run: node ../scripts/check-pages-demo.cjs
+      - run: node ../scripts/build-pages.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: site/dist
+          path: yuhui-web/dist
   deploy:
     environment:
       name: github-pages

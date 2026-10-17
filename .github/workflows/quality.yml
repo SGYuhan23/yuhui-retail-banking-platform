@@ -35,6 +35,7 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm run postinstall
       - run: pnpm run test:contracts
+      - run: node ../scripts/check-pages-demo.cjs
       - run: python3 ../scripts/check-ui-invariants.py
       - run: pnpm run tsc
       - run: pnpm run build

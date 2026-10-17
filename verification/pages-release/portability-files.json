@@ -1,0 +1,37 @@
+{
+  "README.md": {
+    "before": "56d990543e60509e209f3ca0443dd83b0f10f0036aa429fe5742fefebea47a33",
+    "after": "5d7970170cd0af4f54686bb7fefca596aa09adfc3b333909d4cae6df2a59f498",
+    "reason": "Pages subdirectory portability or explicit online-demo README section; layout and local API behavior retained"
+  },
+  "yuhui-web/config/config.ts": {
+    "before": "6956de599033b997bdd0dbb606df9ce405e868c7a721f89f616dce13a0a43c6c",
+    "after": "1de2526a62fbb03779109d0f9ecb308137bcd4e27c7ed97cf184d5d01a76276b",
+    "reason": "Pages subdirectory portability or explicit online-demo README section; layout and local API behavior retained"
+  },
+  "yuhui-web/config/defaultSettings.ts": {
+    "before": "065076f0d5817f92a347fa0527284024866a705c46c3a3e8551b172bbb123e54",
+    "after": "b313494b42e02cce8fb93c73692bb69d37b54000fe0d0499588233569fc23bfb",
+    "reason": "Pages subdirectory portability or explicit online-demo README section; layout and local API behavior retained"
+  },
+  "yuhui-web/src/components/RewardsShell/index.tsx": {
+    "before": "21707d6c2d9527b000317495e4ce5f25fe2f72aef1815455edf606cbebc0cb1b",
+    "after": "67e6d5a875007cfa8c5f350f0d68c4228cd2df3e43c1d4ba13f3b2ba3f5bc672",
+    "reason": "Pages subdirectory portability or explicit online-demo README section; layout and local API behavior retained"
+  },
+  "yuhui-web/src/pages/Experience/index.less": {
+    "before": "fce251ccc82a08dfe6e762fcdc05c890dfef6b0900430508bc85ef22a7ebbd49",
+    "after": "bdf81c8c6dee4fca3c5178e94e0b95b0cddcb51705e2098dd291a9104bfa3a89",
+    "reason": "Pages subdirectory portability or explicit online-demo README section; layout and local API behavior retained"
+  },
+  "yuhui-web/src/pages/Experience/index.tsx": {
+    "before": "0ee8cf1af57cb20b6d6ee650c492a7d187ad9b2f7cb60aae8042be840543c802",
+    "after": "19b311b74b4da5961160fb1d13230c1b447042fcc085055ce8dbb0d5870de645",
+    "reason": "Pages subdirectory portability or explicit online-demo README section; layout and local API behavior retained"
+  },
+  "yuhui-web/src/pages/Wallet/index.tsx": {
+    "before": "c42bfce20f7aa8b1920a3777d296f7ff46ffc126f7c5855e6aa73dd07fdef5a2",
+    "after": "c2a922c7cc419fe561be911d8bb46274b80fc4819db378236af080e5036e3830",
+    "reason": "Pages subdirectory portability or explicit online-demo README section; layout and local API behavior retained"
+  }
+}

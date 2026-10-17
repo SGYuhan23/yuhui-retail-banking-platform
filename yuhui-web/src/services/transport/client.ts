@@ -21,6 +21,9 @@ export function decodeResponse(input: unknown): unknown {
 }
 
 function exchange<T>(method: Method, path: string, body: Body, contentType?: string): Promise<T> {
+  if (process.env.PAGES_DEMO) {
+    return import('../../demo/adapter').then(({ demoRequest }) => demoRequest(method, path, body[0]) as Promise<T>);
+  }
   const options = {
     method,
     ...(contentType ? { headers: { 'Content-Type': contentType } } : {}),

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { request } from '@umijs/max';
+import { walletRequest as request } from '@/services/wallet';
+import { sitePath } from '@/utils/sitePath';
 import { Button, Alert, message, Skeleton, Modal } from 'antd';
 import {
   ArrowRightOutlined,
@@ -98,7 +99,7 @@ export default function Wallet() {
             已使用权益<strong>{loading ? '—' : items.filter((i) => !!i.redeemedAt).length}</strong>
           </span>
         </div>
-        <a href="/experience">
+        <a href={sitePath("/experience")}>
           探索更多好礼 <ArrowRightOutlined />
         </a>
       </div>
@@ -131,7 +132,7 @@ export default function Wallet() {
               ? '切换权益状态，查看你的其他好礼。'
               : '参与积分活动，赢取的生活权益将在这里与你见面。'}
           </p>
-          <a className={art.primary} href="/experience">
+          <a className={art.primary} href={sitePath("/experience")}>
             前往积分专区 <ArrowRightOutlined />
           </a>
         </div>

@@ -1,0 +1,33 @@
+{
+  "result": "PASS",
+  "checks": 27,
+  "names": [
+    "fresh account has zero quota and credit",
+    "signup grants quota and points once",
+    "gift grant is idempotent",
+    "insufficient points cannot change stock or balances",
+    "draw uses configured weights and creates an owned wallet benefit",
+    "wallet rejects forged ids and duplicate use",
+    "DCC downgrade blocks draw without spending quota",
+    "rate limit rejects an immediate repeat",
+    "locked award resolves through configured fallback tree",
+    "spent quota rejects additional draws",
+    "new day supports another sign-in",
+    "exchange updates quota, stock and points together",
+    "failing multi-rebate sign rolls back all prior grants",
+    "CRUD activity survives serialization",
+    "CRUD activity_count survives serialization",
+    "CRUD activity_sku survives serialization",
+    "CRUD award survives serialization",
+    "CRUD behavior survives serialization",
+    "CRUD rule survives serialization",
+    "CRUD rule/tree survives serialization",
+    "CRUD rule/tree/node survives serialization",
+    "CRUD rule/tree/node/line survives serialization",
+    "CRUD strategy survives serialization",
+    "CRUD strategy/award survives serialization",
+    "history pagination and all seven ledgers are connected",
+    "closed and out-of-date activity rejects draw atomically",
+    "unknown endpoints fail explicitly"
+  ]
+}

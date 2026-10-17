@@ -1,4 +1,5 @@
 import React from 'react';
+import { sitePath } from '@/utils/sitePath';
 import { Link, useLocation } from '@umijs/max';
 import { EnvironmentOutlined } from '@ant-design/icons';
 import styles from './index.less';
@@ -8,7 +9,7 @@ export function RewardsHeader({ compact = false }: { compact?: boolean }) {
     <header className={`${styles.header} ${compact ? styles.compactHeader : ''}`}>
       <div className={styles.headerInner}>
         <Link to="/experience" className={styles.brand}>
-          <img src="/assets/bank-mark.svg" alt="" />
+          <img src={sitePath("/assets/bank-mark.svg")} alt="" />
           <span>
             渝惠积分<small>YUHUI REWARDS</small>
           </span>

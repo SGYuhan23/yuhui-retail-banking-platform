@@ -12,7 +12,7 @@ const settings: ProLayoutProps & {
   fixSiderbar: true,
   colorWeak: false,
   title: '渝惠积分',
-  logo: '/assets/bank-mark.svg',
+  logo: `${process.env.PAGES_BASE || '/'}assets/bank-mark.svg`,
   iconfontUrl: '',
   token: {},
 };

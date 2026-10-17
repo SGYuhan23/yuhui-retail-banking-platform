@@ -1,0 +1,630 @@
+{
+  "activity": [
+    {
+      "id": "1989345533881966594",
+      "activityName": "渝惠生活 · 积分好礼季",
+      "activityDesc": "每日签到积累积分，兑换抽奖机会，解锁便民生活与出行礼遇。个人项目演示。",
+      "beginDateTime": "2025-11-14 22:51:43",
+      "endDateTime": "2027-11-14 00:00:00",
+      "strategyId": "1989339401985679361",
+      "state": "open",
+      "createTime": "2025-11-14 22:51:49",
+      "updateTime": "2026-10-17 13:58:44"
+    }
+  ],
+  "activity_count": [
+    {
+      "id": "1989346519992197121",
+      "totalCount": 1,
+      "dayCount": 1,
+      "monthCount": 1,
+      "createTime": 1763132145000,
+      "updateTime": 1763132145000
+    },
+    {
+      "id": "1947297667382018050",
+      "totalCount": 100,
+      "dayCount": 100,
+      "monthCount": 100,
+      "createTime": 1753106917000,
+      "updateTime": 1753106917000
+    },
+    {
+      "id": "1947276092532346881",
+      "totalCount": 20,
+      "dayCount": 20,
+      "monthCount": 20,
+      "createTime": 1753101774000,
+      "updateTime": 1753101774000
+    },
+    {
+      "id": "1934610051247448065",
+      "totalCount": 10,
+      "dayCount": 10,
+      "monthCount": 10,
+      "createTime": 1750081954000,
+      "updateTime": 1750081954000
+    }
+  ],
+  "activity_sku": [
+    {
+      "id": "1989346736015630338",
+      "activityId": "1989345533881966594",
+      "activityCountId": "1989346519992197121",
+      "stockCount": 1000000,
+      "stockCountSurplus": 999972,
+      "productAmount": 15.0,
+      "createTime": 1763132196000,
+      "updateTime": 1792216759000
+    },
+    {
+      "id": "1989346292388290562",
+      "activityId": "1989345533881966594",
+      "activityCountId": "1934610051247448065",
+      "stockCount": 1000000,
+      "stockCountSurplus": 999998,
+      "productAmount": 100.0,
+      "createTime": 1763132090000,
+      "updateTime": 1763795715000
+    },
+    {
+      "id": "1989347216963887106",
+      "activityId": "1989345533881966594",
+      "activityCountId": "1947276092532346881",
+      "stockCount": 1000000,
+      "stockCountSurplus": 999999,
+      "productAmount": 175.0,
+      "createTime": 1763132311000,
+      "updateTime": 1763795715000
+    },
+    {
+      "id": "1989347310463311874",
+      "activityId": "1989345533881966594",
+      "activityCountId": "1947297667382018050",
+      "stockCount": 1000000,
+      "stockCountSurplus": 1000000,
+      "productAmount": 666.66,
+      "createTime": 1763132333000,
+      "updateTime": 1763132367000
+    }
+  ],
+  "award": [
+    {
+      "id": "1934859819538202696",
+      "awardKey": "user_credit_blacklist",
+      "awardConfig": "1",
+      "awardDesc": "关怀积分",
+      "image": "/assets/bank-1934859819538202696.svg",
+      "createTime": 1739769363000,
+      "updateTime": 1792216724000
+    },
+    {
+      "id": "1989336435136356353",
+      "awardKey": "bank_coupon",
+      "awardConfig": "1",
+      "awardDesc": "便民生活券 · 1张",
+      "image": "/assets/bank-1989336435136356353.svg",
+      "createTime": 1763129740000,
+      "updateTime": 1792216724000
+    },
+    {
+      "id": "1989336702498070529",
+      "awardKey": "user_credit_random",
+      "awardConfig": "10,20",
+      "awardDesc": "惊喜积分",
+      "image": "/assets/bank-1989336702498070529.svg",
+      "createTime": 1763129804000,
+      "updateTime": 1792216724000
+    },
+    {
+      "id": "1989336788581965826",
+      "awardKey": "bank_coupon",
+      "awardConfig": "5",
+      "awardDesc": "便民生活券 · 5张",
+      "image": "/assets/bank-1989336788581965826.svg",
+      "createTime": 1763129824000,
+      "updateTime": 1792216724000
+    },
+    {
+      "id": "1989336928877240321",
+      "awardKey": "user_cj",
+      "awardConfig": "1",
+      "awardDesc": "幸运机会 · 1次",
+      "image": "/assets/bank-1989336928877240321.svg",
+      "createTime": 1763129858000,
+      "updateTime": 1792216724000
+    },
+    {
+      "id": "1989336991691137026",
+      "awardKey": "user_cj",
+      "awardConfig": "5",
+      "awardDesc": "幸运机会 · 5次",
+      "image": "/assets/bank-1989336991691137026.svg",
+      "createTime": 1763129873000,
+      "updateTime": 1792216724000
+    },
+    {
+      "id": "1989337068971188225",
+      "awardKey": "user_thanks",
+      "awardConfig": "1",
+      "awardDesc": "谢谢参与",
+      "image": "/assets/bank-1989337068971188225.svg",
+      "createTime": 1763129891000,
+      "updateTime": 1792216724000
+    },
+    {
+      "id": "1989337375050522625",
+      "awardKey": "bank_service",
+      "awardConfig": "7",
+      "awardDesc": "出行礼遇 · 周卡",
+      "image": "/assets/bank-1989337375050522625.svg",
+      "createTime": 1763129964000,
+      "updateTime": 1792216724000
+    },
+    {
+      "id": "1989337465119006721",
+      "awardKey": "bank_service",
+      "awardConfig": "30",
+      "awardDesc": "出行礼遇 · 月卡",
+      "image": "/assets/bank-1989337465119006721.svg",
+      "createTime": 1763129986000,
+      "updateTime": 1792216724000
+    }
+  ],
+  "behavior": [
+    {
+      "id": "1989347020871786497",
+      "activityId": "1989345533881966594",
+      "behaviorType": "sign",
+      "rebateDesc": "签到返积分",
+      "rebateType": "integral",
+      "rebateConfig": "5",
+      "state": "open",
+      "createTime": 1763132264000,
+      "updateTime": 1763132264000
+    },
+    {
+      "id": "1989346867989405698",
+      "activityId": "1989345533881966594",
+      "behaviorType": "sign",
+      "rebateDesc": "签到返抽奖次数",
+      "rebateType": "sku",
+      "rebateConfig": "1989346736015630338",
+      "state": "open",
+      "createTime": 1763132228000,
+      "updateTime": 1763132228000
+    },
+    {
+      "id": "1989346009608314882",
+      "activityId": "1989345533881966594",
+      "behaviorType": "activity_gift",
+      "rebateDesc": "活动赠送1次抽奖次数",
+      "rebateType": "gift",
+      "rebateConfig": "1",
+      "state": "open",
+      "createTime": 1763132023000,
+      "updateTime": 1763132023000
+    }
+  ],
+  "rule": [
+    {
+      "id": "1989338390122422274",
+      "ruleModel": "ai-agent-rule_weight",
+      "ruleValue": "4000:1989337375050522625 5000:1989337465119006721,1989337375050522625",
+      "ruleDesc": "到达4000幸运值，必中奖品1989337375050522625\n到达5000幸运值，必中奖品1989337375050522625或1989337465119006721",
+      "createTime": 1763130206000,
+      "updateTime": 1763131879000
+    },
+    {
+      "id": "1989339056215646209",
+      "ruleModel": "ai-agent-rule_blacklist",
+      "ruleValue": "1947133372497252353:user01,user02",
+      "ruleDesc": "1947133372497252353:user01,user02",
+      "createTime": 1763130365000,
+      "updateTime": 1763130365000
+    }
+  ],
+  "rule/tree": [
+    {
+      "id": "1989339772170756097",
+      "treeName": "æƒç›Šå‘æ”¾ Â· 无规则",
+      "treeDesc": "æƒç›Šå‘æ”¾ Â· 无规则",
+      "treeNodeRuleKey": "rule_stock",
+      "createTime": 1763130536000,
+      "updateTime": 1791979653000
+    },
+    {
+      "id": "1989339871722561537",
+      "treeName": "æƒç›Šå‘æ”¾ Â· 抽奖2次后解锁",
+      "treeDesc": "æƒç›Šå‘æ”¾ Â· 抽奖2次后解锁",
+      "treeNodeRuleKey": "rule_lock",
+      "createTime": 1763130560000,
+      "updateTime": 1791979653000
+    },
+    {
+      "id": "1989339936365174786",
+      "treeName": "æƒç›Šå‘æ”¾ Â· 抽奖3次后解锁",
+      "treeDesc": "æƒç›Šå‘æ”¾ Â· 抽奖3次后解锁",
+      "treeNodeRuleKey": "rule_lock",
+      "createTime": 1763130575000,
+      "updateTime": 1791979653000
+    },
+    {
+      "id": "1989339970464866305",
+      "treeName": "æƒç›Šå‘æ”¾ Â· 抽奖5次后解锁",
+      "treeDesc": "æƒç›Šå‘æ”¾ Â· 抽奖5次后解锁",
+      "treeNodeRuleKey": "rule_lock",
+      "createTime": 1763130583000,
+      "updateTime": 1791979653000
+    },
+    {
+      "id": "1947994741845037057",
+      "treeName": "默认规则",
+      "treeDesc": "默认规则，无次数规则",
+      "treeNodeRuleKey": "rule_stock",
+      "createTime": 1753273113000,
+      "updateTime": 1753274026000
+    }
+  ],
+  "rule/tree/node": [
+    {
+      "id": "1990305628043874306",
+      "ruleTreeId": "1989339772170756097",
+      "ruleName": "rule_stock",
+      "ruleDesc": "权益直接发放节点",
+      "ruleValue": null,
+      "createTime": 1763360812000,
+      "updateTime": 1791979727000
+    },
+    {
+      "id": "1990305705537835010",
+      "ruleTreeId": "1989339772170756097",
+      "ruleName": "rule_luck_award",
+      "ruleDesc": "权益直接发放节点",
+      "ruleValue": null,
+      "createTime": 1763360830000,
+      "updateTime": 1791979727000
+    },
+    {
+      "id": "1989341949245218817",
+      "ruleTreeId": "1989339871722561537",
+      "ruleName": "rule_luck_award",
+      "ruleDesc": "幸运奖",
+      "ruleValue": null,
+      "createTime": 1763131055000,
+      "updateTime": 1763131055000
+    },
+    {
+      "id": "1989341899018428418",
+      "ruleTreeId": "1989339871722561537",
+      "ruleName": "rule_stock",
+      "ruleDesc": "库存扣减",
+      "ruleValue": null,
+      "createTime": 1763131043000,
+      "updateTime": 1763131043000
+    },
+    {
+      "id": "1989341855586410497",
+      "ruleTreeId": "1989339936365174786",
+      "ruleName": "rule_luck_award",
+      "ruleDesc": "幸运奖",
+      "ruleValue": null,
+      "createTime": 1763131033000,
+      "updateTime": 1763131033000
+    },
+    {
+      "id": "1989341818257104898",
+      "ruleTreeId": "1989339936365174786",
+      "ruleName": "rule_stock",
+      "ruleDesc": "库存扣减",
+      "ruleValue": null,
+      "createTime": 1763131024000,
+      "updateTime": 1763131024000
+    },
+    {
+      "id": "1989341715043672065",
+      "ruleTreeId": "1989339970464866305",
+      "ruleName": "rule_luck_award",
+      "ruleDesc": "幸运奖",
+      "ruleValue": null,
+      "createTime": 1763130999000,
+      "updateTime": 1763130999000
+    },
+    {
+      "id": "1989341633128914945",
+      "ruleTreeId": "1989339970464866305",
+      "ruleName": "rule_stock",
+      "ruleDesc": "库存扣减",
+      "ruleValue": null,
+      "createTime": 1763130979000,
+      "updateTime": 1763130979000
+    },
+    {
+      "id": "1989340554844659714",
+      "ruleTreeId": "1989339871722561537",
+      "ruleName": "rule_lock",
+      "ruleDesc": "抽奖2次解锁",
+      "ruleValue": "2",
+      "createTime": 1763130722000,
+      "updateTime": 1763130722000
+    },
+    {
+      "id": "1989340505272180738",
+      "ruleTreeId": "1989339936365174786",
+      "ruleName": "rule_lock",
+      "ruleDesc": "抽奖3次解锁",
+      "ruleValue": "3",
+      "createTime": 1763130711000,
+      "updateTime": 1763130711000
+    },
+    {
+      "id": "1989340434652684290",
+      "ruleTreeId": "1989339970464866305",
+      "ruleName": "rule_lock",
+      "ruleDesc": "抽奖5次解锁",
+      "ruleValue": "5",
+      "createTime": 1763130694000,
+      "updateTime": 1763130694000
+    },
+    {
+      "id": "1947995290489360385",
+      "ruleTreeId": "1947994741845037057",
+      "ruleName": "rule_luck_award",
+      "ruleDesc": "默认节点",
+      "ruleValue": null,
+      "createTime": 1753273243000,
+      "updateTime": 1753273243000
+    },
+    {
+      "id": "1947995190753005569",
+      "ruleTreeId": "1947994741845037057",
+      "ruleName": "rule_stock",
+      "ruleDesc": "默认节点",
+      "ruleValue": null,
+      "createTime": 1753273221000,
+      "updateTime": 1753273221000
+    }
+  ],
+  "rule/tree/node/line": [
+    {
+      "id": "1990305804993171457",
+      "ruleTreeId": "1989339772170756097",
+      "ruleNodeFrom": "rule_stock",
+      "ruleNodeTo": "rule_luck_award",
+      "ruleLimitType": "EQUAL",
+      "ruleLimitValue": "TAKE_OVER",
+      "createTime": 1763360854000,
+      "updateTime": 1763360854000
+    },
+    {
+      "id": "1989342830640455681",
+      "ruleTreeId": "1989339871722561537",
+      "ruleNodeFrom": "rule_lock",
+      "ruleNodeTo": "rule_luck_award",
+      "ruleLimitType": "EQUAL",
+      "ruleLimitValue": "TAKE_OVER",
+      "createTime": 1763131265000,
+      "updateTime": 1763131265000
+    },
+    {
+      "id": "1989342789632745474",
+      "ruleTreeId": "1989339871722561537",
+      "ruleNodeFrom": "rule_stock",
+      "ruleNodeTo": "rule_luck_award",
+      "ruleLimitType": "EQUAL",
+      "ruleLimitValue": "TAKE_OVER",
+      "createTime": 1763131255000,
+      "updateTime": 1763131255000
+    },
+    {
+      "id": "1989342723039780865",
+      "ruleTreeId": "1989339871722561537",
+      "ruleNodeFrom": "rule_lock",
+      "ruleNodeTo": "rule_stock",
+      "ruleLimitType": "EQUAL",
+      "ruleLimitValue": "ALLOW",
+      "createTime": 1763131240000,
+      "updateTime": 1763131240000
+    },
+    {
+      "id": "1989342545830436865",
+      "ruleTreeId": "1989339936365174786",
+      "ruleNodeFrom": "rule_lock",
+      "ruleNodeTo": "rule_luck_award",
+      "ruleLimitType": "EQUAL",
+      "ruleLimitValue": "TAKE_OVER",
+      "createTime": 1763131197000,
+      "updateTime": 1763131197000
+    },
+    {
+      "id": "1989342463370420225",
+      "ruleTreeId": "1989339936365174786",
+      "ruleNodeFrom": "rule_stock",
+      "ruleNodeTo": "rule_luck_award",
+      "ruleLimitType": "EQUAL",
+      "ruleLimitValue": "TAKE_OVER",
+      "createTime": 1763131177000,
+      "updateTime": 1763131177000
+    },
+    {
+      "id": "1989342412799696897",
+      "ruleTreeId": "1989339936365174786",
+      "ruleNodeFrom": "rule_lock",
+      "ruleNodeTo": "rule_stock",
+      "ruleLimitType": "EQUAL",
+      "ruleLimitValue": "ALLOW",
+      "createTime": 1763131165000,
+      "updateTime": 1763131165000
+    },
+    {
+      "id": "1989342371628408833",
+      "ruleTreeId": "1989339970464866305",
+      "ruleNodeFrom": "rule_lock",
+      "ruleNodeTo": "rule_luck_award",
+      "ruleLimitType": "EQUAL",
+      "ruleLimitValue": "TAKE_OVER",
+      "createTime": 1763131156000,
+      "updateTime": 1763131156000
+    },
+    {
+      "id": "1989342296189657089",
+      "ruleTreeId": "1989339970464866305",
+      "ruleNodeFrom": "rule_stock",
+      "ruleNodeTo": "rule_luck_award",
+      "ruleLimitType": "EQUAL",
+      "ruleLimitValue": "TAKE_OVER",
+      "createTime": 1763131138000,
+      "updateTime": 1763131138000
+    },
+    {
+      "id": "1989342193643118594",
+      "ruleTreeId": "1989339970464866305",
+      "ruleNodeFrom": "rule_lock",
+      "ruleNodeTo": "rule_stock",
+      "ruleLimitType": "EQUAL",
+      "ruleLimitValue": "ALLOW",
+      "createTime": 1763131113000,
+      "updateTime": 1763131113000
+    },
+    {
+      "id": "1947995350061060097",
+      "ruleTreeId": "1947994741845037057",
+      "ruleNodeFrom": "rule_stock",
+      "ruleNodeTo": "rule_luck_award",
+      "ruleLimitType": "EQUAL",
+      "ruleLimitValue": "TAKE_OVER",
+      "createTime": 1753273259000,
+      "updateTime": 1753273259000
+    }
+  ],
+  "strategy": [
+    {
+      "id": "1989339401985679361",
+      "strategyDesc": "渝惠积分权益抽奖策略",
+      "ruleModels": "ai-agent-rule_blacklist,ai-agent-rule_weight",
+      "createTime": 1763130448000,
+      "updateTime": 1791979727000
+    },
+    {
+      "id": "1947996138992865281",
+      "strategyDesc": "默认策略",
+      "ruleModels": "",
+      "createTime": 1753273445000,
+      "updateTime": 1753340066000
+    }
+  ],
+  "strategy/award": [
+    {
+      "id": "1989343506909061121",
+      "activityId": "1989345533881966594",
+      "awardId": "1989337068971188225",
+      "awardTitle": "谢谢参与",
+      "awardSubtitle": null,
+      "awardCount": 1000000,
+      "awardCountSurplus": 998928,
+      "awardRate": 0.3,
+      "ruleTreeId": "1989339772170756097",
+      "sort": 1,
+      "createTime": 1763131426000,
+      "updateTime": 1792216770000
+    },
+    {
+      "id": "1989343319025213441",
+      "activityId": "1989345533881966594",
+      "awardId": "1989336435136356353",
+      "awardTitle": "便民生活券 · 1张",
+      "awardSubtitle": "",
+      "awardCount": 1000000,
+      "awardCountSurplus": 999280,
+      "awardRate": 0.2,
+      "ruleTreeId": "1989339772170756097",
+      "sort": 2,
+      "createTime": 1763131381000,
+      "updateTime": 1792216724000
+    },
+    {
+      "id": "1989343674081435649",
+      "activityId": "1989345533881966594",
+      "awardId": "1989336928877240321",
+      "awardTitle": "幸运机会 · 1次",
+      "awardSubtitle": "",
+      "awardCount": 1000000,
+      "awardCountSurplus": 999499,
+      "awardRate": 0.15,
+      "ruleTreeId": "1989339772170756097",
+      "sort": 3,
+      "createTime": 1763131466000,
+      "updateTime": 1792216724000
+    },
+    {
+      "id": "1989343816616468481",
+      "activityId": "1989345533881966594",
+      "awardId": "1989336702498070529",
+      "awardTitle": "惊喜积分",
+      "awardSubtitle": "",
+      "awardCount": 1000000,
+      "awardCountSurplus": 999675,
+      "awardRate": 0.1,
+      "ruleTreeId": "1989339772170756097",
+      "sort": 4,
+      "createTime": 1763131500000,
+      "updateTime": 1792216724000
+    },
+    {
+      "id": "1989344008988221441",
+      "activityId": "1989345533881966594",
+      "awardId": "1989336991691137026",
+      "awardTitle": "幸运机会 · 5次",
+      "awardSubtitle": null,
+      "awardCount": 1000000,
+      "awardCountSurplus": 999625,
+      "awardRate": 0.1,
+      "ruleTreeId": "1989339772170756097",
+      "sort": 5,
+      "createTime": 1763131546000,
+      "updateTime": 1792216724000
+    },
+    {
+      "id": "1989344181713854466",
+      "activityId": "1989345533881966594",
+      "awardId": "1989336788581965826",
+      "awardTitle": "便民生活券 · 5张",
+      "awardSubtitle": " ",
+      "awardCount": 100000,
+      "awardCountSurplus": 99582,
+      "awardRate": 0.12,
+      "ruleTreeId": "1989339871722561537",
+      "sort": 6,
+      "createTime": 1763131587000,
+      "updateTime": 1792216724000
+    },
+    {
+      "id": "1989344419094683650",
+      "activityId": "1989345533881966594",
+      "awardId": "1989337375050522625",
+      "awardTitle": "出行礼遇 · 周卡",
+      "awardSubtitle": "抽奖 3 次后解锁",
+      "awardCount": 100000,
+      "awardCountSurplus": 99919,
+      "awardRate": 0.02,
+      "ruleTreeId": "1989339936365174786",
+      "sort": 7,
+      "createTime": 1763131644000,
+      "updateTime": 1792216724000
+    },
+    {
+      "id": "1989344519481155586",
+      "activityId": "1989345533881966594",
+      "awardId": "1989337465119006721",
+      "awardTitle": "出行礼遇 · 月卡",
+      "awardSubtitle": "抽奖 5 次后解锁",
+      "awardCount": 100000,
+      "awardCountSurplus": 99965,
+      "awardRate": 0.01,
+      "ruleTreeId": "1989339970464866305",
+      "sort": 8,
+      "createTime": 1763131668000,
+      "updateTime": 1792216724000
+    }
+  ]
+}

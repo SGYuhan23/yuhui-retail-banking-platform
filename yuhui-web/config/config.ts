@@ -4,14 +4,23 @@ import proxy from './proxy';
 import routes from './routes';
 
 const { REACT_APP_ENV = 'dev' } = process.env;
+const pagesDemo = process.env.PAGES_DEMO === 'true';
+const pagesBase = pagesDemo ? (process.env.PAGES_BASE || '/yuhui-retail-banking-platform/') : '/';
 
 export default defineConfig({
   hash: true,
-  define: { 'process.env.REPLICA_LOCAL': process.env.REPLICA_LOCAL === 'true' },
+  base: pagesBase,
+  publicPath: pagesBase,
+  define: {
+    'process.env.REPLICA_LOCAL': process.env.REPLICA_LOCAL === 'true',
+    'process.env.PAGES_DEMO': pagesDemo,
+    'process.env.PAGES_BASE': pagesBase,
+  },
   routes,
   theme: {
     'root-entry-name': 'variable',
   },
+  lessLoader: { modifyVars: { 'site-base': `'${pagesBase}'` } },
   ignoreMomentLocale: true,
   proxy: proxy[REACT_APP_ENV as keyof typeof proxy],
   fastRefresh: true,
@@ -31,7 +40,7 @@ export default defineConfig({
   access: {},
   headScripts: [
     {
-      src: '/scripts/loading.js',
+      src: `${pagesBase}scripts/loading.js`,
       async: true,
     },
   ],
